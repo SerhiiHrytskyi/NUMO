@@ -7,59 +7,17 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li class="dropdown">
-            <a href="services/index.html" class="dropdown-toggle"
-              >Services / Solutions</a
-            >
-            <div class="dropdown-content">
-              <a href="services/power-generation.html">Power Generation</a>
-              <a href="services/solar-energy.html">Solar Energy</a>
-              <a href="services/energy-storage.html">Energy Storage</a>
-              <a href="services/hybrid-backup.html"
-                >Hybrid & Backup Solutions</a
-              >
-              <a href="services/project-coordination.html"
-                >Project Coordination & Sourcing</a
-              >
-              <a href="services/supplier-matching.html"
-                >Supplier & Client Matching</a
-              >
-              <a href="services/consulting.html">Consulting & Feasibility</a>
-            </div>
-          </li>
-          <li class="dropdown">
-            <a href="markets/index.html" class="dropdown-toggle"
-              >Markets / Regions</a
-            >
-            <div class="dropdown-content">
-              <a href="markets/europe.html">Europe</a>
-              <a href="markets/ukraine.html">Ukraine</a>
-              <a href="markets/africa.html">Africa</a>
-            </div>
-          </li>
-          <li><a href="how-we-work.html">How We Work</a></li>
-          <li><a href="partners.html">Partners</a></li>
-          <li><a href="projects.html">Projects / Use Cases</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+    <div id="header-placeholder"></div>
 
     <main>
       <!-- Section 1: Page Intro -->
       <section class="hero-section">
-        <h1>Partners</h1>
-        <p class="intro-text">
+        <h1 data-i18n="partners.title">Partners</h1>
+        <p class="intro-text" data-i18n="partners.introText1">
           Reliable energy projects require strong cooperation between multiple
           stakeholders.
         </p>
-        <p class="intro-text">
+        <p class="intro-text" data-i18n="partners.introText2">
           We work with a network of manufacturers, distributors, contractors and
           logistics partners to ensure that energy solutions are properly
           coordinated and executed.
@@ -68,18 +26,18 @@
 
       <!-- Section 2: Partner Network -->
       <section class="partner-network">
-        <h2>Our Partner Network</h2>
+        <h2 data-i18n="partners.networkTitle">Our Partner Network</h2>
 
         <div class="partner-types">
           <!-- Manufacturers -->
           <div class="partner-type">
             <div class="partner-icon">🔹</div>
-            <h3>Manufacturers</h3>
-            <p>
+            <h3 data-i18n="partners.manufacturersTitle">Manufacturers</h3>
+            <p data-i18n="partners.manufacturersText1">
               We cooperate with equipment manufacturers producing generators,
               solar components and energy storage systems.
             </p>
-            <p>
+            <p data-i18n="partners.manufacturersText2">
               Our role is to align technical requirements with manufacturing
               capabilities and project needs.
             </p>
@@ -88,8 +46,10 @@
           <!-- Distributors & Suppliers -->
           <div class="partner-type">
             <div class="partner-icon">🔹</div>
-            <h3>Distributors & Suppliers</h3>
-            <p>
+            <h3 data-i18n="partners.distributorsTitle">
+              Distributors & Suppliers
+            </h3>
+            <p data-i18n="partners.distributorsText">
               We work with regional and international distributors to ensure
               availability, logistics feasibility and commercial alignment.
             </p>
@@ -98,8 +58,8 @@
           <!-- EPC & Contractors -->
           <div class="partner-type">
             <div class="partner-icon">🔹</div>
-            <h3>EPC & Contractors</h3>
-            <p>
+            <h3 data-i18n="partners.epcTitle">EPC & Contractors</h3>
+            <p data-i18n="partners.epcText">
               For implementation and installation, we coordinate with EPC
               companies and technical contractors.
             </p>
@@ -108,8 +68,10 @@
           <!-- Logistics & Freight Partners -->
           <div class="partner-type">
             <div class="partner-icon">🔹</div>
-            <h3>Logistics & Freight Partners</h3>
-            <p>
+            <h3 data-i18n="partners.logisticsTitle">
+              Logistics & Freight Partners
+            </h3>
+            <p data-i18n="partners.logisticsText">
               We cooperate with logistics partners to support transportation,
               customs and delivery coordination, especially for cross-border and
               remote projects.
@@ -119,8 +81,8 @@
           <!-- Local Representatives -->
           <div class="partner-type">
             <div class="partner-icon">🔹</div>
-            <h3>Local Representatives</h3>
-            <p>
+            <h3 data-i18n="partners.localTitle">Local Representatives</h3>
+            <p data-i18n="partners.localText">
               In specific regions, we collaborate with local partners who
               provide on-the-ground support and regional expertise.
             </p>
@@ -130,20 +92,28 @@
 
       <!-- Section 3: Partnership Principles -->
       <section class="partnership-principles">
-        <h2>Partnership Principles</h2>
+        <h2 data-i18n="partners.principlesTitle">Partnership Principles</h2>
         <ul class="principles-list">
-          <li>✓ transparency and clear roles</li>
-          <li>✓ structured communication</li>
-          <li>✓ alignment on technical and commercial expectations</li>
-          <li>✓ long-term cooperation mindset</li>
-          <li>✓ respect for regional and cultural specifics</li>
+          <li data-i18n="partners.principle1">
+            ✓ transparency and clear roles
+          </li>
+          <li data-i18n="partners.principle2">✓ structured communication</li>
+          <li data-i18n="partners.principle3">
+            ✓ alignment on technical and commercial expectations
+          </li>
+          <li data-i18n="partners.principle4">
+            ✓ long-term cooperation mindset
+          </li>
+          <li data-i18n="partners.principle5">
+            ✓ respect for regional and cultural specifics
+          </li>
         </ul>
       </section>
 
       <!-- Section 4: Become a Partner -->
       <section class="become-partner">
-        <h2>Become a Partner</h2>
-        <p>
+        <h2 data-i18n="partners.becomeTitle">Become a Partner</h2>
+        <p data-i18n="partners.becomeText">
           We are open to cooperation with manufacturers, distributors and
           project partners who value structured coordination and professional
           engagement.
@@ -151,144 +121,80 @@
 
         <form class="partner-form" action="#" method="POST">
           <div class="form-group">
-            <label for="company-name">Company Name *</label>
+            <label for="company-name"><span data-i18n="partners.formCompanyName">Company Name</span> <span data-i18n="partners.formRequired">*</span></label>
             <input
               type="text"
               id="company-name"
               name="company-name"
               required
+              data-i18n-placeholder="partners.formPlaceholderCompany"
               placeholder="Your company name"
             />
           </div>
 
           <div class="form-group">
-            <label for="role">Role *</label>
+            <label for="role"><span data-i18n="partners.formRole">Role</span> <span data-i18n="partners.formRequired">*</span></label>
             <select id="role" name="role" required>
-              <option value="">Select your role</option>
-              <option value="manufacturer">Manufacturer</option>
-              <option value="distributor">Distributor/Supplier</option>
-              <option value="epc">EPC/Contractor</option>
-              <option value="logistics">Logistics Partner</option>
-              <option value="local">Local Representative</option>
-              <option value="other">Other</option>
+              <option value="" data-i18n="partners.formSelectRole">Select your role</option>
+              <option value="manufacturer" data-i18n="partners.formRoleManufacturer">Manufacturer</option>
+              <option value="distributor" data-i18n="partners.formRoleDistributor">Distributor/Supplier</option>
+              <option value="epc" data-i18n="partners.formRoleEpc">EPC/Contractor</option>
+              <option value="logistics" data-i18n="partners.formRoleLogistics">Logistics Partner</option>
+              <option value="local" data-i18n="partners.formRoleLocal">Local Representative</option>
+              <option value="other" data-i18n="partners.formRoleOther">Other</option>
             </select>
           </div>
 
           <div class="form-group">
-            <label for="region">Region *</label>
+            <label for="region"><span data-i18n="partners.formRegion">Region</span> <span data-i18n="partners.formRequired">*</span></label>
             <input
               type="text"
               id="region"
               name="region"
               required
+              data-i18n-placeholder="partners.formPlaceholderRegion"
               placeholder="Your primary region/country"
             />
           </div>
 
           <div class="form-group">
-            <label for="contact">Contact *</label>
+            <label for="contact"><span data-i18n="partners.formContact">Contact</span> <span data-i18n="partners.formRequired">*</span></label>
             <input
               type="email"
               id="contact"
               name="contact"
               required
+              data-i18n-placeholder="partners.formPlaceholderContact"
               placeholder="Your email address"
             />
           </div>
 
           <div class="form-group">
-            <label for="message">Message</label>
+            <label for="message" data-i18n="partners.formMessage">Message</label>
             <textarea
               id="message"
               name="message"
               rows="5"
+              data-i18n-placeholder="partners.formPlaceholderMessage"
               placeholder="Tell us about your company and cooperation interests"
             ></textarea>
           </div>
 
-          <button type="submit" class="btn-primary">Submit your company</button>
+          <button type="submit" class="btn-primary" data-i18n="partners.formSubmit">Submit your company</button>
         </form>
       </section>
 
       <!-- Section 5: CTA -->
       <section class="cta-section">
-        <h2>Let's Build Reliable Energy Projects Together</h2>
-        <a href="contact.html" class="btn-primary">Contact us</a>
+        <h2 data-i18n="partners.ctaTitle">Let's Build Reliable Energy Projects Together</h2>
+        <a href="contact.html" class="btn-primary" data-i18n="partners.ctaButton">Contact us</a>
       </section>
     </main>
 
-    <footer>
-      <p>&copy; 2026 NUMO. All rights reserved.</p>
-      <p>
-        <a href="legal/imprint.html" style="color: white; margin: 0 1rem"
-          >Imprint</a
-        >
-        <a href="legal/privacy.html" style="color: white; margin: 0 1rem"
-          >Privacy Policy</a
-        >
-        <a href="legal/terms.html" style="color: white; margin: 0 1rem"
-          >Terms of Use</a
-        >
-      </p>
-    </footer>
+    <div id="footer-placeholder"></div>
+
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/i18n.js"></script>
   </body>
-
-  <script>
-    // Dropdown menu handler with navigation support
-    let lastClickedToggle = null;
-    let clickCount = 0;
-    let clickTimer = null;
-
-    document.querySelectorAll(".dropdown-toggle").forEach((toggle) => {
-      toggle.addEventListener("click", function (e) {
-        const dropdown = this.closest(".dropdown");
-        const currentUrl = this.getAttribute("href");
-
-        // If same toggle clicked within 300ms - navigate
-        if (lastClickedToggle === this && clickCount === 1) {
-          clickCount = 0;
-          window.location.href = currentUrl;
-          return;
-        }
-
-        // First click - toggle dropdown
-        e.preventDefault();
-        lastClickedToggle = this;
-        clickCount = 1;
-
-        // Close other dropdowns
-        document.querySelectorAll(".dropdown").forEach((d) => {
-          if (d !== dropdown) {
-            d.classList.remove("active");
-          }
-        });
-
-        // Toggle current dropdown
-        dropdown.classList.toggle("active");
-
-        // Reset click count after 300ms
-        clearTimeout(clickTimer);
-        clickTimer = setTimeout(() => {
-          clickCount = 0;
-          lastClickedToggle = null;
-        }, 300);
-      });
-    });
-
-    // Close dropdown when clicking on a link
-    document.querySelectorAll(".dropdown-content a").forEach((link) => {
-      link.addEventListener("click", function () {
-        this.closest(".dropdown").classList.remove("active");
-      });
-    });
-
-    // Close dropdown when clicking outside
-    document.addEventListener("click", function (e) {
-      if (!e.target.closest(".dropdown")) {
-        document.querySelectorAll(".dropdown").forEach((d) => {
-          d.classList.remove("active");
-        });
-      }
-    });
-  </script>
 </html>
