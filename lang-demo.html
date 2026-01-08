@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NUMO - Multi-language Demo</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+      .demo-info {
+        background: #f8f9fa;
+        padding: 2rem;
+        margin: 2rem auto;
+        max-width: 1200px;
+        border-radius: 8px;
+        border-left: 4px solid #3498db;
+      }
+      .demo-info h2 {
+        color: #2c3e50;
+        margin-top: 0;
+      }
+      .demo-info code {
+        background: #e9ecef;
+        padding: 0.2rem 0.5rem;
+        border-radius: 4px;
+        font-family: monospace;
+      }
+      .demo-info ul {
+        margin-left: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+
+          <!-- Language Switcher -->
+          <li class="dropdown language-switcher">
+            <a href="#" class="dropdown-toggle">
+              <span class="current-lang">EN</span> 🌐
+            </a>
+            <div class="dropdown-content lang-dropdown">
+              <a href="#" class="lang-option" data-lang="en">🇬🇧 English</a>
+              <a href="#" class="lang-option" data-lang="de">🇩🇪 Deutsch</a>
+              <a href="#" class="lang-option" data-lang="fr">🇫🇷 Français</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="demo-info">
+        <h2>🌍 Multi-Language System - Implementation Guide</h2>
+
+        <h3>✅ What's Implemented:</h3>
+        <ul>
+          <li>
+            <strong>i18n.js</strong> - JavaScript translation engine with
+            localStorage support
+          </li>
+          <li>
+            <strong>JSON Translation Files:</strong>
+            <ul>
+              <li>js/translations/en.json - English</li>
+              <li>js/translations/de.json - German (Deutsch)</li>
+              <li>js/translations/fr.json - French (Français)</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Language Switcher</strong> - Dropdown in navigation with
+            flags
+          </li>
+          <li>
+            <strong>CSS Styles</strong> - Language switcher styling added to
+            styles.css
+          </li>
+          <li>
+            <strong>Demo on index.html</strong> - Navigation and hero section
+            with data-i18n attributes
+          </li>
+        </ul>
+
+        <h3>📝 How to Add Translations to Pages:</h3>
+        <ol>
+          <li>
+            <strong>Add Language Switcher to navigation:</strong>
+            <code
+              >&lt;li class="dropdown language-switcher"&gt;...&lt;/li&gt;</code
+            >
+          </li>
+          <li>
+            <strong>Add data-i18n attributes to elements:</strong>
+            <code>&lt;h1 data-i18n="home.heroTitle"&gt;Text&lt;/h1&gt;</code>
+          </li>
+          <li>
+            <strong>For placeholders:</strong>
+            <code>&lt;input data-i18n-placeholder="contact.fullName"&gt;</code>
+          </li>
+          <li>
+            <strong>Include i18n script before &lt;/html&gt;:</strong>
+            <code>&lt;script src="js/i18n.js"&gt;&lt;/script&gt;</code>
+          </li>
+        </ol>
+
+        <h3>🧪 Test the System:</h3>
+        <p>
+          Try switching languages using the language selector in the navigation
+          (🌐 EN).
+        </p>
+        <p>The following elements are translated on index.html:</p>
+        <ul>
+          <li>Navigation links</li>
+          <li>Hero title and text</li>
+          <li>Buttons</li>
+          <li>"What We Do" section</li>
+        </ul>
+
+        <h3>📂 Translation Keys Structure:</h3>
+        <pre
+          style="
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 1rem;
+            border-radius: 4px;
+            overflow-x: auto;
+          "
+        >
+{
+  "nav": { "home": "Home", "about": "About", ... },
+  "services": { "powerGeneration": "Power Generation", ... },
+  "home": { "heroTitle": "Title text", ... },
+  "contact": { "fullName": "Full Name", ... },
+  "faq": { "q1": "Question 1?", ... }
+}
+            </pre
+        >
+
+        <h3>🚀 Next Steps to Complete:</h3>
+        <ul>
+          <li>
+            Add data-i18n attributes to remaining pages (about, contact, faq,
+            etc.)
+          </li>
+          <li>Add language switcher to all 23 HTML files</li>
+          <li>Include i18n.js script in all pages</li>
+          <li>Extend JSON translation files for all content</li>
+          <li>Test all pages in all three languages</li>
+        </ul>
+
+        <h3>💡 Features:</h3>
+        <ul>
+          <li>✅ Language preference saved in localStorage</li>
+          <li>✅ Automatic language detection on page load</li>
+          <li>✅ Smooth language switching without page reload</li>
+          <li>✅ Fallback to English if translation missing</li>
+          <li>✅ Support for HTML content in translations</li>
+          <li>✅ Responsive language switcher</li>
+        </ul>
+      </div>
+
+      <!-- Demo Content with Translations -->
+      <section style="max-width: 1200px; margin: 2rem auto; padding: 0 2rem">
+        <h2 data-i18n="home.whatWeDoTitle">What We Do</h2>
+        <p data-i18n="home.whatWeDoP1">
+          We act as an independent Energy Solutions Coordinator and Project
+          Connector.
+        </p>
+        <p data-i18n="home.whatWeDoP2">
+          Our role is to structure energy projects, align technical solutions,
+          source reliable suppliers and coordinate all key parties.
+        </p>
+
+        <div
+          style="
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: #e3f2fd;
+            border-radius: 8px;
+          "
+        >
+          <h3 style="color: #1976d2; margin-top: 0">
+            👆 Try changing the language above!
+          </h3>
+          <p>
+            Click on the language switcher (🌐) in the navigation and select
+            German (🇩🇪) or French (🇫🇷) to see this content translated instantly.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p data-i18n="footer.rights">© 2026 NUMO. All rights reserved.</p>
+      <p>
+        <a
+          href="legal/imprint.html"
+          data-i18n="footer.imprint"
+          style="color: white; margin: 0 1rem"
+          >Imprint</a
+        >
+        <a
+          href="legal/privacy.html"
+          data-i18n="footer.privacy"
+          style="color: white; margin: 0 1rem"
+          >Privacy Policy</a
+        >
+        <a
+          href="legal/terms.html"
+          data-i18n="footer.terms"
+          style="color: white; margin: 0 1rem"
+          >Terms of Use</a
+        >
+      </p>
+    </footer>
+
+    <!-- Multi-language Support -->
+    <script src="js/i18n.js"></script>
+  </body>
+</html>

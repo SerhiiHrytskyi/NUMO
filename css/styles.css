@@ -1690,3 +1690,66 @@ ul li::marker {
     font-size: 1.1rem;
   }
 }
+
+/* ========================================
+   LANGUAGE SWITCHER
+   ======================================== */
+
+.language-switcher {
+  margin-left: auto;
+}
+
+.language-switcher .dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--border-radius);
+  transition: all var(--transition-speed) ease;
+}
+
+.language-switcher .dropdown-toggle:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.current-lang {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.lang-dropdown {
+  min-width: 160px;
+  right: 0;
+  left: auto;
+}
+
+.lang-option {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: var(--font-size-base);
+}
+
+.lang-option.active {
+  background: rgba(52, 152, 219, 0.1);
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+.lang-option:hover {
+  background: rgba(52, 152, 219, 0.15);
+}
+
+/* Responsive Language Switcher */
+@media (max-width: 768px) {
+  .language-switcher {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .lang-dropdown {
+    position: static;
+    right: auto;
+  }
+}
