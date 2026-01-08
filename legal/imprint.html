@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Imprint - NUMO</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About Us</a></li>
+          <li class="dropdown">
+            <a href="../services/index.html" class="dropdown-toggle"
+              >Services / Solutions</a
+            >
+            <div class="dropdown-content">
+              <a href="../services/power-generation.html">Power Generation</a>
+              <a href="../services/solar-energy.html">Solar Energy</a>
+              <a href="../services/energy-storage.html">Energy Storage</a>
+              <a href="../services/hybrid-backup.html"
+                >Hybrid & Backup Solutions</a
+              >
+              <a href="../services/project-coordination.html"
+                >Project Coordination & Sourcing</a
+              >
+              <a href="../services/supplier-matching.html"
+                >Supplier & Client Matching</a
+              >
+              <a href="../services/consulting.html">Consulting & Feasibility</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="../markets/index.html" class="dropdown-toggle"
+              >Markets / Regions</a
+            >
+            <div class="dropdown-content">
+              <a href="../markets/europe.html">Europe</a>
+              <a href="../markets/ukraine.html">Ukraine</a>
+              <a href="../markets/africa.html">Africa</a>
+            </div>
+          </li>
+          <li><a href="../how-we-work.html">How We Work</a></li>
+          <li><a href="../partners.html">Partners</a></li>
+          <li><a href="../projects.html">Projects / Use Cases</a></li>
+          <li><a href="../faq.html">FAQ</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="legal-section">
+        <h1>Imprint</h1>
+
+        <div class="legal-content">
+          <h3>Company Information</h3>
+          <p><strong>Business Name:</strong> NUMO Energy Solutions</p>
+          <p><strong>Legal Form:</strong> [To be specified]</p>
+
+          <h3>Address</h3>
+          <p>[Street Address]</p>
+          <p>[City, Postal Code]</p>
+          <p>[Country]</p>
+
+          <h3>Contact</h3>
+          <p><strong>Email:</strong> info@yourdomain.com</p>
+          <p><strong>Phone:</strong> [To be specified]</p>
+
+          <h3>Responsible Person</h3>
+          <p>[Name]</p>
+          <p>[Position]</p>
+
+          <h3>VAT Identification Number</h3>
+          <p>VAT ID: [To be specified]</p>
+
+          <h3>Professional Association</h3>
+          <p>[If applicable]</p>
+
+          <h3>Regulatory Authority</h3>
+          <p>[If applicable]</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 NUMO. All rights reserved.</p>
+      <p>
+        <a href="imprint.html" style="color: white; margin: 0 1rem">Imprint</a>
+        <a href="privacy.html" style="color: white; margin: 0 1rem"
+          >Privacy Policy</a
+        >
+        <a href="terms.html" style="color: white; margin: 0 1rem"
+          >Terms of Use</a
+        >
+      </p>
+    </footer>
+  </body>
+
+  <script>
+    // Dropdown menu handler with navigation support
+    let lastClickedToggle = null;
+    let clickCount = 0;
+    let clickTimer = null;
+
+    document.querySelectorAll(".dropdown-toggle").forEach((toggle) => {
+      toggle.addEventListener("click", function (e) {
+        const dropdown = this.closest(".dropdown");
+        const currentUrl = this.getAttribute("href");
+
+        // If same toggle clicked within 300ms - navigate
+        if (lastClickedToggle === this && clickCount === 1) {
+          clickCount = 0;
+          window.location.href = currentUrl;
+          return;
+        }
+
+        // First click - toggle dropdown
+        e.preventDefault();
+        lastClickedToggle = this;
+        clickCount = 1;
+
+        // Close other dropdowns
+        document.querySelectorAll(".dropdown").forEach((d) => {
+          if (d !== dropdown) {
+            d.classList.remove("active");
+          }
+        });
+
+        // Toggle current dropdown
+        dropdown.classList.toggle("active");
+
+        // Reset click count after 300ms
+        clearTimeout(clickTimer);
+        clickTimer = setTimeout(() => {
+          clickCount = 0;
+          lastClickedToggle = null;
+        }, 300);
+      });
+    });
+
+    // Close dropdown when clicking on a link
+    document.querySelectorAll(".dropdown-content a").forEach((link) => {
+      link.addEventListener("click", function () {
+        this.closest(".dropdown").classList.remove("active");
+      });
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener("click", function (e) {
+      if (!e.target.closest(".dropdown")) {
+        document.querySelectorAll(".dropdown").forEach((d) => {
+          d.classList.remove("active");
+        });
+      }
+    });
+  </script>
+</html>

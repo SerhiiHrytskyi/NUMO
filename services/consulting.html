@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consulting & Feasibility - NUMO</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About Us</a></li>
+          <li class="dropdown">
+            <a href="index.html" class="dropdown-toggle">Services / Solutions</a>
+            <div class="dropdown-content">
+              <a href="power-generation.html">Power Generation</a>
+              <a href="solar-energy.html">Solar Energy</a>
+              <a href="energy-storage.html">Energy Storage</a>
+              <a href="hybrid-backup.html">Hybrid & Backup Solutions</a>
+              <a href="project-coordination.html"
+                >Project Coordination & Sourcing</a
+              >
+              <a href="supplier-matching.html">Supplier & Client Matching</a>
+              <a href="consulting.html">Consulting & Feasibility</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="../markets/index.html" class="dropdown-toggle">Markets / Regions</a>
+            <div class="dropdown-content">
+              <a href="../markets/europe.html">Europe</a>
+              <a href="../markets/ukraine.html">Ukraine</a>
+              <a href="../markets/africa.html">Africa</a>
+            </div>
+          </li>
+            <div class="dropdown-content">
+              <a href="../markets/europe.html">Europe</a>
+              <a href="../markets/ukraine.html">Ukraine</a>
+              <a href="../markets/africa.html">Africa</a>
+            </div>
+          </li>
+          <li><a href="../how-we-work.html">How We Work</a></li>
+          <li><a href="../partners.html">Partners</a></li>
+          <li><a href="../projects.html">Projects / Use Cases</a></li>
+          <li><a href="../faq.html">FAQ</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <script>
+      // Dropdown menu handler with navigation support
+      let lastClickedToggle = null;
+      let clickCount = 0;
+      let clickTimer = null;
+      
+      document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+        toggle.addEventListener('click', function(e) {
+          const dropdown = this.closest('.dropdown');
+          const currentUrl = this.getAttribute('href');
+          
+          // If same toggle clicked within 300ms - navigate
+          if (lastClickedToggle === this && clickCount === 1) {
+            clickCount = 0;
+            window.location.href = currentUrl;
+            return;
+          }
+          
+          // First click - toggle dropdown
+          e.preventDefault();
+          lastClickedToggle = this;
+          clickCount = 1;
+          
+          // Close other dropdowns
+          document.querySelectorAll('.dropdown').forEach(d => {
+            if (d !== dropdown) {
+              d.classList.remove('active');
+            }
+          });
+          
+          // Toggle current dropdown
+          dropdown.classList.toggle('active');
+          
+          // Reset click count after 300ms
+          clearTimeout(clickTimer);
+          clickTimer = setTimeout(() => {
+            clickCount = 0;
+            lastClickedToggle = null;
+          }, 300);
+        });
+      });
+
+      // Close dropdown when clicking on a link
+      document.querySelectorAll('.dropdown-content a').forEach(link => {
+        link.addEventListener('click', function() {
+          this.closest('.dropdown').classList.remove('active');
+        });
+      });
+
+      // Close dropdown when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('.dropdown')) {
+          document.querySelectorAll('.dropdown').forEach(d => {
+            d.classList.remove('active');
+          });
+        }
+      });
+    </script>
+
+    <main>
+      <section
+        style="
+          background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+          color: white;
+          padding: 3rem 0;
+          margin: -2rem -2rem 0 -2rem;
+        "
+      >
+        <div style="max-width: 1200px; margin: 0 auto; padding: 3rem 2rem">
+          <h1 style="color: white">Consulting & Feasibility</h1>
+          <p style="font-size: 1.1rem; margin-top: 1rem">
+            We support early-stage project analysis and feasibility assessment
+            to reduce risks before investment or procurement decisions.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Scope of Consulting Services</h2>
+        <ul style="margin-left: 2rem">
+          <li>Requirements clarification and technical definition</li>
+          <li>Solution comparison and benchmarking</li>
+          <li>Risk and complexity overview</li>
+          <li>Decision support and recommendations</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Why Feasibility Matters</h2>
+        <p>
+          Early analysis prevents costly mistakes later in the project
+          lifecycle.
+        </p>
+        <p><strong>We help you understand:</strong></p>
+        <ul style="margin-left: 2rem; margin-top: 1rem">
+          <li>Whether your requirements are realistic and achievable</li>
+          <li>Which solution approach offers the best balance</li>
+          <li>What risks or challenges you should anticipate</li>
+          <li>What additional information or partnerships you need</li>
+        </ul>
+      </section>
+
+      <section
+        style="
+          text-align: center;
+          background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+          color: white;
+        "
+      >
+        <h2 style="color: white">Let's Assess Your Project Feasibility</h2>
+        <a href="../contact.html" class="btn btn-primary"
+          >Book a feasibility call</a
+        >
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 NUMO. All rights reserved.</p>
+      <p>
+        <a href="../legal/imprint.html" style="color: white; margin: 0 1rem"
+          >Imprint</a
+        >
+        <a href="../legal/privacy.html" style="color: white; margin: 0 1rem"
+          >Privacy Policy</a
+        >
+        <a href="../legal/terms.html" style="color: white; margin: 0 1rem"
+          >Terms of Use</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>
