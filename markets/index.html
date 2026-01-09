@@ -7,57 +7,17 @@
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../about.html">About Us</a></li>
-          <li class="dropdown">
-            <a href="../services/index.html" class="dropdown-toggle"
-              >Services / Solutions</a
-            >
-            <div class="dropdown-content">
-              <a href="../services/power-generation.html">Power Generation</a>
-              <a href="../services/solar-energy.html">Solar Energy</a>
-              <a href="../services/energy-storage.html">Energy Storage</a>
-              <a href="../services/hybrid-backup.html"
-                >Hybrid & Backup Solutions</a
-              >
-              <a href="../services/project-coordination.html"
-                >Project Coordination & Sourcing</a
-              >
-              <a href="../services/supplier-matching.html"
-                >Supplier & Client Matching</a
-              >
-              <a href="../services/consulting.html">Consulting & Feasibility</a>
-            </div>
-          </li>
-          <li class="dropdown">
-            <a href="index.html" class="dropdown-toggle">Markets / Regions</a>
-            <div class="dropdown-content">
-              <a href="europe.html">Europe</a>
-              <a href="ukraine.html">Ukraine</a>
-              <a href="africa.html">Africa</a>
-            </div>
-          </li>
-          <li><a href="../how-we-work.html">How We Work</a></li>
-          <li><a href="../partners.html">Partners</a></li>
-          <li><a href="../projects.html">Projects / Use Cases</a></li>
-          <li><a href="../faq.html">FAQ</a></li>
-          <li><a href="../contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+    <div id="header-placeholder"></div>
 
     <main>
       <!-- Section 1: Title & Intro -->
       <section class="hero-section">
-        <h1>Markets & Regions</h1>
-        <p class="intro-text">
+        <h1 data-i18n="marketsPage.title">Markets & Regions</h1>
+        <p class="intro-text" data-i18n="marketsPage.introText1">
           Energy projects differ significantly depending on region,
           infrastructure, regulations and operational conditions.
         </p>
-        <p class="intro-text">
+        <p class="intro-text" data-i18n="marketsPage.introText2">
           We coordinate energy solutions across multiple markets, adapting
           technical concepts, sourcing strategies and project coordination to
           local realities.
@@ -67,11 +27,11 @@
       <!-- Section 2: Region Tabs -->
       <section class="region-tabs-section">
         <div class="region-tabs">
-          <button class="region-tab active" data-region="europe">
+          <button class="region-tab active" data-region="europe" data-i18n="marketsPage.tabEurope">
             🇪🇺 Europe
           </button>
-          <button class="region-tab" data-region="ukraine">🇺🇦 Ukraine</button>
-          <button class="region-tab" data-region="africa">🌍 Africa</button>
+          <button class="region-tab" data-region="ukraine" data-i18n="marketsPage.tabUkraine">🇺🇦 Ukraine</button>
+          <button class="region-tab" data-region="africa" data-i18n="marketsPage.tabAfrica">🌍 Africa</button>
         </div>
       </section>
 
@@ -80,114 +40,114 @@
         <div class="markets-grid">
           <!-- Europe -->
           <div class="market-card" data-region="europe">
-            <h2>🇪🇺 Europe</h2>
-            <h3>Europe</h3>
-            <p><strong>Context:</strong></p>
-            <p>
+            <h2>🇪🇺 <span data-i18n="marketsPage.europeTitle">Europe</span></h2>
+            <h3 data-i18n="marketsPage.europeTitle">Europe</h3>
+            <p><strong data-i18n="marketsPage.europeContext">Context:</strong></p>
+            <p data-i18n="marketsPage.europeContextText">
               European energy projects require structured processes, regulatory
               compliance and transparent procurement.
             </p>
-            <p><strong>Focus areas:</strong></p>
+            <p><strong data-i18n="marketsPage.europeFocusTitle">Focus areas:</strong></p>
             <ul>
-              <li>commercial and industrial facilities</li>
-              <li>infrastructure and backup power</li>
-              <li>hybrid and energy optimization projects</li>
+              <li data-i18n="marketsPage.europeFocus1">commercial and industrial facilities</li>
+              <li data-i18n="marketsPage.europeFocus2">infrastructure and backup power</li>
+              <li data-i18n="marketsPage.europeFocus3">hybrid and energy optimization projects</li>
             </ul>
-            <p><strong>Our approach in Europe:</strong></p>
+            <p><strong data-i18n="marketsPage.europeApproachTitle">Our approach in Europe:</strong></p>
             <ul>
-              <li>compliance with EU standards and documentation</li>
-              <li>structured supplier sourcing and verification</li>
-              <li>clear coordination between stakeholders</li>
-              <li>focus on reliability and lifecycle performance</li>
+              <li data-i18n="marketsPage.europeApproach1">compliance with EU standards and documentation</li>
+              <li data-i18n="marketsPage.europeApproach2">structured supplier sourcing and verification</li>
+              <li data-i18n="marketsPage.europeApproach3">clear coordination between stakeholders</li>
+              <li data-i18n="marketsPage.europeApproach4">focus on reliability and lifecycle performance</li>
             </ul>
-            <p><strong>Typical formats:</strong></p>
+            <p><strong data-i18n="marketsPage.europeFormatsTitle">Typical formats:</strong></p>
             <ul>
-              <li>coordination and sourcing support</li>
-              <li>feasibility and solution comparison</li>
-              <li>supplier and EPC alignment</li>
+              <li data-i18n="marketsPage.europeFormat1">coordination and sourcing support</li>
+              <li data-i18n="marketsPage.europeFormat2">feasibility and solution comparison</li>
+              <li data-i18n="marketsPage.europeFormat3">supplier and EPC alignment</li>
             </ul>
-            <a href="europe.html" class="btn-primary">Learn more →</a>
+            <a href="europe.html" class="btn-primary" data-i18n="marketsPage.europeLearnMore">Learn more →</a>
           </div>
 
           <!-- Ukraine -->
           <div class="market-card" data-region="ukraine" style="display: none">
-            <h2>🇺🇦 Ukraine</h2>
-            <h3>Ukraine</h3>
-            <p><strong>Context:</strong></p>
-            <p>
+            <h2>🇺🇦 <span data-i18n="marketsPage.ukraineTitle">Ukraine</span></h2>
+            <h3 data-i18n="marketsPage.ukraineTitle">Ukraine</h3>
+            <p><strong data-i18n="marketsPage.ukraineContext">Context:</strong></p>
+            <p data-i18n="marketsPage.ukraineContextText">
               Energy resilience and backup power have become critical across
               commercial, industrial and public sectors.
             </p>
-            <p><strong>Focus areas:</strong></p>
+            <p><strong data-i18n="marketsPage.ukraineFocusTitle">Focus areas:</strong></p>
             <ul>
-              <li>backup and emergency power</li>
-              <li>rapid deployment solutions</li>
-              <li>hybrid systems for energy security</li>
+              <li data-i18n="marketsPage.ukraineFocus1">backup and emergency power</li>
+              <li data-i18n="marketsPage.ukraineFocus2">rapid deployment solutions</li>
+              <li data-i18n="marketsPage.ukraineFocus3">hybrid systems for energy security</li>
             </ul>
-            <p><strong>Our approach in Ukraine:</strong></p>
+            <p><strong data-i18n="marketsPage.ukraineApproachTitle">Our approach in Ukraine:</strong></p>
             <ul>
-              <li>fast and pragmatic coordination</li>
-              <li>sourcing suitable and available equipment</li>
-              <li>alignment with local partners and logistics</li>
-              <li>focus on reliability under challenging conditions</li>
+              <li data-i18n="marketsPage.ukraineApproach1">fast and pragmatic coordination</li>
+              <li data-i18n="marketsPage.ukraineApproach2">sourcing suitable and available equipment</li>
+              <li data-i18n="marketsPage.ukraineApproach3">alignment with local partners and logistics</li>
+              <li data-i18n="marketsPage.ukraineApproach4">focus on reliability under challenging conditions</li>
             </ul>
-            <p><strong>Typical formats:</strong></p>
+            <p><strong data-i18n="marketsPage.ukraineFormatsTitle">Typical formats:</strong></p>
             <ul>
-              <li>generator and hybrid system coordination</li>
-              <li>supplier sourcing and delivery support</li>
-              <li>short-to-mid-term project engagement</li>
+              <li data-i18n="marketsPage.ukraineFormat1">generator and hybrid system coordination</li>
+              <li data-i18n="marketsPage.ukraineFormat2">supplier sourcing and delivery support</li>
+              <li data-i18n="marketsPage.ukraineFormat3">short-to-mid-term project engagement</li>
             </ul>
-            <a href="ukraine.html" class="btn-primary">Learn more →</a>
+            <a href="ukraine.html" class="btn-primary" data-i18n="marketsPage.ukraineLearnMore">Learn more →</a>
           </div>
 
           <!-- Africa -->
           <div class="market-card" data-region="africa" style="display: none">
-            <h2>🌍 Africa</h2>
-            <h3>Africa</h3>
-            <p><strong>Context:</strong></p>
-            <p>
+            <h2>🌍 <span data-i18n="marketsPage.africaTitle">Africa</span></h2>
+            <h3 data-i18n="marketsPage.africaTitle">Africa</h3>
+            <p><strong data-i18n="marketsPage.africaContext">Context:</strong></p>
+            <p data-i18n="marketsPage.africaContextText">
               Many African projects operate in off-grid or unstable grid
               environments, where reliability and logistics are key.
             </p>
-            <p><strong>Focus areas:</strong></p>
+            <p><strong data-i18n="marketsPage.africaFocusTitle">Focus areas:</strong></p>
             <ul>
-              <li>off-grid and hybrid energy systems</li>
-              <li>industrial and agricultural power supply</li>
-              <li>infrastructure and remote site solutions</li>
+              <li data-i18n="marketsPage.africaFocus1">off-grid and hybrid energy systems</li>
+              <li data-i18n="marketsPage.africaFocus2">industrial and agricultural power supply</li>
+              <li data-i18n="marketsPage.africaFocus3">infrastructure and remote site solutions</li>
             </ul>
-            <p><strong>Our approach in Africa:</strong></p>
+            <p><strong data-i18n="marketsPage.africaApproachTitle">Our approach in Africa:</strong></p>
             <ul>
-              <li>practical and robust solution design</li>
-              <li>hybrid systems combining solar, storage and generators</li>
-              <li>coordination of complex logistics</li>
-              <li>collaboration with local partners</li>
+              <li data-i18n="marketsPage.africaApproach1">practical and robust solution design</li>
+              <li data-i18n="marketsPage.africaApproach2">hybrid systems combining solar, storage and generators</li>
+              <li data-i18n="marketsPage.africaApproach3">coordination of complex logistics</li>
+              <li data-i18n="marketsPage.africaApproach4">collaboration with local partners</li>
             </ul>
-            <p><strong>Typical formats:</strong></p>
+            <p><strong data-i18n="marketsPage.africaFormatsTitle">Typical formats:</strong></p>
             <ul>
-              <li>full coordination of hybrid energy concepts</li>
-              <li>supplier and technology matching</li>
-              <li>early-stage feasibility and project structuring</li>
+              <li data-i18n="marketsPage.africaFormat1">full coordination of hybrid energy concepts</li>
+              <li data-i18n="marketsPage.africaFormat2">supplier and technology matching</li>
+              <li data-i18n="marketsPage.africaFormat3">early-stage feasibility and project structuring</li>
             </ul>
-            <a href="africa.html" class="btn-primary">Learn more →</a>
+            <a href="africa.html" class="btn-primary" data-i18n="marketsPage.africaLearnMore">Learn more →</a>
           </div>
         </div>
       </section>
 
       <!-- Section 3: Cross-Regional Value -->
       <section class="cross-regional">
-        <h2>Cross-Regional Coordination</h2>
-        <p>
+        <h2 data-i18n="marketsPage.crossRegionalTitle">Cross-Regional Coordination</h2>
+        <p data-i18n="marketsPage.crossRegionalText1">
           Our value lies in connecting regions, suppliers and project
           requirements.
         </p>
-        <p><strong>We bridge differences in:</strong></p>
+        <p><strong data-i18n="marketsPage.crossRegionalBridgeTitle">We bridge differences in:</strong></p>
         <ul>
-          <li>standards and technical expectations</li>
-          <li>logistics and delivery conditions</li>
-          <li>supplier capabilities</li>
-          <li>project execution cultures</li>
+          <li data-i18n="marketsPage.crossRegionalBridge1">standards and technical expectations</li>
+          <li data-i18n="marketsPage.crossRegionalBridge2">logistics and delivery conditions</li>
+          <li data-i18n="marketsPage.crossRegionalBridge3">supplier capabilities</li>
+          <li data-i18n="marketsPage.crossRegionalBridge4">project execution cultures</li>
         </ul>
-        <p>
+        <p data-i18n="marketsPage.crossRegionalText2">
           This allows clients and partners to operate more efficiently across
           borders.
         </p>
@@ -195,89 +155,19 @@
 
       <!-- Section 4: CTA -->
       <section class="cta-section">
-        <h2>Let's Discuss Your Regional Project</h2>
-        <p>
+        <h2 data-i18n="marketsPage.ctaTitle">Let's Discuss Your Regional Project</h2>
+        <p data-i18n="marketsPage.ctaText">
           If your project involves multiple regions or challenging environments,
           we can help coordinate the right energy solution.
         </p>
-        <a href="../contact.html" class="btn-primary">Discuss a project</a>
+        <a href="../contact.html" class="btn-primary" data-i18n="marketsPage.ctaButton">Discuss a project</a>
       </section>
     </main>
 
-    <footer>
-      <p>&copy; 2026 NUMO. All rights reserved.</p>
-      <p>
-        <a href="../legal/imprint.html" style="color: white; margin: 0 1rem"
-          >Imprint</a
-        >
-        <a href="../legal/privacy.html" style="color: white; margin: 0 1rem"
-          >Privacy Policy</a
-        >
-        <a href="../legal/terms.html" style="color: white; margin: 0 1rem"
-          >Terms of Use</a
-        >
-      </p>
-    </footer>
+    <div id="footer-placeholder"></div>
   </body>
 
   <script>
-    // Dropdown menu handler with navigation support
-    let lastClickedToggle = null;
-    let clickCount = 0;
-    let clickTimer = null;
-
-    document.querySelectorAll(".dropdown-toggle").forEach((toggle) => {
-      toggle.addEventListener("click", function (e) {
-        const dropdown = this.closest(".dropdown");
-        const currentUrl = this.getAttribute("href");
-
-        // If same toggle clicked within 300ms - navigate
-        if (lastClickedToggle === this && clickCount === 1) {
-          clickCount = 0;
-          window.location.href = currentUrl;
-          return;
-        }
-
-        // First click - toggle dropdown
-        e.preventDefault();
-        lastClickedToggle = this;
-        clickCount = 1;
-
-        // Close other dropdowns
-        document.querySelectorAll(".dropdown").forEach((d) => {
-          if (d !== dropdown) {
-            d.classList.remove("active");
-          }
-        });
-
-        // Toggle current dropdown
-        dropdown.classList.toggle("active");
-
-        // Reset click count after 300ms
-        clearTimeout(clickTimer);
-        clickTimer = setTimeout(() => {
-          clickCount = 0;
-          lastClickedToggle = null;
-        }, 300);
-      });
-    });
-
-    // Close dropdown when clicking on a link
-    document.querySelectorAll(".dropdown-content a").forEach((link) => {
-      link.addEventListener("click", function () {
-        this.closest(".dropdown").classList.remove("active");
-      });
-    });
-
-    // Close dropdown when clicking outside
-    document.addEventListener("click", function (e) {
-      if (!e.target.closest(".dropdown")) {
-        document.querySelectorAll(".dropdown").forEach((d) => {
-          d.classList.remove("active");
-        });
-      }
-    });
-
     // Region tabs handler
     document.querySelectorAll(".region-tab").forEach((tab) => {
       tab.addEventListener("click", function () {
@@ -311,4 +201,7 @@
       });
     });
   </script>
+  <script src="../js/header.js"></script>
+  <script src="../js/footer.js"></script>
+  <script src="../js/i18n.js"></script>
 </html>

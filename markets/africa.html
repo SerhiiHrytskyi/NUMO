@@ -3,181 +3,73 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Africa - NUMO</title>
+    <title data-i18n="africaMarket.pageTitle">Africa - NUMO</title>
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../about.html">About Us</a></li>
-          <li class="dropdown">
-            <a href="../services/index.html" class="dropdown-toggle"
-              >Services / Solutions</a
-            >
-            <div class="dropdown-content">
-              <a href="../services/power-generation.html">Power Generation</a>
-              <a href="../services/solar-energy.html">Solar Energy</a>
-              <a href="../services/energy-storage.html">Energy Storage</a>
-              <a href="../services/hybrid-backup.html"
-                >Hybrid & Backup Solutions</a
-              >
-              <a href="../services/project-coordination.html"
-                >Project Coordination & Sourcing</a
-              >
-              <a href="../services/supplier-matching.html"
-                >Supplier & Client Matching</a
-              >
-              <a href="../services/consulting.html">Consulting & Feasibility</a>
-            </div>
-          </li>
-          <li class="dropdown">
-            <a href="index.html" class="dropdown-toggle">Markets / Regions</a>
-            <div class="dropdown-content">
-              <a href="europe.html">Europe</a>
-              <a href="ukraine.html">Ukraine</a>
-              <a href="africa.html">Africa</a>
-            </div>
-          </li>
-          <li><a href="../how-we-work.html">How We Work</a></li>
-          <li><a href="../partners.html">Partners</a></li>
-          <li><a href="../projects.html">Projects / Use Cases</a></li>
-          <li><a href="../faq.html">FAQ</a></li>
-          <li><a href="../contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+    <div id="header-placeholder"></div>
 
     <main>
-      <h1>🌍 Africa</h1>
+      <h1 data-i18n="africaMarket.heroTitle">🌍 Africa</h1>
 
       <section class="market-detail">
-        <h2>Africa</h2>
+        <h2 data-i18n="africaMarket.marketTitle">Africa</h2>
 
         <div class="market-section">
-          <h3>Context</h3>
-          <p>
+          <h3 data-i18n="africaMarket.contextTitle">Context</h3>
+          <p data-i18n="africaMarket.contextText">
             Many African projects operate in off-grid or unstable grid
             environments, where reliability and logistics are key.
           </p>
         </div>
 
         <div class="market-section">
-          <h3>Focus areas</h3>
+          <h3 data-i18n="africaMarket.focusTitle">Focus areas</h3>
           <ul>
-            <li>off-grid and hybrid energy systems</li>
-            <li>industrial and agricultural power supply</li>
-            <li>infrastructure and remote site solutions</li>
+            <li data-i18n="africaMarket.focus1">off-grid and hybrid energy systems</li>
+            <li data-i18n="africaMarket.focus2">industrial and agricultural power supply</li>
+            <li data-i18n="africaMarket.focus3">infrastructure and remote site solutions</li>
           </ul>
         </div>
 
         <div class="market-section">
-          <h3>Our approach in Africa</h3>
+          <h3 data-i18n="africaMarket.approachTitle">Our approach in Africa</h3>
           <ul>
-            <li>practical and robust solution design</li>
-            <li>hybrid systems combining solar, storage and generators</li>
-            <li>coordination of complex logistics</li>
-            <li>collaboration with local partners</li>
+            <li data-i18n="africaMarket.approach1">practical and robust solution design</li>
+            <li data-i18n="africaMarket.approach2">hybrid systems combining solar, storage and generators</li>
+            <li data-i18n="africaMarket.approach3">coordination of complex logistics</li>
+            <li data-i18n="africaMarket.approach4">collaboration with local partners</li>
           </ul>
         </div>
 
         <div class="market-section">
-          <h3>Typical formats</h3>
+          <h3 data-i18n="africaMarket.formatsTitle">Typical formats</h3>
           <ul>
-            <li>full coordination of hybrid energy concepts</li>
-            <li>supplier and technology matching</li>
-            <li>early-stage feasibility and project structuring</li>
+            <li data-i18n="africaMarket.format1">full coordination of hybrid energy concepts</li>
+            <li data-i18n="africaMarket.format2">supplier and technology matching</li>
+            <li data-i18n="africaMarket.format3">early-stage feasibility and project structuring</li>
           </ul>
         </div>
 
         <div class="market-section cta">
-          <h3>Ready to discuss your African project?</h3>
-          <p>
+          <h3 data-i18n="africaMarket.ctaTitle">Ready to discuss your African project?</h3>
+          <p data-i18n="africaMarket.ctaText">
             Contact us to explore how we can coordinate energy solutions for
             your specific conditions.
           </p>
-          <a href="../contact.html" class="btn-primary">Get in touch</a>
+          <a href="../contact.html" class="btn-primary" data-i18n="africaMarket.ctaButton">Get in touch</a>
         </div>
       </section>
 
       <div class="back-to-markets">
-        <a href="index.html">← Back to Markets & Regions</a>
+        <a href="index.html" data-i18n="africaMarket.backLink">← Back to Markets & Regions</a>
       </div>
     </main>
 
-    <footer>
-      <p>&copy; 2026 NUMO. All rights reserved.</p>
-      <p>
-        <a href="../legal/imprint.html" style="color: white; margin: 0 1rem"
-          >Imprint</a
-        >
-        <a href="../legal/privacy.html" style="color: white; margin: 0 1rem"
-          >Privacy Policy</a
-        >
-        <a href="../legal/terms.html" style="color: white; margin: 0 1rem"
-          >Terms of Use</a
-        >
-      </p>
-    </footer>
+    <div id="footer-placeholder"></div>
+
+    <script src="../js/header.js"></script>
+    <script src="../js/footer.js"></script>
+    <script src="../js/i18n.js"></script>
   </body>
-
-  <script>
-    // Dropdown menu handler with navigation support
-    let lastClickedToggle = null;
-    let clickCount = 0;
-    let clickTimer = null;
-
-    document.querySelectorAll(".dropdown-toggle").forEach((toggle) => {
-      toggle.addEventListener("click", function (e) {
-        const dropdown = this.closest(".dropdown");
-        const currentUrl = this.getAttribute("href");
-
-        // If same toggle clicked within 300ms - navigate
-        if (lastClickedToggle === this && clickCount === 1) {
-          clickCount = 0;
-          window.location.href = currentUrl;
-          return;
-        }
-
-        // First click - toggle dropdown
-        e.preventDefault();
-        lastClickedToggle = this;
-        clickCount = 1;
-
-        // Close other dropdowns
-        document.querySelectorAll(".dropdown").forEach((d) => {
-          if (d !== dropdown) {
-            d.classList.remove("active");
-          }
-        });
-
-        // Toggle current dropdown
-        dropdown.classList.toggle("active");
-
-        // Reset click count after 300ms
-        clearTimeout(clickTimer);
-        clickTimer = setTimeout(() => {
-          clickCount = 0;
-          lastClickedToggle = null;
-        }, 300);
-      });
-    });
-
-    // Close dropdown when clicking on a link
-    document.querySelectorAll(".dropdown-content a").forEach((link) => {
-      link.addEventListener("click", function () {
-        this.closest(".dropdown").classList.remove("active");
-      });
-    });
-
-    // Close dropdown when clicking outside
-    document.addEventListener("click", function (e) {
-      if (!e.target.closest(".dropdown")) {
-        document.querySelectorAll(".dropdown").forEach((d) => {
-          d.classList.remove("active");
-        });
-      }
-    });
-  </script>
 </html>
