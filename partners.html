@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Partners - NUMO</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/seo.js"></script>
   </head>
   <body>
     <div id="header-placeholder"></div>
@@ -121,7 +122,10 @@
 
         <form class="partner-form" action="#" method="POST">
           <div class="form-group">
-            <label for="company-name"><span data-i18n="partners.formCompanyName">Company Name</span> <span data-i18n="partners.formRequired">*</span></label>
+            <label for="company-name"
+              ><span data-i18n="partners.formCompanyName">Company Name</span>
+              <span data-i18n="partners.formRequired">*</span></label
+            >
             <input
               type="text"
               id="company-name"
@@ -133,20 +137,46 @@
           </div>
 
           <div class="form-group">
-            <label for="role"><span data-i18n="partners.formRole">Role</span> <span data-i18n="partners.formRequired">*</span></label>
+            <label for="role"
+              ><span data-i18n="partners.formRole">Role</span>
+              <span data-i18n="partners.formRequired">*</span></label
+            >
             <select id="role" name="role" required>
-              <option value="" data-i18n="partners.formSelectRole">Select your role</option>
-              <option value="manufacturer" data-i18n="partners.formRoleManufacturer">Manufacturer</option>
-              <option value="distributor" data-i18n="partners.formRoleDistributor">Distributor/Supplier</option>
-              <option value="epc" data-i18n="partners.formRoleEpc">EPC/Contractor</option>
-              <option value="logistics" data-i18n="partners.formRoleLogistics">Logistics Partner</option>
-              <option value="local" data-i18n="partners.formRoleLocal">Local Representative</option>
-              <option value="other" data-i18n="partners.formRoleOther">Other</option>
+              <option value="" data-i18n="partners.formSelectRole">
+                Select your role
+              </option>
+              <option
+                value="manufacturer"
+                data-i18n="partners.formRoleManufacturer"
+              >
+                Manufacturer
+              </option>
+              <option
+                value="distributor"
+                data-i18n="partners.formRoleDistributor"
+              >
+                Distributor/Supplier
+              </option>
+              <option value="epc" data-i18n="partners.formRoleEpc">
+                EPC/Contractor
+              </option>
+              <option value="logistics" data-i18n="partners.formRoleLogistics">
+                Logistics Partner
+              </option>
+              <option value="local" data-i18n="partners.formRoleLocal">
+                Local Representative
+              </option>
+              <option value="other" data-i18n="partners.formRoleOther">
+                Other
+              </option>
             </select>
           </div>
 
           <div class="form-group">
-            <label for="region"><span data-i18n="partners.formRegion">Region</span> <span data-i18n="partners.formRequired">*</span></label>
+            <label for="region"
+              ><span data-i18n="partners.formRegion">Region</span>
+              <span data-i18n="partners.formRequired">*</span></label
+            >
             <input
               type="text"
               id="region"
@@ -158,7 +188,10 @@
           </div>
 
           <div class="form-group">
-            <label for="contact"><span data-i18n="partners.formContact">Contact</span> <span data-i18n="partners.formRequired">*</span></label>
+            <label for="contact"
+              ><span data-i18n="partners.formContact">Contact</span>
+              <span data-i18n="partners.formRequired">*</span></label
+            >
             <input
               type="email"
               id="contact"
@@ -170,7 +203,9 @@
           </div>
 
           <div class="form-group">
-            <label for="message" data-i18n="partners.formMessage">Message</label>
+            <label for="message" data-i18n="partners.formMessage"
+              >Message</label
+            >
             <textarea
               id="message"
               name="message"
@@ -180,14 +215,27 @@
             ></textarea>
           </div>
 
-          <button type="submit" class="btn-primary" data-i18n="partners.formSubmit">Submit your company</button>
+          <button
+            type="submit"
+            class="btn-primary"
+            data-i18n="partners.formSubmit"
+          >
+            Submit your company
+          </button>
         </form>
       </section>
 
       <!-- Section 5: CTA -->
       <section class="cta-section">
-        <h2 data-i18n="partners.ctaTitle">Let's Build Reliable Energy Projects Together</h2>
-        <a href="contact.html" class="btn-primary" data-i18n="partners.ctaButton">Contact us</a>
+        <h2 data-i18n="partners.ctaTitle">
+          Let's Build Reliable Energy Projects Together
+        </h2>
+        <a
+          href="contact.html"
+          class="btn-primary"
+          data-i18n="partners.ctaButton"
+          >Contact us</a
+        >
       </section>
     </main>
 

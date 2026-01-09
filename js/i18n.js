@@ -15,12 +15,13 @@ class I18n {
   async loadTranslations(lang) {
     try {
       // Determine the correct path to translations based on current location
-      const basePath = window.location.pathname.includes('/services/') || 
-                       window.location.pathname.includes('/markets/') || 
-                       window.location.pathname.includes('/legal/') 
-                       ? '../js/translations/' 
-                       : '/js/translations/';
-      
+      const basePath =
+        window.location.pathname.includes("/services/") ||
+        window.location.pathname.includes("/markets/") ||
+        window.location.pathname.includes("/legal/")
+          ? "../js/translations/"
+          : "/js/translations/";
+
       const response = await fetch(`${basePath}${lang}.json`);
       this.translations = await response.json();
       this.currentLang = lang;
@@ -40,9 +41,13 @@ class I18n {
     this.applyTranslations();
     this.updateLanguageSwitcher();
     localStorage.setItem("language", lang);
+    localStorage.setItem("selectedLanguage", lang);
 
     // Update HTML lang attribute
     document.documentElement.lang = lang;
+
+    // Dispatch custom event for SEO module
+    window.dispatchEvent(new CustomEvent('languageChanged', { detail: { lang } }));
   }
 
   applyTranslations() {

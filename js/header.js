@@ -1,7 +1,7 @@
 // Header component with navigation and language switcher
-function createHeader(basePath = '') {
-  const header = document.createElement('header');
-  
+function createHeader(basePath = "") {
+  const header = document.createElement("header");
+
   header.innerHTML = `
     <nav>
       <ul>
@@ -47,27 +47,31 @@ function createHeader(basePath = '') {
       </ul>
     </nav>
   `;
-  
+
   return header;
 }
 
 // Initialize header on page load
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function () {
   // Determine base path based on current location
   const path = window.location.pathname;
-  let basePath = '';
-  
-  if (path.includes('/services/') || path.includes('/markets/') || path.includes('/legal/')) {
-    basePath = '../';
+  let basePath = "";
+
+  if (
+    path.includes("/services/") ||
+    path.includes("/markets/") ||
+    path.includes("/legal/")
+  ) {
+    basePath = "../";
   }
-  
+
   // Insert header
-  const headerPlaceholder = document.getElementById('header-placeholder');
+  const headerPlaceholder = document.getElementById("header-placeholder");
   if (headerPlaceholder) {
     const header = createHeader(basePath);
     headerPlaceholder.replaceWith(header);
   }
-  
+
   // Initialize dropdown handlers
   initDropdowns();
 });
@@ -78,10 +82,10 @@ function initDropdowns() {
   let clickCount = 0;
   let clickTimer = null;
 
-  document.querySelectorAll('.dropdown-toggle').forEach((toggle) => {
-    toggle.addEventListener('click', function (e) {
-      const dropdown = this.closest('.dropdown');
-      const currentUrl = this.getAttribute('href');
+  document.querySelectorAll(".dropdown-toggle").forEach((toggle) => {
+    toggle.addEventListener("click", function (e) {
+      const dropdown = this.closest(".dropdown");
+      const currentUrl = this.getAttribute("href");
 
       // If same toggle clicked within 300ms - navigate
       if (lastClickedToggle === this && clickCount === 1) {
@@ -96,14 +100,14 @@ function initDropdowns() {
       clickCount = 1;
 
       // Close other dropdowns
-      document.querySelectorAll('.dropdown').forEach((d) => {
+      document.querySelectorAll(".dropdown").forEach((d) => {
         if (d !== dropdown) {
-          d.classList.remove('active');
+          d.classList.remove("active");
         }
       });
 
       // Toggle current dropdown
-      dropdown.classList.toggle('active');
+      dropdown.classList.toggle("active");
 
       // Reset click count after 300ms
       clearTimeout(clickTimer);
@@ -115,17 +119,17 @@ function initDropdowns() {
   });
 
   // Close dropdown when clicking on a link
-  document.querySelectorAll('.dropdown-content a').forEach((link) => {
-    link.addEventListener('click', function () {
-      this.closest('.dropdown').classList.remove('active');
+  document.querySelectorAll(".dropdown-content a").forEach((link) => {
+    link.addEventListener("click", function () {
+      this.closest(".dropdown").classList.remove("active");
     });
   });
 
   // Close dropdown when clicking outside
-  document.addEventListener('click', function (e) {
-    if (!e.target.closest('.dropdown')) {
-      document.querySelectorAll('.dropdown').forEach((d) => {
-        d.classList.remove('active');
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest(".dropdown")) {
+      document.querySelectorAll(".dropdown").forEach((d) => {
+        d.classList.remove("active");
       });
     }
   });

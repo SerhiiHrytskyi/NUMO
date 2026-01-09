@@ -435,7 +435,8 @@
     "need3": "Netzverfügbarkeit",
     "need4": "Projektziele (Kosten, Unabhängigkeit, Backup)",
     "ctaTitle": "Lassen Sie Uns Ihre Solarlösung Entwerfen",
-    "ctaButton": "PV-Lösung besprechen"  },
+    "ctaButton": "PV-Lösung besprechen"
+  },
   "energyStorage": {
     "heroTitle": "Energiespeicherung (Batterien & BESS)",
     "heroText": "Wir koordinieren Batterie- und Energiespeicherlösungen für Notstromversorgung, Lastausgleich und Hybrid-Energiesysteme.",
@@ -453,7 +454,8 @@
     "need2": "Leistungs- und Kapazitätsziele",
     "need3": "Integrationskontext (Solar, Generator, Netz)",
     "ctaTitle": "Lassen Sie uns Ihr Energiespeichersystem planen",
-    "ctaButton": "Speicherkoordination anfordern"  },
+    "ctaButton": "Speicherkoordination anfordern"
+  },
   "hybridBackup": {
     "title": "Hybrid- und Backup-Energielösungen",
     "heroSubtitle": "Wir koordinieren hybride Energiesysteme, die Generatoren, Solar-PV und Energiespeicher kombinieren, um Zuverlässigkeit, Effizienz und betriebliche Flexibilität zu gewährleisten.",
@@ -592,7 +594,8 @@
     "crossRegionalText2": "Dies ermöglicht es Kunden und Partnern, grenzüberschreitend effizienter zu arbeiten.",
     "ctaTitle": "Lassen Sie Uns Über Ihr Regionales Projekt Sprechen",
     "ctaText": "Wenn Ihr Projekt mehrere Regionen oder anspruchsvolle Umgebungen umfasst, können wir dabei helfen, die richtige Energielösung zu koordinieren.",
-    "ctaButton": "Projekt besprechen"  },
+    "ctaButton": "Projekt besprechen"
+  },
   "europeMarket": {
     "pageTitle": "Europa - NUMO",
     "heroTitle": "🇪🇺 Europa",
