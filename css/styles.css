@@ -169,7 +169,14 @@ nav a:hover {
   transition: transform var(--transition-speed) ease;
 }
 
-.dropdown:hover .dropdown-toggle::after {
+/* Стрілка обертається на hover (desktop) або при active (mobile) */
+@media (pointer: fine) {
+  .dropdown:hover .dropdown-toggle::after {
+    transform: rotate(180deg);
+  }
+}
+
+.dropdown.active .dropdown-toggle::after {
   transform: rotate(180deg);
 }
 
@@ -184,16 +191,33 @@ nav a:hover {
   border-radius: var(--border-radius);
   top: 100%;
   left: 0;
-  margin-top: var(--spacing-sm);
-  /* Додаткове padding зверху для плавного переходу */
-  padding-top: calc(var(--spacing-md) + var(--spacing-sm));
+  margin-top: 0;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
-  pointer-events: auto;
+/* Desktop: hover логіка тільки для pointer: fine */
+@media (pointer: fine) {
+  .dropdown:hover .dropdown-content {
+    display: block;
+    pointer-events: auto;
+  }
+
+  /* Додаємо невидимий bridge між toggle та dropdown для плавного переходу */
+  .dropdown::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 8px;
+    display: none;
+  }
+
+  .dropdown:hover::after {
+    display: block;
+  }
 }
 
+/* Mobile: активна клас для touch пристроїв */
 .dropdown.active .dropdown-content {
   display: block;
   pointer-events: auto;
@@ -537,7 +561,7 @@ ul li::marker {
     background: var(--primary-light);
   }
 
-  .dropdown:hover .dropdown-content,
+  /* Mobile: тільки active клас */
   .dropdown.active .dropdown-content {
     display: block;
   }
@@ -1769,7 +1793,11 @@ ul li::marker {
 }
 
 .cookie-table thead {
-  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-light) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--primary-dark) 0%,
+    var(--primary-light) 100%
+  );
   color: white;
 }
 

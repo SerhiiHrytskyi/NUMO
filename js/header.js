@@ -76,56 +76,59 @@ document.addEventListener("DOMContentLoaded", function () {
   initDropdowns();
 });
 
-// Dropdown menu handler with navigation support
+// Dropdown menu handler - hover for desktop, tap for mobile
 function initDropdowns() {
-  let lastClickedToggle = null;
-  let clickCount = 0;
-  let clickTimer = null;
+  const isTouchDevice = window.matchMedia("(pointer: coarse)").matches;
 
-  document.querySelectorAll(".dropdown-toggle").forEach((toggle) => {
-    toggle.addEventListener("click", function (e) {
-      const dropdown = this.closest(".dropdown");
-      const currentUrl = this.getAttribute("href");
+  // Mobile: tap to toggle, tap link to navigate
+  if (isTouchDevice) {
+    document.querySelectorAll(".dropdown-toggle").forEach((toggle) => {
+      toggle.addEventListener("click", function (e) {
+        const dropdown = this.closest(".dropdown");
+        const isOpen = dropdown.classList.contains("active");
 
-      // If same toggle clicked within 300ms - navigate
-      if (lastClickedToggle === this && clickCount === 1) {
-        clickCount = 0;
-        window.location.href = currentUrl;
-        return;
-      }
+        // Close other dropdowns
+        document.querySelectorAll(".dropdown").forEach((d) => {
+          if (d !== dropdown) {
+            d.classList.remove("active");
+          }
+        });
 
-      // First click - toggle dropdown
-      e.preventDefault();
-      lastClickedToggle = this;
-      clickCount = 1;
-
-      // Close other dropdowns
-      document.querySelectorAll(".dropdown").forEach((d) => {
-        if (d !== dropdown) {
-          d.classList.remove("active");
+        // Toggle current dropdown
+        if (!isOpen) {
+          e.preventDefault();
+          dropdown.classList.add("active");
         }
+        // If already open, allow navigation
       });
-
-      // Toggle current dropdown
-      dropdown.classList.toggle("active");
-
-      // Reset click count after 300ms
-      clearTimeout(clickTimer);
-      clickTimer = setTimeout(() => {
-        clickCount = 0;
-        lastClickedToggle = null;
-      }, 300);
     });
-  });
 
-  // Close dropdown when clicking on a link
-  document.querySelectorAll(".dropdown-content a").forEach((link) => {
-    link.addEventListener("click", function () {
-      this.closest(".dropdown").classList.remove("active");
+    // Close dropdown when clicking on a link
+    document.querySelectorAll(".dropdown-content a").forEach((link) => {
+      link.addEventListener("click", function () {
+        this.closest(".dropdown").classList.remove("active");
+      });
     });
-  });
+  }
 
-  // Close dropdown when clicking outside
+  // Desktop: dropdown toggle click navigates, items close menu
+  if (!isTouchDevice) {
+    document.querySelectorAll(".dropdown-toggle").forEach((toggle) => {
+      toggle.addEventListener("click", function () {
+        // On desktop, clicking toggle navigates (hover handles dropdown)
+        // No preventDefault - allow navigation
+      });
+    });
+
+    // Close dropdown when clicking on a link
+    document.querySelectorAll(".dropdown-content a").forEach((link) => {
+      link.addEventListener("click", function () {
+        this.closest(".dropdown").classList.remove("active");
+      });
+    });
+  }
+
+  // Close dropdown when clicking outside (both desktop and mobile)
   document.addEventListener("click", function (e) {
     if (!e.target.closest(".dropdown")) {
       document.querySelectorAll(".dropdown").forEach((d) => {

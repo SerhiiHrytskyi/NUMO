@@ -5,7 +5,7 @@
 
 class CookieConsent {
   constructor() {
-    this.cookieName = 'numo_cookie_consent';
+    this.cookieName = "numo_cookie_consent";
     this.cookieExpiry = 365; // days
     this.init();
   }
@@ -20,44 +20,44 @@ class CookieConsent {
   }
 
   hasConsent() {
-    return this.getCookie(this.cookieName) === 'accepted';
+    return this.getCookie(this.cookieName) === "accepted";
   }
 
   showBanner() {
-    const currentLang = localStorage.getItem('language') || 'en';
-    
+    const currentLang = localStorage.getItem("language") || "en";
+
     const messages = {
       en: {
-        title: 'Cookie Notice',
-        text: 'We use technically necessary cookies to ensure the functionality of this website. With your consent, we also use analytics cookies to improve our service. You can change or revoke your consent at any time.',
-        acceptAll: 'Accept All',
-        acceptNecessary: 'Necessary Only',
-        settings: 'Cookie Settings',
-        moreInfo: 'Privacy Policy'
+        title: "Cookie Notice",
+        text: "We use technically necessary cookies to ensure the functionality of this website. With your consent, we also use analytics cookies to improve our service. You can change or revoke your consent at any time.",
+        acceptAll: "Accept All",
+        acceptNecessary: "Necessary Only",
+        settings: "Cookie Settings",
+        moreInfo: "Privacy Policy",
       },
       de: {
-        title: 'Cookie-Hinweis',
-        text: 'Wir verwenden technisch notwendige Cookies, um die Funktionalität dieser Website zu gewährleisten. Mit Ihrer Einwilligung nutzen wir auch Analyse-Cookies zur Verbesserung unseres Angebots. Sie können Ihre Einwilligung jederzeit ändern oder widerrufen.',
-        acceptAll: 'Alle akzeptieren',
-        acceptNecessary: 'Nur notwendige',
-        settings: 'Cookie-Einstellungen',
-        moreInfo: 'Datenschutzerklärung'
+        title: "Cookie-Hinweis",
+        text: "Wir verwenden technisch notwendige Cookies, um die Funktionalität dieser Website zu gewährleisten. Mit Ihrer Einwilligung nutzen wir auch Analyse-Cookies zur Verbesserung unseres Angebots. Sie können Ihre Einwilligung jederzeit ändern oder widerrufen.",
+        acceptAll: "Alle akzeptieren",
+        acceptNecessary: "Nur notwendige",
+        settings: "Cookie-Einstellungen",
+        moreInfo: "Datenschutzerklärung",
       },
       fr: {
-        title: 'Avis sur les cookies',
-        text: 'Nous utilisons des cookies techniquement nécessaires pour assurer le fonctionnement de ce site. Avec votre consentement, nous utilisons également des cookies d\'analyse pour améliorer notre service. Vous pouvez modifier ou révoquer votre consentement à tout moment.',
-        acceptAll: 'Tout accepter',
-        acceptNecessary: 'Nécessaires uniquement',
-        settings: 'Paramètres des cookies',
-        moreInfo: 'Politique de confidentialité'
-      }
+        title: "Avis sur les cookies",
+        text: "Nous utilisons des cookies techniquement nécessaires pour assurer le fonctionnement de ce site. Avec votre consentement, nous utilisons également des cookies d'analyse pour améliorer notre service. Vous pouvez modifier ou révoquer votre consentement à tout moment.",
+        acceptAll: "Tout accepter",
+        acceptNecessary: "Nécessaires uniquement",
+        settings: "Paramètres des cookies",
+        moreInfo: "Politique de confidentialité",
+      },
     };
 
     const msg = messages[currentLang] || messages.en;
-    
-    const banner = document.createElement('div');
-    banner.id = 'cookie-consent-banner';
-    banner.className = 'cookie-banner';
+
+    const banner = document.createElement("div");
+    banner.id = "cookie-consent-banner";
+    banner.className = "cookie-banner";
     banner.innerHTML = `
       <div class="cookie-banner-content">
         <div class="cookie-banner-text">
@@ -78,41 +78,45 @@ class CookieConsent {
     this.addStyles();
 
     // Add event listeners
-    document.getElementById('cookie-accept-all').addEventListener('click', () => {
-      this.acceptAll();
-    });
+    document
+      .getElementById("cookie-accept-all")
+      .addEventListener("click", () => {
+        this.acceptAll();
+      });
 
-    document.getElementById('cookie-accept-necessary').addEventListener('click', () => {
-      this.acceptNecessary();
-    });
+    document
+      .getElementById("cookie-accept-necessary")
+      .addEventListener("click", () => {
+        this.acceptNecessary();
+      });
   }
 
   acceptAll() {
-    this.setCookie(this.cookieName, 'accepted', this.cookieExpiry);
-    this.setCookie('numo_analytics_consent', 'accepted', this.cookieExpiry);
+    this.setCookie(this.cookieName, "accepted", this.cookieExpiry);
+    this.setCookie("numo_analytics_consent", "accepted", this.cookieExpiry);
     this.hideBanner();
     this.loadAnalytics();
   }
 
   acceptNecessary() {
-    this.setCookie(this.cookieName, 'necessary_only', this.cookieExpiry);
-    this.setCookie('numo_analytics_consent', 'rejected', this.cookieExpiry);
+    this.setCookie(this.cookieName, "necessary_only", this.cookieExpiry);
+    this.setCookie("numo_analytics_consent", "rejected", this.cookieExpiry);
     this.hideBanner();
   }
 
   hideBanner() {
-    const banner = document.getElementById('cookie-consent-banner');
+    const banner = document.getElementById("cookie-consent-banner");
     if (banner) {
-      banner.style.opacity = '0';
+      banner.style.opacity = "0";
       setTimeout(() => banner.remove(), 300);
     }
   }
 
   loadAnalytics() {
-    const analyticsConsent = this.getCookie('numo_analytics_consent');
-    if (analyticsConsent === 'accepted') {
+    const analyticsConsent = this.getCookie("numo_analytics_consent");
+    if (analyticsConsent === "accepted") {
       // Load Google Analytics or other analytics here
-      console.log('Analytics loaded (consent given)');
+      console.log("Analytics loaded (consent given)");
       // Example: Load GA4
       // const script = document.createElement('script');
       // script.src = 'https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';
@@ -123,27 +127,28 @@ class CookieConsent {
 
   setCookie(name, value, days) {
     const date = new Date();
-    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-    const expires = 'expires=' + date.toUTCString();
-    document.cookie = name + '=' + value + ';' + expires + ';path=/;SameSite=Lax';
+    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+    const expires = "expires=" + date.toUTCString();
+    document.cookie =
+      name + "=" + value + ";" + expires + ";path=/;SameSite=Lax";
   }
 
   getCookie(name) {
-    const nameEQ = name + '=';
-    const ca = document.cookie.split(';');
+    const nameEQ = name + "=";
+    const ca = document.cookie.split(";");
     for (let i = 0; i < ca.length; i++) {
       let c = ca[i];
-      while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+      while (c.charAt(0) === " ") c = c.substring(1, c.length);
       if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
     }
     return null;
   }
 
   addStyles() {
-    if (document.getElementById('cookie-consent-styles')) return;
+    if (document.getElementById("cookie-consent-styles")) return;
 
-    const style = document.createElement('style');
-    style.id = 'cookie-consent-styles';
+    const style = document.createElement("style");
+    style.id = "cookie-consent-styles";
     style.textContent = `
       .cookie-banner {
         position: fixed;
@@ -270,15 +275,15 @@ class CookieConsent {
 
   // Method to revoke consent (can be called from settings page)
   revokeConsent() {
-    this.setCookie(this.cookieName, '', -1);
-    this.setCookie('numo_analytics_consent', '', -1);
+    this.setCookie(this.cookieName, "", -1);
+    this.setCookie("numo_analytics_consent", "", -1);
     window.location.reload();
   }
 }
 
 // Initialize cookie consent when DOM is loaded
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', () => {
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", () => {
     window.cookieConsent = new CookieConsent();
   });
 } else {
