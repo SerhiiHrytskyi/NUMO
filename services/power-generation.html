@@ -7,106 +7,7 @@
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../about.html">About Us</a></li>
-          <li class="dropdown">
-            <a href="index.html" class="dropdown-toggle">Services / Solutions</a>
-            <div class="dropdown-content">
-              <a href="power-generation.html">Power Generation</a>
-              <a href="solar-energy.html">Solar Energy</a>
-              <a href="energy-storage.html">Energy Storage</a>
-              <a href="hybrid-backup.html">Hybrid & Backup Solutions</a>
-              <a href="project-coordination.html"
-                >Project Coordination & Sourcing</a
-              >
-              <a href="supplier-matching.html">Supplier & Client Matching</a>
-              <a href="consulting.html">Consulting & Feasibility</a>
-            </div>
-          </li>
-          <li class="dropdown">
-            <a href="../markets/index.html" class="dropdown-toggle">Markets / Regions</a>
-            <div class="dropdown-content">
-              <a href="../markets/europe.html">Europe</a>
-              <a href="../markets/ukraine.html">Ukraine</a>
-              <a href="../markets/africa.html">Africa</a>
-            </div>
-          </li>
-            <div class="dropdown-content">
-              <a href="../markets/europe.html">Europe</a>
-              <a href="../markets/ukraine.html">Ukraine</a>
-              <a href="../markets/africa.html">Africa</a>
-            </div>
-          </li>
-          <li><a href="../how-we-work.html">How We Work</a></li>
-          <li><a href="../partners.html">Partners</a></li>
-          <li><a href="../projects.html">Projects / Use Cases</a></li>
-          <li><a href="../faq.html">FAQ</a></li>
-          <li><a href="../contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <script>
-      // Dropdown menu handler with navigation support
-      let lastClickedToggle = null;
-      let clickCount = 0;
-      let clickTimer = null;
-      
-      document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-        toggle.addEventListener('click', function(e) {
-          const dropdown = this.closest('.dropdown');
-          const currentUrl = this.getAttribute('href');
-          
-          // If same toggle clicked within 300ms - navigate
-          if (lastClickedToggle === this && clickCount === 1) {
-            clickCount = 0;
-            window.location.href = currentUrl;
-            return;
-          }
-          
-          // First click - toggle dropdown
-          e.preventDefault();
-          lastClickedToggle = this;
-          clickCount = 1;
-          
-          // Close other dropdowns
-          document.querySelectorAll('.dropdown').forEach(d => {
-            if (d !== dropdown) {
-              d.classList.remove('active');
-            }
-          });
-          
-          // Toggle current dropdown
-          dropdown.classList.toggle('active');
-          
-          // Reset click count after 300ms
-          clearTimeout(clickTimer);
-          clickTimer = setTimeout(() => {
-            clickCount = 0;
-            lastClickedToggle = null;
-          }, 300);
-        });
-      });
-
-      // Close dropdown when clicking on a link
-      document.querySelectorAll('.dropdown-content a').forEach(link => {
-        link.addEventListener('click', function() {
-          this.closest('.dropdown').classList.remove('active');
-        });
-      });
-
-      // Close dropdown when clicking outside
-      document.addEventListener('click', function(e) {
-        if (!e.target.closest('.dropdown')) {
-          document.querySelectorAll('.dropdown').forEach(d => {
-            d.classList.remove('active');
-          });
-        }
-      });
-    </script>
+    <div id="header-placeholder"></div>
 
     <main>
       <section
@@ -118,8 +19,8 @@
         "
       >
         <div style="max-width: 1200px; margin: 0 auto; padding: 3rem 2rem">
-          <h1 style="color: white">Power Generation</h1>
-          <p style="font-size: 1.1rem; margin-top: 1rem">
+          <h1 style="color: white" data-i18n="powerGeneration.title">Power Generation</h1>
+          <p style="font-size: 1.1rem; margin-top: 1rem" data-i18n="powerGeneration.heroSubtitle">
             We coordinate generator-based power solutions for industrial,
             commercial and infrastructure applications — including backup, prime
             and continuous power scenarios.
@@ -128,31 +29,31 @@
       </section>
 
       <section>
-        <h2>Typical Applications</h2>
+        <h2 data-i18n="powerGeneration.applicationsTitle">Typical Applications</h2>
         <ul style="margin-left: 2rem">
-          <li>Backup power for facilities and businesses</li>
-          <li>Prime power for remote or unstable grids</li>
-          <li>Temporary or emergency power solutions</li>
+          <li data-i18n="powerGeneration.app1">Backup power for facilities and businesses</li>
+          <li data-i18n="powerGeneration.app2">Prime power for remote or unstable grids</li>
+          <li data-i18n="powerGeneration.app3">Temporary or emergency power solutions</li>
         </ul>
       </section>
 
       <section>
-        <h2>What We Deliver</h2>
+        <h2 data-i18n="powerGeneration.deliverTitle">What We Deliver</h2>
         <ul style="margin-left: 2rem">
-          <li>Requirements-based generator selection</li>
-          <li>Coordination with manufacturers and distributors</li>
-          <li>Alignment of technical specifications</li>
-          <li>Logistics and documentation support</li>
+          <li data-i18n="powerGeneration.deliver1">Requirements-based generator selection</li>
+          <li data-i18n="powerGeneration.deliver2">Coordination with manufacturers and distributors</li>
+          <li data-i18n="powerGeneration.deliver3">Alignment of technical specifications</li>
+          <li data-i18n="powerGeneration.deliver4">Logistics and documentation support</li>
         </ul>
       </section>
 
       <section>
-        <h2>What We Need From You</h2>
+        <h2 data-i18n="powerGeneration.needTitle">What We Need From You</h2>
         <ul style="margin-left: 2rem">
-          <li>Required power output (kW / kVA)</li>
-          <li>Usage type (backup / prime / continuous)</li>
-          <li>Location and grid conditions</li>
-          <li>Timeline and budget framework</li>
+          <li data-i18n="powerGeneration.need1">Required power output (kW / kVA)</li>
+          <li data-i18n="powerGeneration.need2">Usage type (backup / prime / continuous)</li>
+          <li data-i18n="powerGeneration.need3">Location and grid conditions</li>
+          <li data-i18n="powerGeneration.need4">Timeline and budget framework</li>
         </ul>
       </section>
 
@@ -163,26 +64,20 @@
           color: white;
         "
       >
-        <h2 style="color: white">Let's Discuss Your Power Generation Needs</h2>
-        <a href="../contact.html" class="btn btn-primary"
+        <h2 style="color: white" data-i18n="powerGeneration.ctaTitle">Let's Discuss Your Power Generation Needs</h2>
+        <a href="../contact.html" class="btn btn-primary" data-i18n="powerGeneration.ctaButton"
           >Send power requirements</a
         >
       </section>
     </main>
 
-    <footer>
-      <p>&copy; 2026 NUMO. All rights reserved.</p>
-      <p>
-        <a href="../legal/imprint.html" style="color: white; margin: 0 1rem"
-          >Imprint</a
-        >
-        <a href="../legal/privacy.html" style="color: white; margin: 0 1rem"
-          >Privacy Policy</a
-        >
-        <a href="../legal/terms.html" style="color: white; margin: 0 1rem"
-          >Terms of Use</a
-        >
-      </p>
-    </footer>
+    <div id="footer-placeholder"></div>
+
+    <script>
+      const basePath = '../';
+    </script>
+    <script src="../js/header.js"></script>
+    <script src="../js/footer.js"></script>
+    <script src="../js/i18n.js"></script>
   </body>
 </html>

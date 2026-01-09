@@ -14,7 +14,14 @@ class I18n {
 
   async loadTranslations(lang) {
     try {
-      const response = await fetch(`/js/translations/${lang}.json`);
+      // Determine the correct path to translations based on current location
+      const basePath = window.location.pathname.includes('/services/') || 
+                       window.location.pathname.includes('/markets/') || 
+                       window.location.pathname.includes('/legal/') 
+                       ? '../js/translations/' 
+                       : '/js/translations/';
+      
+      const response = await fetch(`${basePath}${lang}.json`);
       this.translations = await response.json();
       this.currentLang = lang;
     } catch (error) {

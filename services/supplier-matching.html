@@ -7,106 +7,7 @@
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../about.html">About Us</a></li>
-          <li class="dropdown">
-            <a href="index.html" class="dropdown-toggle">Services / Solutions</a>
-            <div class="dropdown-content">
-              <a href="power-generation.html">Power Generation</a>
-              <a href="solar-energy.html">Solar Energy</a>
-              <a href="energy-storage.html">Energy Storage</a>
-              <a href="hybrid-backup.html">Hybrid & Backup Solutions</a>
-              <a href="project-coordination.html"
-                >Project Coordination & Sourcing</a
-              >
-              <a href="supplier-matching.html">Supplier & Client Matching</a>
-              <a href="consulting.html">Consulting & Feasibility</a>
-            </div>
-          </li>
-          <li class="dropdown">
-            <a href="../markets/index.html" class="dropdown-toggle">Markets / Regions</a>
-            <div class="dropdown-content">
-              <a href="../markets/europe.html">Europe</a>
-              <a href="../markets/ukraine.html">Ukraine</a>
-              <a href="../markets/africa.html">Africa</a>
-            </div>
-          </li>
-            <div class="dropdown-content">
-              <a href="../markets/europe.html">Europe</a>
-              <a href="../markets/ukraine.html">Ukraine</a>
-              <a href="../markets/africa.html">Africa</a>
-            </div>
-          </li>
-          <li><a href="../how-we-work.html">How We Work</a></li>
-          <li><a href="../partners.html">Partners</a></li>
-          <li><a href="../projects.html">Projects / Use Cases</a></li>
-          <li><a href="../faq.html">FAQ</a></li>
-          <li><a href="../contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <script>
-      // Dropdown menu handler with navigation support
-      let lastClickedToggle = null;
-      let clickCount = 0;
-      let clickTimer = null;
-      
-      document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-        toggle.addEventListener('click', function(e) {
-          const dropdown = this.closest('.dropdown');
-          const currentUrl = this.getAttribute('href');
-          
-          // If same toggle clicked within 300ms - navigate
-          if (lastClickedToggle === this && clickCount === 1) {
-            clickCount = 0;
-            window.location.href = currentUrl;
-            return;
-          }
-          
-          // First click - toggle dropdown
-          e.preventDefault();
-          lastClickedToggle = this;
-          clickCount = 1;
-          
-          // Close other dropdowns
-          document.querySelectorAll('.dropdown').forEach(d => {
-            if (d !== dropdown) {
-              d.classList.remove('active');
-            }
-          });
-          
-          // Toggle current dropdown
-          dropdown.classList.toggle('active');
-          
-          // Reset click count after 300ms
-          clearTimeout(clickTimer);
-          clickTimer = setTimeout(() => {
-            clickCount = 0;
-            lastClickedToggle = null;
-          }, 300);
-        });
-      });
-
-      // Close dropdown when clicking on a link
-      document.querySelectorAll('.dropdown-content a').forEach(link => {
-        link.addEventListener('click', function() {
-          this.closest('.dropdown').classList.remove('active');
-        });
-      });
-
-      // Close dropdown when clicking outside
-      document.addEventListener('click', function(e) {
-        if (!e.target.closest('.dropdown')) {
-          document.querySelectorAll('.dropdown').forEach(d => {
-            d.classList.remove('active');
-          });
-        }
-      });
-    </script>
+    <div id="header-placeholder"></div>
 
     <main>
       <section
@@ -118,8 +19,8 @@
         "
       >
         <div style="max-width: 1200px; margin: 0 auto; padding: 3rem 2rem">
-          <h1 style="color: white">Supplier & Client Matching</h1>
-          <p style="font-size: 1.1rem; margin-top: 1rem">
+          <h1 style="color: white" data-i18n="supplierMatchingPage.title">Supplier & Client Matching</h1>
+          <p style="font-size: 1.1rem; margin-top: 1rem" data-i18n="supplierMatchingPage.heroSubtitle">
             We connect verified suppliers and manufacturers with suitable B2B
             clients and projects.
           </p>
@@ -127,32 +28,32 @@
       </section>
 
       <section>
-        <h2>Typical Scenarios</h2>
+        <h2 data-i18n="supplierMatchingPage.scenariosTitle">Typical Scenarios</h2>
         <ul style="margin-left: 2rem">
-          <li>Manufacturers entering new regions</li>
-          <li>Distributors looking for reliable projects</li>
-          <li>Clients seeking qualified suppliers</li>
+          <li data-i18n="supplierMatchingPage.scenario1">Manufacturers entering new regions</li>
+          <li data-i18n="supplierMatchingPage.scenario2">Distributors looking for reliable projects</li>
+          <li data-i18n="supplierMatchingPage.scenario3">Clients seeking qualified suppliers</li>
         </ul>
       </section>
 
       <section>
-        <h2>What We Deliver</h2>
+        <h2 data-i18n="supplierMatchingPage.deliverTitle">What We Deliver</h2>
         <ul style="margin-left: 2rem">
-          <li>Partner matching based on capabilities and requirements</li>
-          <li>Professional introduction and alignment</li>
-          <li>Support during initial project phase</li>
+          <li data-i18n="supplierMatchingPage.deliver1">Partner matching based on capabilities and requirements</li>
+          <li data-i18n="supplierMatchingPage.deliver2">Professional introduction and alignment</li>
+          <li data-i18n="supplierMatchingPage.deliver3">Support during initial project phase</li>
         </ul>
       </section>
 
       <section>
-        <h2>Who Can Benefit</h2>
+        <h2 data-i18n="supplierMatchingPage.benefitTitle">Who Can Benefit</h2>
         <p>
-          <strong>For suppliers:</strong> Access to vetted projects and clients
-          without cold outreach.
+          <strong data-i18n="supplierMatchingPage.benefitSuppliersStrong">For suppliers:</strong> <span data-i18n="supplierMatchingPage.benefitSuppliersText">Access to vetted projects and clients
+          without cold outreach.</span>
         </p>
         <p>
-          <strong>For clients:</strong> Reliable suppliers pre-qualified and
-          suited to your specific needs.
+          <strong data-i18n="supplierMatchingPage.benefitClientsStrong">For clients:</strong> <span data-i18n="supplierMatchingPage.benefitClientsText">Reliable suppliers pre-qualified and
+          suited to your specific needs.</span>
         </p>
       </section>
 
@@ -163,24 +64,15 @@
           color: white;
         "
       >
-        <h2 style="color: white">Let's Connect You With the Right Partner</h2>
-        <a href="../contact.html" class="btn btn-primary">Become a partner</a>
+        <h2 style="color: white" data-i18n="supplierMatchingPage.ctaTitle">Let's Connect You With the Right Partner</h2>
+        <a href="../contact.html" class="btn btn-primary" data-i18n="supplierMatchingPage.ctaButton">Become a partner</a>
       </section>
     </main>
 
-    <footer>
-      <p>&copy; 2026 NUMO. All rights reserved.</p>
-      <p>
-        <a href="../legal/imprint.html" style="color: white; margin: 0 1rem"
-          >Imprint</a
-        >
-        <a href="../legal/privacy.html" style="color: white; margin: 0 1rem"
-          >Privacy Policy</a
-        >
-        <a href="../legal/terms.html" style="color: white; margin: 0 1rem"
-          >Terms of Use</a
-        >
-      </p>
-    </footer>
+    <div id="footer-placeholder"></div>
+
+    <script src="../js/header.js"></script>
+    <script src="../js/footer.js"></script>
+    <script src="../js/i18n.js"></script>
   </body>
 </html>

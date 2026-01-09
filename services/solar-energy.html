@@ -7,47 +7,7 @@
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../about.html">About Us</a></li>
-          <li class="dropdown">
-            <a href="index.html" class="dropdown-toggle">Services / Solutions</a>
-            <div class="dropdown-content">
-              <a href="power-generation.html">Power Generation</a>
-              <a href="solar-energy.html">Solar Energy</a>
-              <a href="energy-storage.html">Energy Storage</a>
-              <a href="hybrid-backup.html">Hybrid & Backup Solutions</a>
-              <a href="project-coordination.html"
-                >Project Coordination & Sourcing</a
-              >
-              <a href="supplier-matching.html">Supplier & Client Matching</a>
-              <a href="consulting.html">Consulting & Feasibility</a>
-            </div>
-          </li>
-          <li class="dropdown">
-            <a href="../markets/index.html" class="dropdown-toggle">Markets / Regions</a>
-            <div class="dropdown-content">
-              <a href="../markets/europe.html">Europe</a>
-              <a href="../markets/ukraine.html">Ukraine</a>
-              <a href="../markets/africa.html">Africa</a>
-            </div>
-          </li>
-            <div class="dropdown-content">
-              <a href="../markets/europe.html">Europe</a>
-              <a href="../markets/ukraine.html">Ukraine</a>
-              <a href="../markets/africa.html">Africa</a>
-            </div>
-          </li>
-          <li><a href="../how-we-work.html">How We Work</a></li>
-          <li><a href="../partners.html">Partners</a></li>
-          <li><a href="../projects.html">Projects / Use Cases</a></li>
-          <li><a href="../faq.html">FAQ</a></li>
-          <li><a href="../contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+    <div id="header-placeholder"></div>
 
     <main>
       <section
@@ -59,8 +19,8 @@
         "
       >
         <div style="max-width: 1200px; margin: 0 auto; padding: 3rem 2rem">
-          <h1 style="color: white">Solar Energy (PV Systems)</h1>
-          <p style="font-size: 1.1rem; margin-top: 1rem">
+          <h1 style="color: white" data-i18n="solarEnergy.title">Solar Energy (PV Systems)</h1>
+          <p style="font-size: 1.1rem; margin-top: 1rem" data-i18n="solarEnergy.heroSubtitle">
             We coordinate photovoltaic solutions for on-grid, off-grid and
             hybrid applications, ensuring that system design matches real
             operating conditions.
@@ -69,31 +29,31 @@
       </section>
 
       <section>
-        <h2>Typical Applications</h2>
+        <h2 data-i18n="solarEnergy.applicationsTitle">Typical Applications</h2>
         <ul style="margin-left: 2rem">
-          <li>Commercial and industrial rooftops</li>
-          <li>Agricultural facilities</li>
-          <li>Remote and off-grid sites</li>
+          <li data-i18n="solarEnergy.app1">Commercial and industrial rooftops</li>
+          <li data-i18n="solarEnergy.app2">Agricultural facilities</li>
+          <li data-i18n="solarEnergy.app3">Remote and off-grid sites</li>
         </ul>
       </section>
 
       <section>
-        <h2>What We Deliver</h2>
+        <h2 data-i18n="solarEnergy.deliverTitle">What We Deliver</h2>
         <ul style="margin-left: 2rem">
-          <li>Concept-level PV system design</li>
-          <li>Sourcing of PV modules, inverters and BOS</li>
-          <li>Coordination with EPC and local partners</li>
-          <li>Feasibility and integration support</li>
+          <li data-i18n="solarEnergy.deliver1">Concept-level PV system design</li>
+          <li data-i18n="solarEnergy.deliver2">Sourcing of PV modules, inverters and BOS</li>
+          <li data-i18n="solarEnergy.deliver3">Coordination with EPC and local partners</li>
+          <li data-i18n="solarEnergy.deliver4">Feasibility and integration support</li>
         </ul>
       </section>
 
       <section>
-        <h2>What We Need From You</h2>
+        <h2 data-i18n="solarEnergy.needTitle">What We Need From You</h2>
         <ul style="margin-left: 2rem">
-          <li>Location and site conditions</li>
-          <li>Energy consumption profile</li>
-          <li>Grid availability</li>
-          <li>Project objectives (cost, independence, backup)</li>
+          <li data-i18n="solarEnergy.need1">Location and site conditions</li>
+          <li data-i18n="solarEnergy.need2">Energy consumption profile</li>
+          <li data-i18n="solarEnergy.need3">Grid availability</li>
+          <li data-i18n="solarEnergy.need4">Project objectives (cost, independence, backup)</li>
         </ul>
       </section>
 
@@ -104,85 +64,17 @@
           color: white;
         "
       >
-        <h2 style="color: white">Let's Design Your Solar Solution</h2>
-        <a href="../contact.html" class="btn btn-primary"
+        <h2 style="color: white" data-i18n="solarEnergy.ctaTitle">Let's Design Your Solar Solution</h2>
+        <a href="../contact.html" class="btn btn-primary" data-i18n="solarEnergy.ctaButton"
           >Discuss PV solution</a
         >
       </section>
     </main>
 
-    <footer>
-      <p>&copy; 2026 NUMO. All rights reserved.</p>
-      <p>
-        <a href="../legal/imprint.html" style="color: white; margin: 0 1rem"
-          >Imprint</a
-        >
-        <a href="../legal/privacy.html" style="color: white; margin: 0 1rem"
-          >Privacy Policy</a
-        >
-        <a href="../legal/terms.html" style="color: white; margin: 0 1rem"
-          >Terms of Use</a
-        >
-      </p>
-    </footer>
+    <div id="footer-placeholder"></div>
+
+    <script src="../js/header.js"></script>
+    <script src="../js/footer.js"></script>
+    <script src="../js/i18n.js"></script>
   </body>
-
-  <script>
-    // Dropdown menu handler with navigation support
-    let lastClickedToggle = null;
-    let clickCount = 0;
-    let clickTimer = null;
-    
-    document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-      toggle.addEventListener('click', function(e) {
-        const dropdown = this.closest('.dropdown');
-        const currentUrl = this.getAttribute('href');
-        
-        // If same toggle clicked within 300ms - navigate
-        if (lastClickedToggle === this && clickCount === 1) {
-          clickCount = 0;
-          window.location.href = currentUrl;
-          return;
-        }
-        
-        // First click - toggle dropdown
-        e.preventDefault();
-        lastClickedToggle = this;
-        clickCount = 1;
-        
-        // Close other dropdowns
-        document.querySelectorAll('.dropdown').forEach(d => {
-          if (d !== dropdown) {
-            d.classList.remove('active');
-          }
-        });
-        
-        // Toggle current dropdown
-        dropdown.classList.toggle('active');
-        
-        // Reset click count after 300ms
-        clearTimeout(clickTimer);
-        clickTimer = setTimeout(() => {
-          clickCount = 0;
-          lastClickedToggle = null;
-        }, 300);
-      });
-    });
-
-    // Close dropdown when clicking on a link
-    document.querySelectorAll('.dropdown-content a').forEach(link => {
-      link.addEventListener('click', function() {
-        this.closest('.dropdown').classList.remove('active');
-      });
-    });
-
-    // Close dropdown when clicking outside
-    document.addEventListener('click', function(e) {
-      if (!e.target.closest('.dropdown')) {
-        document.querySelectorAll('.dropdown').forEach(d => {
-          d.classList.remove('active');
-        });
-      }
-    });
-  </script>
 </html>
