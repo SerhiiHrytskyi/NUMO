@@ -226,4 +226,14 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://numo-energy.com/legal/terms.html"/>
   </url>
   
+  <url>
+    <loc>https://numo-energy.com/legal/cookies.html</loc>
+    <lastmod>2026-01-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://numo-energy.com/legal/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://numo-energy.com/legal/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://numo-energy.com/legal/cookies.html"/>
+  </url>
+  
 </urlset>

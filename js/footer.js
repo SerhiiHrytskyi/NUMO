@@ -7,6 +7,7 @@ function createFooter(basePath = "") {
     <p>
       <a href="${basePath}legal/imprint.html" style="color: white; margin: 0 1rem" data-i18n="footer.imprint">Imprint</a>
       <a href="${basePath}legal/privacy.html" style="color: white; margin: 0 1rem" data-i18n="footer.privacy">Privacy Policy</a>
+      <a href="${basePath}legal/cookies.html" style="color: white; margin: 0 1rem" data-i18n="footer.cookies">Cookie Policy</a>
       <a href="${basePath}legal/terms.html" style="color: white; margin: 0 1rem" data-i18n="footer.terms">Terms of Use</a>
     </p>
   `;

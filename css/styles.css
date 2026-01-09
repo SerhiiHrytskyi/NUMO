@@ -1753,3 +1753,118 @@ ul li::marker {
     right: auto;
   }
 }
+
+/* ========================================
+   COOKIE POLICY SPECIFIC STYLES
+   ======================================== */
+
+.cookie-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--spacing-lg) 0;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.cookie-table thead {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-light) 100%);
+  color: white;
+}
+
+.cookie-table th {
+  padding: var(--spacing-lg);
+  text-align: left;
+  font-weight: 600;
+  font-size: var(--font-size-base);
+}
+
+.cookie-table td {
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-bottom: 1px solid #e9ecef;
+  color: var(--text-dark);
+}
+
+.cookie-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.cookie-table tbody tr:hover {
+  background: #f8f9fa;
+}
+
+.cookie-settings-section {
+  margin: var(--spacing-2xl) 0;
+  padding: var(--spacing-xl);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.cookie-settings-section .cta-button {
+  background: white;
+  color: #667eea;
+  border: none;
+  padding: var(--spacing-md) var(--spacing-2xl);
+  font-size: var(--font-size-large);
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cookie-settings-section .cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Last Updated Timestamp */
+.last-updated {
+  font-style: italic;
+  color: var(--text-light);
+  margin-bottom: var(--spacing-lg);
+  font-size: var(--font-size-small);
+}
+
+/* Responsive Cookie Tables */
+@media (max-width: 768px) {
+  .cookie-table {
+    font-size: var(--font-size-small);
+  }
+
+  .cookie-table th,
+  .cookie-table td {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+
+  .cookie-table thead {
+    display: none;
+  }
+
+  .cookie-table tr {
+    display: block;
+    margin-bottom: var(--spacing-md);
+    border: 1px solid #e9ecef;
+    border-radius: var(--border-radius);
+  }
+
+  .cookie-table td {
+    display: block;
+    text-align: right;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-bottom: 1px solid #f1f1f1;
+  }
+
+  .cookie-table td:last-child {
+    border-bottom: none;
+  }
+
+  .cookie-table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: 600;
+    color: var(--primary-dark);
+  }
+}

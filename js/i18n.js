@@ -47,7 +47,9 @@ class I18n {
     document.documentElement.lang = lang;
 
     // Dispatch custom event for SEO module
-    window.dispatchEvent(new CustomEvent('languageChanged', { detail: { lang } }));
+    window.dispatchEvent(
+      new CustomEvent("languageChanged", { detail: { lang } })
+    );
   }
 
   applyTranslations() {
