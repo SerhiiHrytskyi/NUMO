@@ -3,13 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NUMO - Energy Solutions</title>
-    <link rel="stylesheet" href="css/styles.css" />
+    <title>NUMO - Energy Solutions Coordinator</title>
+    <link rel="stylesheet" href="css/design-system.css" />
+    <link rel="stylesheet" href="css/pages.css" />
     <script src="js/seo.js"></script>
   </head>
   <body>
     <header>
-      <nav>
+      <div class="container">
+        <nav>
         <ul>
           <li><a href="index.html" data-i18n="nav.home">Home</a></li>
           <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
@@ -100,318 +102,326 @@
           </li>
         </ul>
       </nav>
+      </div>
     </header>
 
     <main>
       <!-- HERO SECTION -->
-      <div class="hero">
-        <h1 data-i18n="home.heroTitle">
-          We Coordinate Energy Solutions — Not Just Equipment
-        </h1>
-        <p data-i18n="home.heroText">
-          We connect clients, suppliers and technologies to deliver reliable
-          power, solar and hybrid energy solutions across Europe, Ukraine and
-          Africa.
-        </p>
-        <div>
-          <a
-            href="contact.html"
-            class="btn btn-primary"
-            data-i18n="home.btnDiscuss"
-            >Discuss a project</a
-          >
-          <a
-            href="contact.html"
-            class="btn btn-secondary"
-            data-i18n="home.btnRequirements"
-            >Send requirements</a
-          >
+      <section class="hero">
+        <div class="hero__content">
+          <h1 class="hero__title" data-i18n="home.heroTitle">
+            We Coordinate Energy Solutions — Not Just Equipment
+          </h1>
+          <p class="hero__subtitle" data-i18n="home.heroText">
+            We connect clients, suppliers and technologies to deliver reliable
+            power, solar and hybrid energy solutions across Europe, Ukraine and
+            Africa.
+          </p>
+          <div class="hero__actions">
+            <a
+              href="contact.html"
+              class="btn btn--primary btn--large"
+              data-i18n="home.btnDiscuss"
+              >Discuss a project</a
+            >
+            <a
+              href="contact.html"
+              class="btn btn--white btn--large"
+              data-i18n="home.btnRequirements"
+              >Send requirements</a
+            >
+          </div>
         </div>
-      </div>
+      </section>
 
       <!-- WHAT WE DO -->
-      <section>
-        <h2 data-i18n="home.whatWeDoTitle">What We Do</h2>
-        <p data-i18n="home.whatWeDoP1">
-          We act as an independent Energy Solutions Coordinator and Project
-          Connector.
-        </p>
-        <p data-i18n="home.whatWeDoP2">
-          Our role is to structure energy projects, align technical solutions,
-          source reliable suppliers and coordinate all key parties — from
-          initial requirements to delivery support.
-        </p>
-        <p data-i18n="home.whatWeDoP3">
-          We do not sell equipment directly. We coordinate energy solutions.
-        </p>
+      <section class="section">
+        <div class="container">
+          <div class="intro-section">
+            <h2 data-i18n="home.whatWeDoTitle">What We Do</h2>
+            <p class="text-large" data-i18n="home.whatWeDoP1">
+              We act as an independent Energy Solutions Coordinator and Project
+              Connector.
+            </p>
+            <p data-i18n="home.whatWeDoP2">
+              Our role is to structure energy projects, align technical solutions,
+              source reliable suppliers and coordinate all key parties — from
+              initial requirements to delivery support.
+            </p>
+            <p data-i18n="home.whatWeDoP3">
+              We do not sell equipment directly. We coordinate energy solutions.
+            </p>
+          </div>
+        </div>
       </section>
 
       <!-- CORE SOLUTION AREAS -->
-      <section>
-        <h2 data-i18n="home.coreSolutionsTitle">Core Solution Areas</h2>
-        <div class="grid grid-2">
-          <div class="card">
-            <h3 class="card-title" data-i18n="home.powerGenTitle">
-              Power Generation
-            </h3>
-            <p class="card-body" data-i18n="home.powerGenText">
-              Reliable diesel and gas generator solutions for industrial,
-              commercial and remote applications.
-            </p>
-          </div>
-          <div class="card">
-            <h3 class="card-title" data-i18n="home.solarTitle">Solar Energy</h3>
-            <p class="card-body" data-i18n="home.solarText">
-              PV systems for on-grid, off-grid and hybrid projects, adapted to
-              local conditions.
-            </p>
-          </div>
-          <div class="card">
-            <h3 class="card-title" data-i18n="home.storageTitle">
-              Energy Storage
-            </h3>
-            <p class="card-body" data-i18n="home.storageText">
-              Battery and BESS solutions for backup, peak shaving and energy
-              independence.
-            </p>
-          </div>
-          <div class="card">
-            <h3 class="card-title" data-i18n="home.hybridTitle">
-              Hybrid & Backup Systems
-            </h3>
-            <p class="card-body" data-i18n="home.hybridText">
-              Integrated solutions combining generators, solar and storage.
-            </p>
-          </div>
-          <div class="card">
-            <h3 class="card-title" data-i18n="home.coordTitle">
-              Project Coordination & Sourcing
-            </h3>
-            <p class="card-body" data-i18n="home.coordText">
-              Supplier selection, technical alignment and commercial
-              coordination.
-            </p>
+      <section class="section section--gray">
+        <div class="container">
+          <h2 class="text-center" data-i18n="home.coreSolutionsTitle">Core Solution Areas</h2>
+          <div class="solutions-grid">
+            <div class="card solution-card">
+              <div class="solution-card__number">1</div>
+              <h3 class="card__title" data-i18n="home.powerGenTitle">
+                Power Generation
+              </h3>
+              <p data-i18n="home.powerGenText">
+                Reliable diesel and gas generator solutions for industrial,
+                commercial and remote applications.
+              </p>
+            </div>
+            <div class="card solution-card">
+              <div class="solution-card__number">2</div>
+              <h3 class="card__title" data-i18n="home.solarTitle">Solar Energy</h3>
+              <p data-i18n="home.solarText">
+                PV systems for on-grid, off-grid and hybrid projects, adapted to
+                local conditions.
+              </p>
+            </div>
+            <div class="card solution-card">
+              <div class="solution-card__number">3</div>
+              <h3 class="card__title" data-i18n="home.storageTitle">
+                Energy Storage
+              </h3>
+              <p data-i18n="home.storageText">
+                Battery and BESS solutions for backup, peak shaving and energy
+                independence.
+              </p>
+            </div>
+            <div class="card solution-card">
+              <div class="solution-card__number">4</div>
+              <h3 class="card__title" data-i18n="home.hybridTitle">
+                Hybrid & Backup Systems
+              </h3>
+              <p data-i18n="home.hybridText">
+                Integrated solutions combining generators, solar and storage.
+              </p>
+            </div>
+            <div class="card solution-card">
+              <div class="solution-card__number">5</div>
+              <h3 class="card__title" data-i18n="home.coordTitle">
+                Project Coordination & Sourcing
+              </h3>
+              <p data-i18n="home.coordText">
+                Supplier selection, technical alignment and commercial
+                coordination.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- HOW WE WORK -->
-      <section>
-        <h2 data-i18n="home.howWeWorkTitle">How We Work</h2>
-        <div class="grid grid-3">
-          <div class="card">
-            <h3 class="card-title" data-i18n="home.reqAnalysisTitle">
-              Requirements Analysis
-            </h3>
-            <p class="card-body" data-i18n="home.reqAnalysisText">
-              We clarify technical, operational and regional requirements.
-            </p>
-          </div>
-          <div class="card">
-            <h3 class="card-title" data-i18n="home.solutionDesignTitle">
-              Solution Design
-            </h3>
-            <p class="card-body" data-i18n="home.solutionDesignText">
-              We define suitable technical concepts and solution options.
-            </p>
-          </div>
-          <div class="card">
-            <h3 class="card-title" data-i18n="home.supplierSourcingTitle">
-              Supplier Sourcing
-            </h3>
-            <p class="card-body" data-i18n="home.supplierSourcingText">
-              We identify and verify manufacturers and distributors.
-            </p>
-          </div>
-          <div class="card">
-            <h3 class="card-title" data-i18n="home.coordAlignTitle">
-              Coordination & Alignment
-            </h3>
-            <p class="card-body" data-i18n="home.coordAlignText">
-              We align technical, commercial and logistical aspects.
-            </p>
-          </div>
-          <div class="card">
-            <h3 class="card-title" data-i18n="home.projectSupportTitle">
-              Project Support
-            </h3>
-            <p class="card-body" data-i18n="home.projectSupportText">
-              We support delivery, documentation and partner communication.
-            </p>
+      <section class="section">
+        <div class="container">
+          <h2 class="text-center" data-i18n="home.howWeWorkTitle">How We Work</h2>
+          <div class="process-grid">
+            <div class="process-step">
+              <div class="process-step__number">1</div>
+              <h3 data-i18n="home.reqAnalysisTitle">
+                Requirements Analysis
+              </h3>
+              <p data-i18n="home.reqAnalysisText">
+                We clarify technical, operational and regional requirements.
+              </p>
+            </div>
+            <div class="process-step">
+              <div class="process-step__number">2</div>
+              <h3 data-i18n="home.solutionDesignTitle">
+                Solution Design
+              </h3>
+              <p data-i18n="home.solutionDesignText">
+                We define suitable technical concepts and solution options.
+              </p>
+            </div>
+            <div class="process-step">
+              <div class="process-step__number">3</div>
+              <h3 data-i18n="home.supplierSourcingTitle">
+                Supplier Sourcing
+              </h3>
+              <p data-i18n="home.supplierSourcingText">
+                We identify and verify manufacturers and distributors.
+              </p>
+            </div>
+            <div class="process-step">
+              <div class="process-step__number">4</div>
+              <h3 data-i18n="home.coordAlignTitle">
+                Coordination & Alignment
+              </h3>
+              <p data-i18n="home.coordAlignText">
+                We align technical, commercial and logistical aspects.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- MARKETS & REGIONS -->
-      <section>
-        <h2 data-i18n="home.marketsWeWorkTitle">Markets We Work In</h2>
-        <p data-i18n="home.marketsWeWorkText">
-          We operate across multiple regions, adapting solutions to local
-          standards, logistics and project conditions.
-        </p>
-        <div class="grid grid-3">
-          <div class="card">
-            <h3 class="card-title" data-i18n="home.europeTitle">Europe</h3>
-            <p class="card-body" data-i18n="home.europeText">
-              Compliance, standards, structured procurement
-            </p>
-          </div>
-          <div class="card">
-            <h3 class="card-title" data-i18n="home.ukraineTitle">Ukraine</h3>
-            <p class="card-body" data-i18n="home.ukraineText">
-              Resilience, backup and rapid deployment
-            </p>
-          </div>
-          <div class="card">
-            <h3 class="card-title" data-i18n="home.africaTitle">Africa</h3>
-            <p class="card-body" data-i18n="home.africaText">
-              Off-grid, hybrid systems and complex logistics
-            </p>
+      <section class="section section--dark">
+        <div class="container">
+          <h2 class="text-center" data-i18n="home.marketsWeWorkTitle">Markets We Work In</h2>
+          <p class="text-center text-large" data-i18n="home.marketsWeWorkText" style="max-width: 700px; margin: 0 auto var(--space-12);">
+            We operate across multiple regions, adapting solutions to local
+            standards, logistics and project conditions.
+          </p>
+          <div class="markets-overview">
+            <div class="market-block">
+              <div class="market-block__icon">🇪🇺</div>
+              <h3 data-i18n="home.europeTitle">Europe</h3>
+              <p data-i18n="home.europeText">
+                Compliance, standards, structured procurement
+              </p>
+            </div>
+            <div class="market-block">
+              <div class="market-block__icon">🇺🇦</div>
+              <h3 data-i18n="home.ukraineTitle">Ukraine</h3>
+              <p data-i18n="home.ukraineText">
+                Resilience, backup and rapid deployment
+              </p>
+            </div>
+            <div class="market-block">
+              <div class="market-block__icon">🌍</div>
+              <h3 data-i18n="home.africaTitle">Africa</h3>
+              <p data-i18n="home.africaText">
+                Off-grid, hybrid systems and complex logistics
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- WHY WORK WITH US -->
-      <section>
-        <h2 data-i18n="home.whyWorkTitle">Why Work With Us</h2>
-        <ul style="margin-left: 2rem">
-          <li data-i18n="home.whyBenefit1">
-            Independent and solution-driven approach
-          </li>
-          <li data-i18n="home.whyBenefit2">No brand or supplier bias</li>
-          <li data-i18n="home.whyBenefit3">
-            Clear coordination and structured processes
-          </li>
-          <li data-i18n="home.whyBenefit4">
-            International sourcing experience
-          </li>
-          <li data-i18n="home.whyBenefit5">
-            Transparent communication and documentation
-          </li>
-          <li data-i18n="home.whyBenefit6">
-            Focus on long-term reliability, not short-term sales
-          </li>
-        </ul>
+      <section class="section">
+        <div class="container">
+          <h2 class="text-center" data-i18n="home.whyWorkTitle">Why Work With Us</h2>
+          <ul class="trust-grid">
+            <li class="trust-item">
+              <div class="trust-item__icon">✓</div>
+              <div class="trust-item__content">
+                <h4>Independent Approach</h4>
+                <p data-i18n="home.whyBenefit1">
+                  Independent and solution-driven approach
+                </p>
+              </div>
+            </li>
+            <li class="trust-item">
+              <div class="trust-item__icon">✓</div>
+              <div class="trust-item__content">
+                <h4>No Bias</h4>
+                <p data-i18n="home.whyBenefit2">No brand or supplier bias</p>
+              </div>
+            </li>
+            <li class="trust-item">
+              <div class="trust-item__icon">✓</div>
+              <div class="trust-item__content">
+                <h4>Clear Coordination</h4>
+                <p data-i18n="home.whyBenefit3">
+                  Clear coordination and structured processes
+                </p>
+              </div>
+            </li>
+            <li class="trust-item">
+              <div class="trust-item__icon">✓</div>
+              <div class="trust-item__content">
+                <h4>International Experience</h4>
+                <p data-i18n="home.whyBenefit4">
+                  International sourcing experience
+                </p>
+              </div>
+            </li>
+            <li class="trust-item">
+              <div class="trust-item__icon">✓</div>
+              <div class="trust-item__content">
+                <h4>Transparent Communication</h4>
+                <p data-i18n="home.whyBenefit5">
+                  Transparent communication and documentation
+                </p>
+              </div>
+            </li>
+            <li class="trust-item">
+              <div class="trust-item__icon">✓</div>
+              <div class="trust-item__content">
+                <h4>Long-term Focus</h4>
+                <p data-i18n="home.whyBenefit6">
+                  Focus on long-term reliability, not short-term sales
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <!-- USE CASES -->
-      <section>
-        <h2 data-i18n="home.useCasesTitle">Typical Use Cases</h2>
-        <ul style="margin-left: 2rem">
-          <li data-i18n="home.useCase1">
-            Backup power solutions for commercial and industrial facilities
-          </li>
-          <li data-i18n="home.useCase2">
-            Hybrid energy systems for remote or unstable grids
-          </li>
-          <li data-i18n="home.useCase3">
-            Generator and equipment sourcing for infrastructure projects
-          </li>
-          <li data-i18n="home.useCase4">
-            Solar and storage coordination for SMEs and agricultural sites
-          </li>
-        </ul>
+      <section class="section section--gray">
+        <div class="container">
+          <h2 class="text-center" data-i18n="home.useCasesTitle">Typical Use Cases</h2>
+          <ul class="service-benefits" style="max-width: 900px; margin: 0 auto;">
+            <li>
+              <span data-i18n="home.useCase1">
+                Backup power solutions for commercial and industrial facilities
+              </span>
+            </li>
+            <li>
+              <span data-i18n="home.useCase2">
+                Hybrid energy systems for remote or unstable grids
+              </span>
+            </li>
+            <li>
+              <span data-i18n="home.useCase3">
+                Generator and equipment sourcing for infrastructure projects
+              </span>
+            </li>
+            <li>
+              <span data-i18n="home.useCase4">
+                Solar and storage coordination for SMEs and agricultural sites
+              </span>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <!-- CTA SECTION -->
-      <section
-        style="
-          text-align: center;
-          background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-          color: white;
-        "
-      >
-        <h2 style="color: white" data-i18n="home.ctaFinalTitle">
-          Let's Discuss Your Energy Project
-        </h2>
-        <p data-i18n="home.ctaFinalText">
-          If you have a project, requirement or idea — we are ready to discuss
-          the most suitable and reliable energy solution.
-        </p>
-        <a
-          href="contact.html"
-          class="btn btn-primary"
-          data-i18n="home.ctaFinalBtn"
-          >Discuss a project</a
-        >
+      <section class="section">
+        <div class="container">
+          <div class="cta-section">
+            <h2 data-i18n="home.ctaFinalTitle">
+              Let's Discuss Your Energy Project
+            </h2>
+            <p data-i18n="home.ctaFinalText">
+              If you have a project, requirement or idea — we are ready to discuss
+              the most suitable and reliable energy solution.
+            </p>
+            <a
+              href="contact.html"
+              class="btn btn--primary btn--large"
+              data-i18n="home.ctaFinalBtn"
+              >Discuss a project</a
+            >
+          </div>
+        </div>
       </section>
     </main>
 
     <footer>
-      <p>&copy; 2026 NUMO. All rights reserved.</p>
-      <p>
-        <a href="legal/imprint.html" style="color: white; margin: 0 1rem"
-          >Imprint</a
-        >
-        <a href="legal/privacy.html" style="color: white; margin: 0 1rem"
-          >Privacy Policy</a
-        >
-        <a href="legal/terms.html" style="color: white; margin: 0 1rem"
-          >Terms of Use</a
-        >
-      </p>
+      <div class="container">
+        <div class="footer__bottom">
+          <p>&copy; 2026 NUMO Energy Solutions. All rights reserved.</p>
+          <p style="margin-top: var(--space-4);">
+            <a href="legal/imprint.html">Imprint</a>
+            <span style="margin: 0 var(--space-2); color: var(--gray-500);">•</span>
+            <a href="legal/privacy.html">Privacy Policy</a>
+            <span style="margin: 0 var(--space-2); color: var(--gray-500);">•</span>
+            <a href="legal/cookies.html">Cookie Policy</a>
+            <span style="margin: 0 var(--space-2); color: var(--gray-500);">•</span>
+            <a href="legal/terms.html">Terms of Use</a>
+          </p>
+        </div>
+      </div>
     </footer>
   </body>
 
-  <script>
-    // Dropdown menu handler with navigation support
-    let lastClickedToggle = null;
-    let clickCount = 0;
-    let clickTimer = null;
-
-    document.querySelectorAll(".dropdown-toggle").forEach((toggle) => {
-      toggle.addEventListener("click", function (e) {
-        const dropdown = this.closest(".dropdown");
-        const currentUrl = this.getAttribute("href");
-
-        // If same toggle clicked within 300ms - navigate
-        if (lastClickedToggle === this && clickCount === 1) {
-          clickCount = 0;
-          window.location.href = currentUrl;
-          return;
-        }
-
-        // First click - toggle dropdown
-        e.preventDefault();
-        lastClickedToggle = this;
-        clickCount = 1;
-
-        // Close other dropdowns
-        document.querySelectorAll(".dropdown").forEach((d) => {
-          if (d !== dropdown) {
-            d.classList.remove("active");
-          }
-        });
-
-        // Toggle current dropdown
-        dropdown.classList.toggle("active");
-
-        // Reset click count after 300ms
-        clearTimeout(clickTimer);
-        clickTimer = setTimeout(() => {
-          clickCount = 0;
-          lastClickedToggle = null;
-        }, 300);
-      });
-    });
-
-    // Close dropdown when clicking on a link
-    document.querySelectorAll(".dropdown-content a").forEach((link) => {
-      link.addEventListener("click", function () {
-        this.closest(".dropdown").classList.remove("active");
-      });
-    });
-
-    // Close dropdown when clicking outside
-    document.addEventListener("click", function (e) {
-      if (!e.target.closest(".dropdown")) {
-        document.querySelectorAll(".dropdown").forEach((d) => {
-          d.classList.remove("active");
-        });
-      }
-    });
-  </script>
-  <!-- Multi-language Support -->
+  <!-- Scripts -->
+  <script src="js/header.js"></script>
   <script src="js/i18n.js"></script>
   <script src="js/cookie-consent.js"></script>
 </html>
