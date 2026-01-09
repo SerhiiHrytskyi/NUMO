@@ -659,7 +659,11 @@
    ============================================================================ */
 
 .cookie-banner {
-  background: linear-gradient(135deg, var(--navy-dark), var(--graphite)) !important;
+  background: linear-gradient(
+    135deg,
+    var(--navy-dark),
+    var(--graphite)
+  ) !important;
 }
 
 .cookie-btn-primary {
@@ -681,21 +685,21 @@
     flex-direction: column;
     width: 100%;
   }
-  
+
   .hero__actions .btn {
     width: 100%;
   }
-  
+
   /* Full width cards on mobile */
   .card {
     padding: var(--space-5);
   }
-  
+
   /* Reduce hero text size */
   .hero__title {
     font-size: var(--text-3xl);
   }
-  
+
   /* Cookie table responsive */
   .cookie-table {
     display: block;
