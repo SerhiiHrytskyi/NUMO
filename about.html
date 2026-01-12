@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us - NUMO Energy Solutions</title>
+    <title>About Us - NUMO</title>
     <link rel="stylesheet" href="css/design-system.css" />
     <link rel="stylesheet" href="css/pages.css" />
     <script src="js/seo.js"></script>
@@ -13,76 +13,72 @@
       <div class="container">
         <nav>
           <ul>
-            <li><a href="index.html" data-i18n="nav.home">Home</a></li>
-            <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
-            <li class="dropdown">
+          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+          <li class="dropdown">
+            <a
+              href="services/index.html"
+              class="dropdown-toggle"
+              data-i18n="nav.services"
+              >Services / Solutions</a
+            >
+            <div class="dropdown-content">
               <a
-                href="services/index.html"
-                class="dropdown-toggle"
-                data-i18n="nav.services"
-                >Services / Solutions</a
+                href="services/power-generation.html"
+                data-i18n="services.powerGeneration"
+                >Power Generation</a
               >
-              <div class="dropdown-content">
-                <a
-                  href="services/power-generation.html"
-                  data-i18n="services.powerGeneration"
-                  >Power Generation</a
-                >
-                <a
-                  href="services/solar-energy.html"
-                  data-i18n="services.solarEnergy"
-                  >Solar Energy</a
-                >
-                <a
-                  href="services/energy-storage.html"
-                  data-i18n="services.energyStorage"
-                  >Energy Storage</a
-                >
-                <a
-                  href="services/hybrid-backup.html"
-                  data-i18n="services.hybridBackup"
-                  >Hybrid & Backup Solutions</a
-                >
-                <a
-                  href="services/project-coordination.html"
-                  data-i18n="services.projectCoordination"
-                  >Project Coordination & Sourcing</a
-                >
-                <a
-                  href="services/supplier-matching.html"
-                  data-i18n="services.supplierMatching"
-                  >Supplier & Client Matching</a
-                >
-                <a
-                  href="services/consulting.html"
-                  data-i18n="services.consulting"
-                  >Consulting & Feasibility</a
-                >
-              </div>
-            </li>
-            <li class="dropdown">
               <a
-                href="markets/index.html"
-                class="dropdown-toggle"
-                data-i18n="nav.markets"
-                >Markets / Regions</a
+                href="services/solar-energy.html"
+                data-i18n="services.solarEnergy"
+                >Solar Energy</a
               >
-              <div class="dropdown-content">
-                <a href="markets/europe.html" data-i18n="markets.europe"
-                  >Europe</a
-                >
-                <a href="markets/ukraine.html" data-i18n="markets.ukraine"
-                  >Ukraine</a
-                >
-                <a href="markets/africa.html" data-i18n="markets.africa"
-                  >Africa</a
-                >
-              </div>
-            </li>
-            <li>
-              <a href="how-we-work.html" data-i18n="nav.howWeWork"
-                >How We Work</a
+              <a
+                href="services/energy-storage.html"
+                data-i18n="services.energyStorage"
+                >Energy Storage</a
               >
+              <a
+                href="services/hybrid-backup.html"
+                data-i18n="services.hybridBackup"
+                >Hybrid & Backup Solutions</a
+              >
+              <a
+                href="services/project-coordination.html"
+                data-i18n="services.projectCoordination"
+                >Project Coordination & Sourcing</a
+              >
+              <a
+                href="services/supplier-matching.html"
+                data-i18n="services.supplierMatching"
+                >Supplier & Client Matching</a
+              >
+              <a href="services/consulting.html" data-i18n="services.consulting"
+                >Consulting & Feasibility</a
+              >
+            </div>
+          </li>
+          <li class="dropdown">
+            <a
+              href="markets/index.html"
+              class="dropdown-toggle"
+              data-i18n="nav.markets"
+              >Markets / Regions</a
+            >
+            <div class="dropdown-content">
+              <a href="markets/europe.html" data-i18n="markets.europe"
+                >Europe</a
+              >
+              <a href="markets/ukraine.html" data-i18n="markets.ukraine"
+                >Ukraine</a
+              >
+              <a href="markets/africa.html" data-i18n="markets.africa"
+                >Africa</a
+              >
+            </div>
+          </li>
+          <li>
+            <a href="how-we-work.html" data-i18n="nav.howWeWork">How We Work</a>
           </li>
           <li><a href="partners.html" data-i18n="nav.partners">Partners</a></li>
           <li>
@@ -106,100 +102,104 @@
           </li>
         </ul>
       </nav>
+      </div>
     </header>
 
     <main>
       <!-- PAGE INTRO -->
-      <section
-        style="
-          background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-          color: white;
-          padding: 3rem 0;
-          margin: -2rem -2rem 0 -2rem;
-        "
-      >
-        <div style="max-width: 1200px; margin: 0 auto; padding: 3rem 2rem">
-          <h1 style="color: white" data-i18n="about.title">About Us</h1>
-          <p
-            style="font-size: 1.1rem; margin-top: 1rem"
-            data-i18n="about.subtitle1"
-          >
-            We operate as an independent Energy Solutions Coordinator and
-            Project Connector, supporting B2B energy projects across Europe,
-            Ukraine and Africa.
-          </p>
-          <p style="font-size: 1.1rem" data-i18n="about.subtitle2">
-            Our role is to structure complex energy requirements, align suitable
-            technical solutions and coordinate reliable partners — without being
-            tied to specific brands or manufacturers.
-          </p>
+      <section class="hero">
+        <div class="container">
+          <div class="hero__content">
+            <h1 class="hero__title" data-i18n="about.title">About Us</h1>
+            <p class="hero__subtitle" data-i18n="about.subtitle1">
+              We operate as an independent Energy Solutions Coordinator and
+              Project Connector, supporting B2B energy projects across Europe,
+              Ukraine and Africa.
+            </p>
+            <p class="hero__subtitle" data-i18n="about.subtitle2">
+              Our role is to structure complex energy requirements, align suitable
+              technical solutions and coordinate reliable partners — without being
+              tied to specific brands or manufacturers.
+            </p>
+          </div>
         </div>
       </section>
 
       <!-- OUR ROLE -->
-      <section>
-        <h2 data-i18n="about.roleTitle">
-          Our Role as Energy Solutions Coordinator
-        </h2>
-        <p data-i18n="about.roleText1">
-          Modern energy projects often involve multiple stakeholders,
-          technologies and regions. Our role is to act as a neutral coordination
-          layer between clients, suppliers, contractors and logistics partners.
-        </p>
-        <p><strong data-i18n="about.roleEnsure">We ensure that:</strong></p>
-        <ul style="margin-left: 2rem">
-          <li data-i18n="about.roleItem1">
-            Technical solutions match real operational needs
-          </li>
-          <li data-i18n="about.roleItem2">
-            Suppliers are suitable and verified
-          </li>
-          <li data-i18n="about.roleItem3">
-            Commercial and logistical aspects are aligned
-          </li>
-          <li data-i18n="about.roleItem4">
-            Projects remain structured and transparent
-          </li>
-        </ul>
-        <p style="margin-top: 1.5rem">
-          <strong data-i18n="about.roleStatement"
-            >We do not sell equipment directly. We coordinate energy
-            solutions.</strong
-          >
-        </p>
+      <section class="section">
+        <div class="container">
+          <div class="intro-section">
+            <h2 data-i18n="about.roleTitle">
+              Our Role as Energy Solutions Coordinator
+            </h2>
+            <p data-i18n="about.roleText1">
+              Modern energy projects often involve multiple stakeholders,
+              technologies and regions. Our role is to act as a neutral coordination
+              layer between clients, suppliers, contractors and logistics partners.
+            </p>
+          </div>
+          <p><strong data-i18n="about.roleEnsure">We ensure that:</strong></p>
+          <ul class="service-benefits">
+            <li data-i18n="about.roleItem1">
+              Technical solutions match real operational needs
+            </li>
+            <li data-i18n="about.roleItem2">
+              Suppliers are suitable and verified
+            </li>
+            <li data-i18n="about.roleItem3">
+              Commercial and logistical aspects are aligned
+            </li>
+            <li data-i18n="about.roleItem4">
+              Projects remain structured and transparent
+            </li>
+          </ul>
+          <p style="margin-top: var(--space-6)">
+            <strong data-i18n="about.roleStatement"
+              >We do not sell equipment directly. We coordinate energy
+              solutions.</strong
+            >
+          </p>
+        </div>
       </section>
 
       <!-- WHY THIS MODEL -->
-      <section>
-        <h2 data-i18n="about.whyTitle">Why Coordination Matters</h2>
-        <p data-i18n="about.whyText1">
-          In many energy projects, the main risks arise not from technology
-          itself, but from misalignment between requirements, suppliers and
-          execution.
-        </p>
-        <p>
-          <strong data-i18n="about.whyReduce"
-            >By acting as an independent coordinator, we help reduce:</strong
-          >
-        </p>
-        <ul style="margin-left: 2rem">
-          <li data-i18n="about.whyItem1">Technical mismatches</li>
-          <li data-i18n="about.whyItem2">Procurement risks</li>
-          <li data-i18n="about.whyItem3">Supplier dependency</li>
-          <li data-i18n="about.whyItem4">Communication gaps between regions</li>
-        </ul>
-        <p style="margin-top: 1.5rem">
-          <strong data-i18n="about.whyFocus"
-            >Our focus is on reliability, clarity and long-term
-            performance.</strong
-          >
-        </p>
+      <section class="section section--gray">
+        <div class="container">
+          <div class="intro-section">
+            <h2 data-i18n="about.whyTitle">Why Coordination Matters</h2>
+            <p data-i18n="about.whyText1">
+              In many energy projects, the main risks arise not from technology
+              itself, but from misalignment between requirements, suppliers and
+              execution.
+            </p>
+          </div>
+          <p>
+            <strong data-i18n="about.whyReduce"
+              >By acting as an independent coordinator, we help reduce:</strong
+            >
+          </p>
+          <ul class="service-benefits">
+            <li data-i18n="about.whyItem1">Technical mismatches</li>
+            <li data-i18n="about.whyItem2">Procurement risks</li>
+            <li data-i18n="about.whyItem3">Supplier dependency</li>
+            <li data-i18n="about.whyItem4">Communication gaps between regions</li>
+          </ul>
+          <p style="margin-top: var(--space-6)">
+            <strong data-i18n="about.whyFocus"
+              >Our focus is on reliability, clarity and long-term
+              performance.</strong
+            >
+          </p>
+        </div>
       </section>
 
       <!-- OUR APPROACH -->
-      <section>
-        <h2 data-i18n="about.approachTitle">Our Approach</h2>
-        <ul style="margin-left: 2rem">
+      <section class="section">
+        <div class="container">
+          <div class="intro-section">
+            <h2 data-i18n="about.approachTitle">Our Approach</h2>
+          </div>
+          <ul class="service-benefits">
           <li data-i18n="about.approachItem1">
             Requirements-driven, not product-driven
           </li>
@@ -215,88 +215,84 @@
             Focus on feasibility and operational reality
           </li>
         </ul>
+        </div>
       </section>
 
       <!-- VALUES & PRINCIPLES -->
-      <section>
-        <h2 data-i18n="about.valuesTitle">Values & Principles</h2>
-        <ul style="margin-left: 2rem">
-          <li data-i18n="about.valuesItem1">Independence and neutrality</li>
-          <li data-i18n="about.valuesItem2">Transparency in coordination</li>
-          <li data-i18n="about.valuesItem3">
-            Responsibility for decisions and recommendations
-          </li>
-          <li data-i18n="about.valuesItem4">Respect for regional specifics</li>
-          <li data-i18n="about.valuesItem5">Long-term partnership mindset</li>
-          <li data-i18n="about.valuesItem6">
-            Compliance and documentation-first approach
-          </li>
-        </ul>
+      <section class="section section--gray">
+        <div class="container">
+          <div class="intro-section">
+            <h2 data-i18n="about.valuesTitle">Values & Principles</h2>
+          </div>
+          <ul class="service-benefits">
+            <li data-i18n="about.valuesItem1">Independence and neutrality</li>
+            <li data-i18n="about.valuesItem2">Transparency in coordination</li>
+            <li data-i18n="about.valuesItem3">
+              Responsibility for decisions and recommendations
+            </li>
+            <li data-i18n="about.valuesItem4">Respect for regional specifics</li>
+            <li data-i18n="about.valuesItem5">Long-term partnership mindset</li>
+            <li data-i18n="about.valuesItem6">
+              Compliance and documentation-first approach
+            </li>
+          </ul>
+        </div>
       </section>
 
       <!-- EXPERIENCE & CONTEXT -->
-      <section>
-        <h2 data-i18n="about.experienceTitle">Experience & Context</h2>
-        <p data-i18n="about.experienceText1">
-          Our experience is built across multiple regions and project
-          environments — from structured European procurement to complex and
-          developing markets.
-        </p>
-        <p data-i18n="about.experienceText2">
-          We work with manufacturers, distributors, EPC contractors and local
-          partners to ensure that energy solutions are practical, reliable and
-          suited to real-world conditions.
-        </p>
+      <section class="section">
+        <div class="container">
+          <div class="intro-section">
+            <h2 data-i18n="about.experienceTitle">Experience & Context</h2>
+            <p data-i18n="about.experienceText1">
+              Our experience is built across multiple regions and project
+              environments — from structured European procurement to complex and
+              developing markets.
+            </p>
+            <p data-i18n="about.experienceText2">
+              We work with manufacturers, distributors, EPC contractors and local
+              partners to ensure that energy solutions are practical, reliable and
+              suited to real-world conditions.
+            </p>
+          </div>
+        </div>
       </section>
 
       <!-- CTA SECTION -->
-      <section
-        style="
-          text-align: center;
-          background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-          color: white;
-        "
-      >
-        <h2 style="color: white" data-i18n="about.ctaTitle">
-          Let's Discuss Your Project
-        </h2>
-        <p data-i18n="about.ctaText">
-          If you are looking for a structured and independent coordination
-          partner for your energy project, we are ready to start the
-          conversation.
-        </p>
-        <a href="contact.html" class="btn btn-primary" data-i18n="about.ctaBtn"
-          >Discuss a project</a
-        >
+      <section class="section">
+        <div class="container">
+          <div class="cta-section">
+            <h2 data-i18n="about.ctaTitle">
+              Let's Discuss Your Project
+            </h2>
+            <p data-i18n="about.ctaText">
+              If you are looking for a structured and independent coordination
+              partner for your energy project, we are ready to start the
+              conversation.
+            </p>
+            <a href="contact.html" class="btn btn--primary" data-i18n="about.ctaBtn"
+              >Discuss a project</a
+            >
+          </div>
+        </div>
       </section>
     </main>
 
     <footer>
       <div class="container">
+        <div class="footer__content">
+          <p data-i18n="footer.rights">&copy; 2026 NUMO. All rights reserved.</p>
+        </div>
         <div class="footer__bottom">
-          <p>&copy; 2026 NUMO Energy Solutions. All rights reserved.</p>
-          <p style="margin-top: var(--space-4)">
-            <a href="legal/imprint.html">Imprint</a>
-            <span style="margin: 0 var(--space-2); color: var(--gray-500)"
-              >•</span
-            >
-            <a href="legal/privacy.html">Privacy Policy</a>
-            <span style="margin: 0 var(--space-2); color: var(--gray-500)"
-              >•</span
-            >
-            <a href="legal/cookies.html">Cookie Policy</a>
-            <span style="margin: 0 var(--space-2); color: var(--gray-500)"
-              >•</span
-            >
-            <a href="legal/terms.html">Terms of Use</a>
-          </p>
+          <a href="legal/imprint.html" data-i18n="footer.imprint">Imprint</a>
+          <a href="legal/privacy.html" data-i18n="footer.privacy">Privacy Policy</a>
+          <a href="legal/terms.html" data-i18n="footer.terms">Terms of Use</a>
         </div>
       </div>
     </footer>
-  </body>
 
-  <!-- Scripts -->
-  <script src="js/header.js"></script>
+    <script src="js/header.js"></script>
+  <!-- Multi-language Support -->
   <script src="js/i18n.js"></script>
   <script src="js/cookie-consent.js"></script>
 </html>

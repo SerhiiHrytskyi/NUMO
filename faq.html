@@ -3,128 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FAQ - NUMO Energy Solutions</title>
+    <title>FAQ - NUMO</title>
     <link rel="stylesheet" href="css/design-system.css" />
     <link rel="stylesheet" href="css/pages.css" />
     <script src="js/seo.js"></script>
   </head>
   <body>
-    <header>
-      <div class="container">
-        <nav>
-          <ul>
-            <li><a href="index.html" data-i18n="nav.home">Home</a></li>
-            <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
-            <li class="dropdown">
-              <a
-                href="services/index.html"
-                class="dropdown-toggle"
-                data-i18n="nav.services"
-                >Services / Solutions</a
-              >
-              <div class="dropdown-content">
-                <a
-                  href="services/power-generation.html"
-                  data-i18n="services.powerGeneration"
-                  >Power Generation</a
-                >
-                <a
-                  href="services/solar-energy.html"
-                  data-i18n="services.solarEnergy"
-                  >Solar Energy</a
-                >
-                <a
-                  href="services/energy-storage.html"
-                  data-i18n="services.energyStorage"
-                  >Energy Storage</a
-                >
-                <a
-                  href="services/hybrid-backup.html"
-                  data-i18n="services.hybridBackup"
-                  >Hybrid & Backup Solutions</a
-                >
-                <a
-                  href="services/project-coordination.html"
-                  data-i18n="services.projectCoordination"
-                  >Project Coordination & Sourcing</a
-                >
-                <a
-                  href="services/supplier-matching.html"
-                  data-i18n="services.supplierMatching"
-                  >Supplier & Client Matching</a
-                >
-                <a
-                  href="services/consulting.html"
-                  data-i18n="services.consulting"
-                  >Consulting & Feasibility</a
-                >
-              </div>
-            </li>
-            <li class="dropdown">
-              <a
-                href="markets/index.html"
-                class="dropdown-toggle"
-                data-i18n="nav.markets"
-                >Markets / Regions</a
-              >
-              <div class="dropdown-content">
-                <a href="markets/europe.html" data-i18n="markets.europe"
-                  >Europe</a
-                >
-                <a href="markets/ukraine.html" data-i18n="markets.ukraine"
-                  >Ukraine</a
-                >
-                <a href="markets/africa.html" data-i18n="markets.africa"
-                  >Africa</a
-                >
-              </div>
-            </li>
-            <li>
-              <a href="how-we-work.html" data-i18n="nav.howWeWork"
-                >How We Work</a
-              >
-            </li>
-            <li>
-              <a href="partners.html" data-i18n="nav.partners">Partners</a>
-            </li>
-            <li>
-              <a href="projects.html" data-i18n="nav.projects"
-                >Projects / Use Cases</a
-              >
-            </li>
-            <li><a href="faq.html" data-i18n="nav.faq">FAQ</a></li>
-            <li>
-              <a href="contact.html" data-i18n="nav.contact">Contact</a>
-            </li>
-
-            <!-- Language Switcher -->
-            <li class="dropdown language-switcher">
-              <a href="#" class="dropdown-toggle">
-                <span class="current-lang">EN</span> 🌐
-              </a>
-              <div class="dropdown-content lang-dropdown">
-                <a href="#" class="lang-option" data-lang="en">🇬🇧 English</a>
-                <a href="#" class="lang-option" data-lang="de">🇩🇪 Deutsch</a>
-                <a href="#" class="lang-option" data-lang="fr">🇫🇷 Français</a>
-              </div>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <div id="header-placeholder"></div>
 
     <main>
       <!-- Hero Section -->
-      <section class="hero-section">
-        <h1 data-i18n="faq.title">Frequently Asked Questions</h1>
-        <p data-i18n="faq.subtitle">
-          Below are answers to common questions about how we work, what we do
-          and how to start a cooperation.
-        </p>
+      <section class="hero">
+        <div class="container">
+          <div class="hero__content">
+            <h1 data-i18n="faq.title">Frequently Asked Questions</h1>
+            <p data-i18n="faq.subtitle">
+              Below are answers to common questions about how we work, what we do
+              and how to start a cooperation.
+            </p>
+          </div>
+        </div>
       </section>
 
       <!-- FAQ Section -->
-      <section class="faq-section">
+      <section class="section">
+        <div class="container">
         <div class="faq-container">
           <!-- Question 1 -->
           <article class="faq-item">
@@ -266,46 +169,31 @@
             </div>
           </article>
         </div>
+        </div>
       </section>
 
       <!-- CTA Section -->
-      <section class="cta-section">
-        <h2 data-i18n="faq.ctaTitle">Still Have Questions?</h2>
-        <p data-i18n="faq.ctaText">
-          If your question is not listed here, feel free to contact us directly.
-        </p>
-        <a href="contact.html" class="btn-primary" data-i18n="faq.ctaButton"
-          >Contact us</a
-        >
+      <section class="section section--gray">
+        <div class="container">
+          <div class="cta-section">
+            <h2 data-i18n="faq.ctaTitle">Still Have Questions?</h2>
+            <p data-i18n="faq.ctaText">
+              If your question is not listed here, feel free to contact us directly.
+            </p>
+            <a href="contact.html" class="btn btn--primary" data-i18n="faq.ctaButton"
+              >Contact us</a
+            >
+          </div>
+        </div>
       </section>
     </main>
 
-    <footer>
-      <div class="container">
-        <div class="footer__bottom">
-          <p>&copy; 2026 NUMO Energy Solutions. All rights reserved.</p>
-          <p style="margin-top: var(--space-4)">
-            <a href="legal/imprint.html">Imprint</a>
-            <span style="margin: 0 var(--space-2); color: var(--gray-500)"
-              >•</span
-            >
-            <a href="legal/privacy.html">Privacy Policy</a>
-            <span style="margin: 0 var(--space-2); color: var(--gray-500)"
-              >•</span
-            >
-            <a href="legal/cookies.html">Cookie Policy</a>
-            <span style="margin: 0 var(--space-2); color: var(--gray-500)"
-              >•</span
-            >
-            <a href="legal/terms.html">Terms of Use</a>
-          </p>
-        </div>
-      </div>
-    </footer>
+    <div id="footer-placeholder"></div>
   </body>
 
-  <!-- Scripts -->
+  <!-- Components & Internationalization -->
   <script src="js/header.js"></script>
+  <script src="js/footer.js"></script>
   <script src="js/i18n.js"></script>
   <script src="js/cookie-consent.js"></script>
 </html>
