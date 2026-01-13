@@ -3,8 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NUMO - Energy Solutions Coordinator | Power, Solar & Hybrid Systems</title>
-    <meta name="description" content="Independent Energy Solutions Coordinator connecting clients, suppliers and technologies across Europe, Ukraine and Africa. Power Generation, Solar, Storage & Hybrid Systems." />
+    <title>
+      NUMO - Energy Solutions Coordinator | Power, Solar & Hybrid Systems
+    </title>
+    <meta
+      name="description"
+      content="Independent Energy Solutions Coordinator connecting clients, suppliers and technologies across Europe, Ukraine and Africa. Power Generation, Solar, Storage & Hybrid Systems."
+    />
     <link rel="stylesheet" href="css/design-system.css" />
     <link rel="stylesheet" href="css/pages.css" />
     <style>
@@ -62,7 +67,7 @@
       }
 
       .landing-nav__link::after {
-        content: '';
+        content: "";
         position: absolute;
         bottom: -4px;
         left: 0;
@@ -111,16 +116,6 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        z-index: 0;
-      }
-
-      .hero-landing__overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(135deg, rgba(15, 28, 46, 0.8) 0%, rgba(37, 99, 235, 0.6) 100%);
         z-index: 1;
       }
 
@@ -139,15 +134,15 @@
         color: var(--white);
         margin-bottom: 1.5rem;
         line-height: 1.2;
-        text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+        text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.9), 0 0 20px rgba(0, 0, 0, 0.5);
       }
 
       .hero-landing__subtitle {
         font-size: clamp(1.1rem, 2vw, 1.4rem);
-        color: rgba(255, 255, 255, 0.95);
+        color: rgba(255, 255, 255, 0.98);
         margin-bottom: 2.5rem;
         line-height: 1.6;
-        text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9), 0 0 15px rgba(0, 0, 0, 0.5);
       }
 
       .hero-landing__actions {
@@ -200,7 +195,11 @@
       }
 
       @keyframes bounce {
-        0%, 20%, 50%, 80%, 100% {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
           transform: translateX(-50%) translateY(0);
         }
         40% {
@@ -236,7 +235,11 @@
 
       /* Stats Section */
       .stats-section {
-        background: linear-gradient(135deg, var(--blue-eu) 0%, var(--blue-eu-hover) 100%);
+        background: linear-gradient(
+          135deg,
+          var(--blue-eu) 0%,
+          var(--blue-eu-hover) 100%
+        );
         color: white;
         padding: 4rem 0;
       }
@@ -266,7 +269,7 @@
       }
 
       .timeline::before {
-        content: '';
+        content: "";
         position: absolute;
         left: 50%;
         top: 0;
@@ -350,22 +353,27 @@
     <main>
       <!-- HERO SECTION -->
       <section id="hero" class="hero-landing">
-        <img 
-          src="Image/hero_energy_1920x1080.jpg" 
-          alt="Energy Solutions" 
+        <img
+          src="Image/hero_energy_1920x1080.jpg"
+          alt="Energy Solutions"
           class="hero-landing__image"
         />
-        <div class="hero-landing__overlay"></div>
         <div class="hero-landing__content">
           <h1 class="hero-landing__title">
             We Coordinate Energy Solutions — Not Just Equipment
           </h1>
           <p class="hero-landing__subtitle">
-            Independent Energy Solutions Coordinator connecting clients, suppliers and technologies to deliver reliable power, solar and hybrid energy solutions across Europe, Ukraine and Africa.
+            Independent Energy Solutions Coordinator connecting clients,
+            suppliers and technologies to deliver reliable power, solar and
+            hybrid energy solutions across Europe, Ukraine and Africa.
           </p>
           <div class="hero-landing__actions">
-            <a href="#contact" class="btn btn--primary btn--large">Discuss a Project</a>
-            <a href="#services" class="btn btn--white btn--large">Our Services</a>
+            <a href="#contact" class="btn btn--primary btn--large"
+              >Discuss a Project</a
+            >
+            <a href="#services" class="btn btn--white btn--large"
+              >Our Services</a
+            >
           </div>
         </div>
         <div class="scroll-indicator">
@@ -381,12 +389,20 @@
           <div class="intro-section">
             <h2>About NUMO</h2>
             <p class="text-large">
-              We act as an independent Energy Solutions Coordinator and Project Connector.
+              We act as an independent Energy Solutions Coordinator and Project
+              Connector.
             </p>
             <p>
-              Our role is to structure energy projects, align technical solutions, source reliable suppliers and coordinate all key parties — from initial requirements to delivery support.
+              Our role is to structure energy projects, align technical
+              solutions, source reliable suppliers and coordinate all key
+              parties — from initial requirements to delivery support.
             </p>
-            <p><strong>We do not sell equipment directly. We coordinate energy solutions.</strong></p>
+            <p>
+              <strong
+                >We do not sell equipment directly. We coordinate energy
+                solutions.</strong
+              >
+            </p>
           </div>
         </div>
       </section>
@@ -397,7 +413,10 @@
           <div class="intro-section">
             <h2>Our Role as Energy Solutions Coordinator</h2>
             <p>
-              Modern energy projects often involve multiple stakeholders, technologies and regions. Our role is to act as a neutral coordination layer between clients, suppliers, contractors and logistics partners.
+              Modern energy projects often involve multiple stakeholders,
+              technologies and regions. Our role is to act as a neutral
+              coordination layer between clients, suppliers, contractors and
+              logistics partners.
             </p>
           </div>
           <p><strong>We ensure that:</strong></p>
@@ -414,50 +433,62 @@
       <section id="services" class="section reveal">
         <div class="container">
           <h2 class="text-center">Services & Solutions</h2>
-          <p class="text-center text-large" style="max-width: 800px; margin: 0 auto 3rem;">
-            We provide independent coordination and sourcing services for power generation, solar and hybrid energy projects.
+          <p
+            class="text-center text-large"
+            style="max-width: 800px; margin: 0 auto 3rem"
+          >
+            We provide independent coordination and sourcing services for power
+            generation, solar and hybrid energy projects.
           </p>
           <div class="solutions-grid">
             <div class="card solution-card">
-              <div style="font-size: 3rem; margin-bottom: 1rem;">⚡</div>
+              <div style="font-size: 3rem; margin-bottom: 1rem">⚡</div>
               <h3 class="card__title">Power Generation</h3>
               <p>
-                Generator-based power solutions for industrial, commercial and infrastructure applications — backup, prime and continuous power scenarios.
+                Generator-based power solutions for industrial, commercial and
+                infrastructure applications — backup, prime and continuous power
+                scenarios.
               </p>
             </div>
             <div class="card solution-card">
-              <div style="font-size: 3rem; margin-bottom: 1rem;">☀️</div>
+              <div style="font-size: 3rem; margin-bottom: 1rem">☀️</div>
               <h3 class="card__title">Solar Energy (PV Systems)</h3>
               <p>
-                Photovoltaic solutions for on-grid, off-grid and hybrid applications, ensuring system design matches real operating conditions.
+                Photovoltaic solutions for on-grid, off-grid and hybrid
+                applications, ensuring system design matches real operating
+                conditions.
               </p>
             </div>
             <div class="card solution-card">
-              <div style="font-size: 3rem; margin-bottom: 1rem;">🔋</div>
+              <div style="font-size: 3rem; margin-bottom: 1rem">🔋</div>
               <h3 class="card__title">Energy Storage (BESS)</h3>
               <p>
-                Battery and energy storage solutions for backup power, load balancing and hybrid energy systems.
+                Battery and energy storage solutions for backup power, load
+                balancing and hybrid energy systems.
               </p>
             </div>
             <div class="card solution-card">
-              <div style="font-size: 3rem; margin-bottom: 1rem;">🔄</div>
+              <div style="font-size: 3rem; margin-bottom: 1rem">🔄</div>
               <h3 class="card__title">Hybrid & Backup Solutions</h3>
               <p>
-                Integrated systems combining generators, solar PV and energy storage for reliability and operational flexibility.
+                Integrated systems combining generators, solar PV and energy
+                storage for reliability and operational flexibility.
               </p>
             </div>
             <div class="card solution-card">
-              <div style="font-size: 3rem; margin-bottom: 1rem;">🎯</div>
+              <div style="font-size: 3rem; margin-bottom: 1rem">🎯</div>
               <h3 class="card__title">Project Coordination & Sourcing</h3>
               <p>
-                Independent coordination layer between clients, suppliers, contractors and logistics partners.
+                Independent coordination layer between clients, suppliers,
+                contractors and logistics partners.
               </p>
             </div>
             <div class="card solution-card">
-              <div style="font-size: 3rem; margin-bottom: 1rem;">🤝</div>
+              <div style="font-size: 3rem; margin-bottom: 1rem">🤝</div>
               <h3 class="card__title">Supplier & Client Matching</h3>
               <p>
-                Connecting verified suppliers and manufacturers with suitable B2B clients and projects.
+                Connecting verified suppliers and manufacturers with suitable
+                B2B clients and projects.
               </p>
             </div>
           </div>
@@ -468,34 +499,55 @@
       <section id="how-we-work" class="section section--gray reveal">
         <div class="container">
           <h2 class="text-center">How We Work</h2>
-          <p class="text-center text-large" style="max-width: 700px; margin: 0 auto 3rem;">
-            Energy projects require clear structure, coordination and accountability. Our 5-step process ensures alignment from start to finish.
+          <p
+            class="text-center text-large"
+            style="max-width: 700px; margin: 0 auto 3rem"
+          >
+            Energy projects require clear structure, coordination and
+            accountability. Our 5-step process ensures alignment from start to
+            finish.
           </p>
           <div class="process-grid">
             <div class="process-step">
               <div class="process-step__number">1</div>
               <h3>Requirements Analysis</h3>
-              <p>We clarify technical, operational and regional requirements, avoiding assumptions and defining clear parameters.</p>
+              <p>
+                We clarify technical, operational and regional requirements,
+                avoiding assumptions and defining clear parameters.
+              </p>
             </div>
             <div class="process-step">
               <div class="process-step__number">2</div>
               <h3>Solution Design</h3>
-              <p>We define suitable technical concepts — generators, solar, storage or hybrid combinations — focusing on practical configurations.</p>
+              <p>
+                We define suitable technical concepts — generators, solar,
+                storage or hybrid combinations — focusing on practical
+                configurations.
+              </p>
             </div>
             <div class="process-step">
               <div class="process-step__number">3</div>
               <h3>Supplier Sourcing & Verification</h3>
-              <p>We identify and evaluate suitable manufacturers and distributors, assessing capabilities and compliance.</p>
+              <p>
+                We identify and evaluate suitable manufacturers and
+                distributors, assessing capabilities and compliance.
+              </p>
             </div>
             <div class="process-step">
               <div class="process-step__number">4</div>
               <h3>Coordination & Alignment</h3>
-              <p>We coordinate technical clarifications, commercial alignment, logistics and documentation flow.</p>
+              <p>
+                We coordinate technical clarifications, commercial alignment,
+                logistics and documentation flow.
+              </p>
             </div>
             <div class="process-step">
               <div class="process-step__number">5</div>
               <h3>Project Support & Handover</h3>
-              <p>We support delivery, documentation and transition to operation or EPC teams.</p>
+              <p>
+                We support delivery, documentation and transition to operation
+                or EPC teams.
+              </p>
             </div>
           </div>
         </div>
@@ -505,24 +557,37 @@
       <section id="markets" class="section section--dark reveal">
         <div class="container">
           <h2 class="text-center">Markets We Work In</h2>
-          <p class="text-center text-large" style="max-width: 700px; margin: 0 auto 3rem;">
-            We operate across multiple regions, adapting solutions to local standards, logistics and project conditions.
+          <p
+            class="text-center text-large"
+            style="max-width: 700px; margin: 0 auto 3rem"
+          >
+            We operate across multiple regions, adapting solutions to local
+            standards, logistics and project conditions.
           </p>
           <div class="markets-overview">
             <div class="market-block">
               <div class="market-block__icon">🇪🇺</div>
               <h3>Europe</h3>
-              <p>Compliance-driven markets with structured procurement and high technical standards.</p>
+              <p>
+                Compliance-driven markets with structured procurement and high
+                technical standards.
+              </p>
             </div>
             <div class="market-block">
               <div class="market-block__icon">🇺🇦</div>
               <h3>Ukraine</h3>
-              <p>Post-conflict reconstruction, energy independence and resilience-focused projects.</p>
+              <p>
+                Post-conflict reconstruction, energy independence and
+                resilience-focused projects.
+              </p>
             </div>
             <div class="market-block">
               <div class="market-block__icon">🌍</div>
               <h3>Africa</h3>
-              <p>Off-grid solutions, industrial power and infrastructure development in emerging markets.</p>
+              <p>
+                Off-grid solutions, industrial power and infrastructure
+                development in emerging markets.
+              </p>
             </div>
           </div>
         </div>
@@ -532,25 +597,41 @@
       <section id="projects" class="section reveal">
         <div class="container">
           <h2 class="text-center">Use Cases & Project Types</h2>
-          <p class="text-center text-large" style="max-width: 800px; margin: 0 auto 3rem;">
-            Real-world scenarios where coordination, sourcing and structured solutions deliver results.
+          <p
+            class="text-center text-large"
+            style="max-width: 800px; margin: 0 auto 3rem"
+          >
+            Real-world scenarios where coordination, sourcing and structured
+            solutions deliver results.
           </p>
           <div class="solutions-grid">
             <div class="card">
               <h3 class="card__title">🏭 Industrial Backup Power</h3>
-              <p>Manufacturing facility requires reliable backup for critical production lines during grid outages.</p>
+              <p>
+                Manufacturing facility requires reliable backup for critical
+                production lines during grid outages.
+              </p>
             </div>
             <div class="card">
               <h3 class="card__title">🏢 Hybrid Office Complex</h3>
-              <p>Office building combining solar, battery storage and grid connection for energy independence.</p>
+              <p>
+                Office building combining solar, battery storage and grid
+                connection for energy independence.
+              </p>
             </div>
             <div class="card">
               <h3 class="card__title">🌾 Agricultural Off-Grid</h3>
-              <p>Remote farm operation requiring solar + diesel hybrid system for irrigation and processing.</p>
+              <p>
+                Remote farm operation requiring solar + diesel hybrid system for
+                irrigation and processing.
+              </p>
             </div>
             <div class="card">
               <h3 class="card__title">🏗️ Construction Site Power</h3>
-              <p>Temporary but reliable power supply for multi-year infrastructure development project.</p>
+              <p>
+                Temporary but reliable power supply for multi-year
+                infrastructure development project.
+              </p>
             </div>
           </div>
         </div>
@@ -560,22 +641,38 @@
       <section class="section section--gray reveal">
         <div class="container">
           <h2 class="text-center">Why Work With Us</h2>
-          <div class="solutions-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+          <div
+            class="solutions-grid"
+            style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))"
+          >
             <div class="card">
               <h3 class="card__title">Independent & Neutral</h3>
-              <p>We are not tied to specific brands or manufacturers — our recommendations are based on your requirements, not our inventory.</p>
+              <p>
+                We are not tied to specific brands or manufacturers — our
+                recommendations are based on your requirements, not our
+                inventory.
+              </p>
             </div>
             <div class="card">
               <h3 class="card__title">Multi-Region Experience</h3>
-              <p>We understand the differences between European compliance, Ukrainian reconstruction and African infrastructure markets.</p>
+              <p>
+                We understand the differences between European compliance,
+                Ukrainian reconstruction and African infrastructure markets.
+              </p>
             </div>
             <div class="card">
               <h3 class="card__title">Coordination-First Approach</h3>
-              <p>We reduce risks by aligning all parties before commitments, not after problems arise.</p>
+              <p>
+                We reduce risks by aligning all parties before commitments, not
+                after problems arise.
+              </p>
             </div>
             <div class="card">
               <h3 class="card__title">Transparent & Structured</h3>
-              <p>Clear documentation, defined processes and open communication throughout the project lifecycle.</p>
+              <p>
+                Clear documentation, defined processes and open communication
+                throughout the project lifecycle.
+              </p>
             </div>
           </div>
         </div>
@@ -583,37 +680,106 @@
 
       <!-- FAQ SECTION -->
       <section id="faq" class="section reveal">
-        <div class="container" style="max-width: 900px;">
+        <div class="container" style="max-width: 900px">
           <h2 class="text-center">Frequently Asked Questions</h2>
-          <div style="margin-top: 3rem;">
-            <details style="margin-bottom: 1.5rem; padding: 1.5rem; background: var(--gray-50); border-radius: var(--radius-md);">
-              <summary style="font-weight: 600; cursor: pointer; font-size: 1.1rem;">Do you sell equipment directly?</summary>
-              <p style="margin-top: 1rem; color: var(--gray-700);">
-                No. We do not sell generators, solar panels or batteries directly. Our role is to coordinate energy solutions — which includes sourcing, supplier verification, technical alignment and project coordination.
+          <div style="margin-top: 3rem">
+            <details
+              style="
+                margin-bottom: 1.5rem;
+                padding: 1.5rem;
+                background: var(--gray-50);
+                border-radius: var(--radius-md);
+              "
+            >
+              <summary
+                style="font-weight: 600; cursor: pointer; font-size: 1.1rem"
+              >
+                Do you sell equipment directly?
+              </summary>
+              <p style="margin-top: 1rem; color: var(--gray-700)">
+                No. We do not sell generators, solar panels or batteries
+                directly. Our role is to coordinate energy solutions — which
+                includes sourcing, supplier verification, technical alignment
+                and project coordination.
               </p>
             </details>
-            <details style="margin-bottom: 1.5rem; padding: 1.5rem; background: var(--gray-50); border-radius: var(--radius-md);">
-              <summary style="font-weight: 600; cursor: pointer; font-size: 1.1rem;">How do you select suppliers?</summary>
-              <p style="margin-top: 1rem; color: var(--gray-700);">
-                We evaluate suppliers based on technical capability, compliance documentation, delivery track record and suitability for specific project requirements. We maintain independence and do not favor any single manufacturer.
+            <details
+              style="
+                margin-bottom: 1.5rem;
+                padding: 1.5rem;
+                background: var(--gray-50);
+                border-radius: var(--radius-md);
+              "
+            >
+              <summary
+                style="font-weight: 600; cursor: pointer; font-size: 1.1rem"
+              >
+                How do you select suppliers?
+              </summary>
+              <p style="margin-top: 1rem; color: var(--gray-700)">
+                We evaluate suppliers based on technical capability, compliance
+                documentation, delivery track record and suitability for
+                specific project requirements. We maintain independence and do
+                not favor any single manufacturer.
               </p>
             </details>
-            <details style="margin-bottom: 1.5rem; padding: 1.5rem; background: var(--gray-50); border-radius: var(--radius-md);">
-              <summary style="font-weight: 600; cursor: pointer; font-size: 1.1rem;">What regions do you operate in?</summary>
-              <p style="margin-top: 1rem; color: var(--gray-700);">
-                We primarily work across Europe (EU compliance markets), Ukraine (reconstruction & resilience projects) and Africa (off-grid & industrial power). We adapt solutions to regional standards and logistics.
+            <details
+              style="
+                margin-bottom: 1.5rem;
+                padding: 1.5rem;
+                background: var(--gray-50);
+                border-radius: var(--radius-md);
+              "
+            >
+              <summary
+                style="font-weight: 600; cursor: pointer; font-size: 1.1rem"
+              >
+                What regions do you operate in?
+              </summary>
+              <p style="margin-top: 1rem; color: var(--gray-700)">
+                We primarily work across Europe (EU compliance markets), Ukraine
+                (reconstruction & resilience projects) and Africa (off-grid &
+                industrial power). We adapt solutions to regional standards and
+                logistics.
               </p>
             </details>
-            <details style="margin-bottom: 1.5rem; padding: 1.5rem; background: var(--gray-50); border-radius: var(--radius-md);">
-              <summary style="font-weight: 600; cursor: pointer; font-size: 1.1rem;">How long does the coordination process take?</summary>
-              <p style="margin-top: 1rem; color: var(--gray-700);">
-                It depends on project complexity. Simple requirements analysis and supplier sourcing may take 1-2 weeks. Full project coordination from requirements to delivery support can range from weeks to months.
+            <details
+              style="
+                margin-bottom: 1.5rem;
+                padding: 1.5rem;
+                background: var(--gray-50);
+                border-radius: var(--radius-md);
+              "
+            >
+              <summary
+                style="font-weight: 600; cursor: pointer; font-size: 1.1rem"
+              >
+                How long does the coordination process take?
+              </summary>
+              <p style="margin-top: 1rem; color: var(--gray-700)">
+                It depends on project complexity. Simple requirements analysis
+                and supplier sourcing may take 1-2 weeks. Full project
+                coordination from requirements to delivery support can range
+                from weeks to months.
               </p>
             </details>
-            <details style="margin-bottom: 1.5rem; padding: 1.5rem; background: var(--gray-50); border-radius: var(--radius-md);">
-              <summary style="font-weight: 600; cursor: pointer; font-size: 1.1rem;">Do you provide installation or EPC services?</summary>
-              <p style="margin-top: 1rem; color: var(--gray-700);">
-                We do not provide direct installation or EPC services. However, we can coordinate with local EPC contractors, align technical specifications and support the handover process.
+            <details
+              style="
+                margin-bottom: 1.5rem;
+                padding: 1.5rem;
+                background: var(--gray-50);
+                border-radius: var(--radius-md);
+              "
+            >
+              <summary
+                style="font-weight: 600; cursor: pointer; font-size: 1.1rem"
+              >
+                Do you provide installation or EPC services?
+              </summary>
+              <p style="margin-top: 1rem; color: var(--gray-700)">
+                We do not provide direct installation or EPC services. However,
+                we can coordinate with local EPC contractors, align technical
+                specifications and support the handover process.
               </p>
             </details>
           </div>
@@ -622,27 +788,84 @@
 
       <!-- CONTACT SECTION -->
       <section id="contact" class="section section--gray reveal">
-        <div class="container" style="max-width: 800px;">
+        <div class="container" style="max-width: 800px">
           <h2 class="text-center">Get In Touch</h2>
-          <p class="text-center text-large" style="margin-bottom: 3rem;">
-            Ready to discuss your energy project? Send us your requirements and we'll get back to you within 24-48 hours.
+          <p class="text-center text-large" style="margin-bottom: 3rem">
+            Ready to discuss your energy project? Send us your requirements and
+            we'll get back to you within 24-48 hours.
           </p>
-          <form style="background: white; padding: 2rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
-            <div style="margin-bottom: 1.5rem;">
-              <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Name *</label>
-              <input type="text" required style="width: 100%; padding: 0.75rem; border: 1px solid var(--gray-300); border-radius: var(--radius-md); font-size: 1rem;">
+          <form
+            style="
+              background: white;
+              padding: 2rem;
+              border-radius: var(--radius-lg);
+              box-shadow: var(--shadow-lg);
+            "
+          >
+            <div style="margin-bottom: 1.5rem">
+              <label
+                style="display: block; margin-bottom: 0.5rem; font-weight: 600"
+                >Name *</label
+              >
+              <input
+                type="text"
+                required
+                style="
+                  width: 100%;
+                  padding: 0.75rem;
+                  border: 1px solid var(--gray-300);
+                  border-radius: var(--radius-md);
+                  font-size: 1rem;
+                "
+              />
             </div>
-            <div style="margin-bottom: 1.5rem;">
-              <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Email *</label>
-              <input type="email" required style="width: 100%; padding: 0.75rem; border: 1px solid var(--gray-300); border-radius: var(--radius-md); font-size: 1rem;">
+            <div style="margin-bottom: 1.5rem">
+              <label
+                style="display: block; margin-bottom: 0.5rem; font-weight: 600"
+                >Email *</label
+              >
+              <input
+                type="email"
+                required
+                style="
+                  width: 100%;
+                  padding: 0.75rem;
+                  border: 1px solid var(--gray-300);
+                  border-radius: var(--radius-md);
+                  font-size: 1rem;
+                "
+              />
             </div>
-            <div style="margin-bottom: 1.5rem;">
-              <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Company</label>
-              <input type="text" style="width: 100%; padding: 0.75rem; border: 1px solid var(--gray-300); border-radius: var(--radius-md); font-size: 1rem;">
+            <div style="margin-bottom: 1.5rem">
+              <label
+                style="display: block; margin-bottom: 0.5rem; font-weight: 600"
+                >Company</label
+              >
+              <input
+                type="text"
+                style="
+                  width: 100%;
+                  padding: 0.75rem;
+                  border: 1px solid var(--gray-300);
+                  border-radius: var(--radius-md);
+                  font-size: 1rem;
+                "
+              />
             </div>
-            <div style="margin-bottom: 1.5rem;">
-              <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Project Type</label>
-              <select style="width: 100%; padding: 0.75rem; border: 1px solid var(--gray-300); border-radius: var(--radius-md); font-size: 1rem;">
+            <div style="margin-bottom: 1.5rem">
+              <label
+                style="display: block; margin-bottom: 0.5rem; font-weight: 600"
+                >Project Type</label
+              >
+              <select
+                style="
+                  width: 100%;
+                  padding: 0.75rem;
+                  border: 1px solid var(--gray-300);
+                  border-radius: var(--radius-md);
+                  font-size: 1rem;
+                "
+              >
                 <option>Power Generation</option>
                 <option>Solar Energy</option>
                 <option>Energy Storage</option>
@@ -650,13 +873,32 @@
                 <option>Other</option>
               </select>
             </div>
-            <div style="margin-bottom: 1.5rem;">
-              <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Message *</label>
-              <textarea required rows="5" style="width: 100%; padding: 0.75rem; border: 1px solid var(--gray-300); border-radius: var(--radius-md); font-size: 1rem;"></textarea>
+            <div style="margin-bottom: 1.5rem">
+              <label
+                style="display: block; margin-bottom: 0.5rem; font-weight: 600"
+                >Message *</label
+              >
+              <textarea
+                required
+                rows="5"
+                style="
+                  width: 100%;
+                  padding: 0.75rem;
+                  border: 1px solid var(--gray-300);
+                  border-radius: var(--radius-md);
+                  font-size: 1rem;
+                "
+              ></textarea>
             </div>
-            <button type="submit" class="btn btn--primary btn--large" style="width: 100%;">Send Message</button>
+            <button
+              type="submit"
+              class="btn btn--primary btn--large"
+              style="width: 100%"
+            >
+              Send Message
+            </button>
           </form>
-          <div style="margin-top: 3rem; text-align: center;">
+          <div style="margin-top: 3rem; text-align: center">
             <p><strong>Direct Contact:</strong></p>
             <p>Email: info@numo-energy.com</p>
             <p>Phone: +49 XXX XXXX XXXX</p>
@@ -665,32 +907,113 @@
       </section>
 
       <!-- FOOTER -->
-      <footer style="background: var(--navy-dark); color: white; padding: 3rem 0 1rem;">
+      <footer
+        style="background: var(--navy-dark); color: white; padding: 3rem 0 1rem"
+      >
         <div class="container">
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+          <div
+            style="
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+              gap: 2rem;
+              margin-bottom: 2rem;
+            "
+          >
             <div>
-              <h3 style="margin-bottom: 1rem;">NUMO</h3>
-              <p style="opacity: 0.8;">Independent Energy Solutions Coordinator</p>
+              <h3 style="margin-bottom: 1rem">NUMO</h3>
+              <p style="opacity: 0.8">
+                Independent Energy Solutions Coordinator
+              </p>
             </div>
             <div>
-              <h4 style="margin-bottom: 1rem;">Quick Links</h4>
-              <ul style="list-style: none; padding: 0;">
-                <li style="margin-bottom: 0.5rem;"><a href="#about" style="color: rgba(255,255,255,0.8); text-decoration: none;">About</a></li>
-                <li style="margin-bottom: 0.5rem;"><a href="#services" style="color: rgba(255,255,255,0.8); text-decoration: none;">Services</a></li>
-                <li style="margin-bottom: 0.5rem;"><a href="#how-we-work" style="color: rgba(255,255,255,0.8); text-decoration: none;">Process</a></li>
-                <li style="margin-bottom: 0.5rem;"><a href="#contact" style="color: rgba(255,255,255,0.8); text-decoration: none;">Contact</a></li>
+              <h4 style="margin-bottom: 1rem">Quick Links</h4>
+              <ul style="list-style: none; padding: 0">
+                <li style="margin-bottom: 0.5rem">
+                  <a
+                    href="#about"
+                    style="
+                      color: rgba(255, 255, 255, 0.8);
+                      text-decoration: none;
+                    "
+                    >About</a
+                  >
+                </li>
+                <li style="margin-bottom: 0.5rem">
+                  <a
+                    href="#services"
+                    style="
+                      color: rgba(255, 255, 255, 0.8);
+                      text-decoration: none;
+                    "
+                    >Services</a
+                  >
+                </li>
+                <li style="margin-bottom: 0.5rem">
+                  <a
+                    href="#how-we-work"
+                    style="
+                      color: rgba(255, 255, 255, 0.8);
+                      text-decoration: none;
+                    "
+                    >Process</a
+                  >
+                </li>
+                <li style="margin-bottom: 0.5rem">
+                  <a
+                    href="#contact"
+                    style="
+                      color: rgba(255, 255, 255, 0.8);
+                      text-decoration: none;
+                    "
+                    >Contact</a
+                  >
+                </li>
               </ul>
             </div>
             <div>
-              <h4 style="margin-bottom: 1rem;">Legal</h4>
-              <ul style="list-style: none; padding: 0;">
-                <li style="margin-bottom: 0.5rem;"><a href="legal/privacy.html" style="color: rgba(255,255,255,0.8); text-decoration: none;">Privacy Policy</a></li>
-                <li style="margin-bottom: 0.5rem;"><a href="legal/terms.html" style="color: rgba(255,255,255,0.8); text-decoration: none;">Terms of Service</a></li>
-                <li style="margin-bottom: 0.5rem;"><a href="legal/imprint.html" style="color: rgba(255,255,255,0.8); text-decoration: none;">Imprint</a></li>
+              <h4 style="margin-bottom: 1rem">Legal</h4>
+              <ul style="list-style: none; padding: 0">
+                <li style="margin-bottom: 0.5rem">
+                  <a
+                    href="legal/privacy.html"
+                    style="
+                      color: rgba(255, 255, 255, 0.8);
+                      text-decoration: none;
+                    "
+                    >Privacy Policy</a
+                  >
+                </li>
+                <li style="margin-bottom: 0.5rem">
+                  <a
+                    href="legal/terms.html"
+                    style="
+                      color: rgba(255, 255, 255, 0.8);
+                      text-decoration: none;
+                    "
+                    >Terms of Service</a
+                  >
+                </li>
+                <li style="margin-bottom: 0.5rem">
+                  <a
+                    href="legal/imprint.html"
+                    style="
+                      color: rgba(255, 255, 255, 0.8);
+                      text-decoration: none;
+                    "
+                    >Imprint</a
+                  >
+                </li>
               </ul>
             </div>
           </div>
-          <div style="text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); opacity: 0.7;">
+          <div
+            style="
+              text-align: center;
+              padding-top: 2rem;
+              border-top: 1px solid rgba(255, 255, 255, 0.1);
+              opacity: 0.7;
+            "
+          >
             <p>&copy; 2024 NUMO. All rights reserved.</p>
           </div>
         </div>
@@ -699,62 +1022,62 @@
 
     <script>
       // Smooth scroll for navigation links
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
           e.preventDefault();
-          const target = document.querySelector(this.getAttribute('href'));
+          const target = document.querySelector(this.getAttribute("href"));
           if (target) {
             window.scrollTo({
               top: target.offsetTop - 80,
-              behavior: 'smooth'
+              behavior: "smooth",
             });
           }
         });
       });
 
       // Navbar scroll effect
-      const nav = document.getElementById('mainNav');
-      window.addEventListener('scroll', () => {
+      const nav = document.getElementById("mainNav");
+      window.addEventListener("scroll", () => {
         if (window.scrollY > 100) {
-          nav.classList.add('scrolled');
+          nav.classList.add("scrolled");
         } else {
-          nav.classList.remove('scrolled');
+          nav.classList.remove("scrolled");
         }
       });
 
       // Reveal sections on scroll
-      const revealElements = document.querySelectorAll('.reveal');
+      const revealElements = document.querySelectorAll(".reveal");
       const revealOnScroll = () => {
-        revealElements.forEach(element => {
+        revealElements.forEach((element) => {
           const elementTop = element.getBoundingClientRect().top;
           const windowHeight = window.innerHeight;
           if (elementTop < windowHeight - 100) {
-            element.classList.add('active');
+            element.classList.add("active");
           }
         });
       };
 
-      window.addEventListener('scroll', revealOnScroll);
+      window.addEventListener("scroll", revealOnScroll);
       revealOnScroll(); // Initial check
 
       // Active nav link on scroll
-      const sections = document.querySelectorAll('section[id]');
-      const navLinks = document.querySelectorAll('.landing-nav__link');
+      const sections = document.querySelectorAll("section[id]");
+      const navLinks = document.querySelectorAll(".landing-nav__link");
 
-      window.addEventListener('scroll', () => {
-        let current = '';
-        sections.forEach(section => {
+      window.addEventListener("scroll", () => {
+        let current = "";
+        sections.forEach((section) => {
           const sectionTop = section.offsetTop;
           const sectionHeight = section.clientHeight;
           if (window.scrollY >= sectionTop - 200) {
-            current = section.getAttribute('id');
+            current = section.getAttribute("id");
           }
         });
 
-        navLinks.forEach(link => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === `#${current}`) {
-            link.classList.add('active');
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === `#${current}`) {
+            link.classList.add("active");
           }
         });
       });
