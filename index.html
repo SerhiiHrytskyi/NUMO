@@ -98,6 +98,64 @@
         box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
       }
 
+      /* Language Switcher */
+      .language-switcher {
+        position: relative;
+        margin: 0 1rem;
+      }
+
+      .current-lang {
+        color: var(--white);
+        font-weight: 600;
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        border-radius: var(--radius-sm);
+        transition: all 0.3s ease;
+      }
+
+      .current-lang:hover {
+        border-color: var(--blue-eu);
+        background: rgba(37, 99, 235, 0.1);
+      }
+
+      .lang-dropdown {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        margin-top: 0.5rem;
+        background: var(--navy-dark);
+        border-radius: var(--radius-md);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        min-width: 80px;
+        overflow: hidden;
+        z-index: 10;
+      }
+
+      .language-switcher:hover .lang-dropdown {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .lang-option {
+        padding: 0.75rem 1rem;
+        color: var(--white);
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        text-align: center;
+      }
+
+      .lang-option:hover {
+        background: var(--blue-eu);
+      }
+
+      .lang-option.active {
+        background: rgba(37, 99, 235, 0.2);
+        color: var(--blue-eu);
+      }
+
       /* Hero Section Enhancement */
       .hero-landing {
         position: relative;
@@ -339,14 +397,22 @@
       <div class="container">
         <a href="#hero" class="landing-nav__logo">NUMO</a>
         <ul class="landing-nav__menu">
-          <li><a href="#about" class="landing-nav__link">About</a></li>
-          <li><a href="#services" class="landing-nav__link">Services</a></li>
-          <li><a href="#how-we-work" class="landing-nav__link">Process</a></li>
-          <li><a href="#markets" class="landing-nav__link">Markets</a></li>
-          <li><a href="#projects" class="landing-nav__link">Projects</a></li>
-          <li><a href="#faq" class="landing-nav__link">FAQ</a></li>
+          <li><a href="#about" class="landing-nav__link" data-i18n="nav.about">About</a></li>
+          <li><a href="#services" class="landing-nav__link" data-i18n="nav.services">Services</a></li>
+          <li><a href="#how-we-work" class="landing-nav__link" data-i18n="nav.howWeWork">Process</a></li>
+          <li><a href="#markets" class="landing-nav__link" data-i18n="nav.markets">Markets</a></li>
+          <li><a href="#projects" class="landing-nav__link" data-i18n="nav.projects">Projects</a></li>
+          <li><a href="#faq" class="landing-nav__link" data-i18n="nav.faq">FAQ</a></li>
         </ul>
-        <a href="#contact" class="landing-nav__cta">Contact Us</a>
+        <div class="language-switcher">
+          <span class="current-lang">EN</span>
+          <div class="lang-dropdown">
+            <a href="#" class="lang-option active" data-lang="en">EN</a>
+            <a href="#" class="lang-option" data-lang="fr">FR</a>
+            <a href="#" class="lang-option" data-lang="de">DE</a>
+          </div>
+        </div>
+        <a href="#contact" class="landing-nav__cta" data-i18n="nav.contact">Contact Us</a>
       </div>
     </nav>
 
@@ -359,19 +425,19 @@
           class="hero-landing__image"
         />
         <div class="hero-landing__content">
-          <h1 class="hero-landing__title">
+          <h1 class="hero-landing__title" data-i18n="home.heroTitle">
             We Coordinate Energy Solutions — Not Just Equipment
           </h1>
-          <p class="hero-landing__subtitle">
+          <p class="hero-landing__subtitle" data-i18n="home.heroText">
             Independent Energy Solutions Coordinator connecting clients,
             suppliers and technologies to deliver reliable power, solar and
             hybrid energy solutions across Europe, Ukraine and Africa.
           </p>
           <div class="hero-landing__actions">
-            <a href="#contact" class="btn btn--primary btn--large"
+            <a href="#contact" class="btn btn--primary btn--large" data-i18n="home.btnDiscuss"
               >Discuss a Project</a
             >
-            <a href="#services" class="btn btn--white btn--large"
+            <a href="#services" class="btn btn--white btn--large" data-i18n="home.btnServices"
               >Our Services</a
             >
           </div>
@@ -387,18 +453,18 @@
       <section id="about" class="section reveal">
         <div class="container">
           <div class="intro-section">
-            <h2>About NUMO</h2>
-            <p class="text-large">
+            <h2 data-i18n="about.title">About NUMO</h2>
+            <p class="text-large" data-i18n="about.subtitle1">
               We act as an independent Energy Solutions Coordinator and Project
               Connector.
             </p>
-            <p>
+            <p data-i18n="about.subtitle2">
               Our role is to structure energy projects, align technical
               solutions, source reliable suppliers and coordinate all key
               parties — from initial requirements to delivery support.
             </p>
             <p>
-              <strong
+              <strong data-i18n="about.roleStatement"
                 >We do not sell equipment directly. We coordinate energy
                 solutions.</strong
               >
@@ -1321,5 +1387,6 @@
         });
       });
     </script>
+    <script src="js/i18n.js"></script>
   </body>
 </html>
