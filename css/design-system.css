@@ -710,7 +710,6 @@ nav a:focus-visible {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: var(--navy-dark);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -718,11 +717,8 @@ nav a:focus-visible {
 }
 
 .hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: var(--overlay-dark);
-  z-index: 1;
+  content: none;
+  /* Overlay вимкнено */
 }
 
 .hero__content {

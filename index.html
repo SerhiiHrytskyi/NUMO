@@ -3,434 +3,761 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NUMO - Energy Solutions Coordinator</title>
+    <title>NUMO - Energy Solutions Coordinator | Power, Solar & Hybrid Systems</title>
+    <meta name="description" content="Independent Energy Solutions Coordinator connecting clients, suppliers and technologies across Europe, Ukraine and Africa. Power Generation, Solar, Storage & Hybrid Systems." />
     <link rel="stylesheet" href="css/design-system.css" />
     <link rel="stylesheet" href="css/pages.css" />
-    <script src="js/seo.js"></script>
+    <style>
+      /* Landing Page Specific Styles */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Sticky Navigation */
+      .landing-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: rgba(15, 28, 46, 0.95);
+        backdrop-filter: blur(10px);
+        z-index: 1000;
+        padding: 1rem 0;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+      }
+
+      .landing-nav.scrolled {
+        padding: 0.5rem 0;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      .landing-nav .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .landing-nav__logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--white);
+        text-decoration: none;
+      }
+
+      .landing-nav__menu {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .landing-nav__link {
+        color: var(--white);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+        position: relative;
+      }
+
+      .landing-nav__link::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: var(--blue-eu);
+        transition: width 0.3s ease;
+      }
+
+      .landing-nav__link:hover::after,
+      .landing-nav__link.active::after {
+        width: 100%;
+      }
+
+      .landing-nav__cta {
+        background: var(--blue-eu);
+        color: var(--white);
+        padding: 0.75rem 1.5rem;
+        border-radius: var(--radius-md);
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      .landing-nav__cta:hover {
+        background: var(--blue-eu-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+      }
+
+      /* Hero Section Enhancement */
+      .hero-landing {
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 80px;
+        overflow: hidden;
+      }
+
+      .hero-landing__image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+      }
+
+      .hero-landing__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, rgba(15, 28, 46, 0.8) 0%, rgba(37, 99, 235, 0.6) 100%);
+        z-index: 1;
+      }
+
+      .hero-landing__content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        max-width: 1000px;
+        padding: 2rem;
+        animation: fadeInUp 1s ease-out;
+      }
+
+      .hero-landing__title {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        font-weight: 700;
+        color: var(--white);
+        margin-bottom: 1.5rem;
+        line-height: 1.2;
+        text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+      }
+
+      .hero-landing__subtitle {
+        font-size: clamp(1.1rem, 2vw, 1.4rem);
+        color: rgba(255, 255, 255, 0.95);
+        margin-bottom: 2.5rem;
+        line-height: 1.6;
+        text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .hero-landing__actions {
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      /* Scroll Indicator */
+      .scroll-indicator {
+        position: absolute;
+        bottom: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        animation: bounce 2s infinite;
+      }
+
+      .scroll-indicator__icon {
+        width: 30px;
+        height: 50px;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        border-radius: 20px;
+        position: relative;
+      }
+
+      .scroll-indicator__dot {
+        width: 6px;
+        height: 6px;
+        background: white;
+        border-radius: 50%;
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: scroll 2s infinite;
+      }
+
+      /* Animations */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% {
+          transform: translateX(-50%) translateY(0);
+        }
+        40% {
+          transform: translateX(-50%) translateY(-10px);
+        }
+        60% {
+          transform: translateX(-50%) translateY(-5px);
+        }
+      }
+
+      @keyframes scroll {
+        0% {
+          opacity: 1;
+          top: 10px;
+        }
+        100% {
+          opacity: 0;
+          top: 30px;
+        }
+      }
+
+      /* Section Reveal Animation */
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.6s ease-out;
+      }
+
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Stats Section */
+      .stats-section {
+        background: linear-gradient(135deg, var(--blue-eu) 0%, var(--blue-eu-hover) 100%);
+        color: white;
+        padding: 4rem 0;
+      }
+
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 3rem;
+        text-align: center;
+      }
+
+      .stat-item__number {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+
+      .stat-item__label {
+        font-size: 1.1rem;
+        opacity: 0.9;
+      }
+
+      /* Timeline */
+      .timeline {
+        position: relative;
+        padding: 2rem 0;
+      }
+
+      .timeline::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: var(--gray-300);
+      }
+
+      .timeline-item {
+        display: flex;
+        margin-bottom: 3rem;
+        position: relative;
+      }
+
+      .timeline-item:nth-child(odd) {
+        flex-direction: row-reverse;
+      }
+
+      .timeline-item__content {
+        width: 45%;
+        padding: 1.5rem;
+        background: white;
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-lg);
+      }
+
+      .timeline-item__dot {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 20px;
+        height: 20px;
+        background: var(--blue-eu);
+        border-radius: 50%;
+        border: 4px solid white;
+        box-shadow: 0 0 0 4px var(--gray-200);
+      }
+
+      /* Mobile Menu */
+      @media (max-width: 768px) {
+        .landing-nav__menu {
+          display: none;
+        }
+
+        .timeline::before {
+          left: 20px;
+        }
+
+        .timeline-item {
+          flex-direction: row !important;
+        }
+
+        .timeline-item__content {
+          width: calc(100% - 60px);
+          margin-left: 60px;
+        }
+
+        .timeline-item__dot {
+          left: 20px;
+        }
+      }
+    </style>
   </head>
   <body>
-    <header>
+    <!-- Sticky Navigation -->
+    <nav class="landing-nav" id="mainNav">
       <div class="container">
-        <nav>
-          <ul>
-            <li><a href="index.html" data-i18n="nav.home">Home</a></li>
-            <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
-            <li class="dropdown">
-              <a
-                href="services/index.html"
-                class="dropdown-toggle"
-                data-i18n="nav.services"
-                >Services / Solutions</a
-              >
-              <div class="dropdown-content">
-                <a
-                  href="services/power-generation.html"
-                  data-i18n="services.powerGeneration"
-                  >Power Generation</a
-                >
-                <a
-                  href="services/solar-energy.html"
-                  data-i18n="services.solarEnergy"
-                  >Solar Energy</a
-                >
-                <a
-                  href="services/energy-storage.html"
-                  data-i18n="services.energyStorage"
-                  >Energy Storage</a
-                >
-                <a
-                  href="services/hybrid-backup.html"
-                  data-i18n="services.hybridBackup"
-                  >Hybrid & Backup Solutions</a
-                >
-                <a
-                  href="services/project-coordination.html"
-                  data-i18n="services.projectCoordination"
-                  >Project Coordination & Sourcing</a
-                >
-                <a
-                  href="services/supplier-matching.html"
-                  data-i18n="services.supplierMatching"
-                  >Supplier & Client Matching</a
-                >
-                <a
-                  href="services/consulting.html"
-                  data-i18n="services.consulting"
-                  >Consulting & Feasibility</a
-                >
-              </div>
-            </li>
-            <li class="dropdown">
-              <a
-                href="markets/index.html"
-                class="dropdown-toggle"
-                data-i18n="nav.markets"
-                >Markets / Regions</a
-              >
-              <div class="dropdown-content">
-                <a href="markets/europe.html" data-i18n="markets.europe"
-                  >Europe</a
-                >
-                <a href="markets/ukraine.html" data-i18n="markets.ukraine"
-                  >Ukraine</a
-                >
-                <a href="markets/africa.html" data-i18n="markets.africa"
-                  >Africa</a
-                >
-              </div>
-            </li>
-            <li>
-              <a href="how-we-work.html" data-i18n="nav.howWeWork"
-                >How We Work</a
-              >
-            </li>
-            <li>
-              <a href="partners.html" data-i18n="nav.partners">Partners</a>
-            </li>
-            <li>
-              <a href="projects.html" data-i18n="nav.projects"
-                >Projects / Use Cases</a
-              >
-            </li>
-            <li><a href="faq.html" data-i18n="nav.faq">FAQ</a></li>
-            <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
-
-            <!-- Language Switcher -->
-            <li class="dropdown language-switcher">
-              <a href="#" class="dropdown-toggle">
-                <span class="current-lang">EN</span> 🌐
-              </a>
-              <div class="dropdown-content lang-dropdown">
-                <a href="#" class="lang-option" data-lang="en">🇬🇧 English</a>
-                <a href="#" class="lang-option" data-lang="de">🇩🇪 Deutsch</a>
-                <a href="#" class="lang-option" data-lang="fr">🇫🇷 Français</a>
-              </div>
-            </li>
-          </ul>
-        </nav>
+        <a href="#hero" class="landing-nav__logo">NUMO</a>
+        <ul class="landing-nav__menu">
+          <li><a href="#about" class="landing-nav__link">About</a></li>
+          <li><a href="#services" class="landing-nav__link">Services</a></li>
+          <li><a href="#how-we-work" class="landing-nav__link">Process</a></li>
+          <li><a href="#markets" class="landing-nav__link">Markets</a></li>
+          <li><a href="#projects" class="landing-nav__link">Projects</a></li>
+          <li><a href="#faq" class="landing-nav__link">FAQ</a></li>
+        </ul>
+        <a href="#contact" class="landing-nav__cta">Contact Us</a>
       </div>
-    </header>
+    </nav>
 
     <main>
       <!-- HERO SECTION -->
-      <section class="hero">
-        <div class="hero__content">
-          <h1 class="hero__title" data-i18n="home.heroTitle">
+      <section id="hero" class="hero-landing">
+        <img 
+          src="Image/hero_energy_1920x1080.jpg" 
+          alt="Energy Solutions" 
+          class="hero-landing__image"
+        />
+        <div class="hero-landing__overlay"></div>
+        <div class="hero-landing__content">
+          <h1 class="hero-landing__title">
             We Coordinate Energy Solutions — Not Just Equipment
           </h1>
-          <p class="hero__subtitle" data-i18n="home.heroText">
-            We connect clients, suppliers and technologies to deliver reliable
-            power, solar and hybrid energy solutions across Europe, Ukraine and
-            Africa.
+          <p class="hero-landing__subtitle">
+            Independent Energy Solutions Coordinator connecting clients, suppliers and technologies to deliver reliable power, solar and hybrid energy solutions across Europe, Ukraine and Africa.
           </p>
-          <div class="hero__actions">
-            <a
-              href="contact.html"
-              class="btn btn--primary btn--large"
-              data-i18n="home.btnDiscuss"
-              >Discuss a project</a
-            >
-            <a
-              href="contact.html"
-              class="btn btn--white btn--large"
-              data-i18n="home.btnRequirements"
-              >Send requirements</a
-            >
+          <div class="hero-landing__actions">
+            <a href="#contact" class="btn btn--primary btn--large">Discuss a Project</a>
+            <a href="#services" class="btn btn--white btn--large">Our Services</a>
+          </div>
+        </div>
+        <div class="scroll-indicator">
+          <div class="scroll-indicator__icon">
+            <div class="scroll-indicator__dot"></div>
           </div>
         </div>
       </section>
 
-      <!-- WHAT WE DO -->
-      <section class="section">
+      <!-- ABOUT SECTION -->
+      <section id="about" class="section reveal">
         <div class="container">
           <div class="intro-section">
-            <h2 data-i18n="home.whatWeDoTitle">What We Do</h2>
-            <p class="text-large" data-i18n="home.whatWeDoP1">
-              We act as an independent Energy Solutions Coordinator and Project
-              Connector.
+            <h2>About NUMO</h2>
+            <p class="text-large">
+              We act as an independent Energy Solutions Coordinator and Project Connector.
             </p>
-            <p data-i18n="home.whatWeDoP2">
-              Our role is to structure energy projects, align technical
-              solutions, source reliable suppliers and coordinate all key
-              parties — from initial requirements to delivery support.
+            <p>
+              Our role is to structure energy projects, align technical solutions, source reliable suppliers and coordinate all key parties — from initial requirements to delivery support.
             </p>
-            <p data-i18n="home.whatWeDoP3">
-              We do not sell equipment directly. We coordinate energy solutions.
-            </p>
+            <p><strong>We do not sell equipment directly. We coordinate energy solutions.</strong></p>
           </div>
         </div>
       </section>
 
-      <!-- CORE SOLUTION AREAS -->
-      <section class="section section--gray">
+      <!-- OUR ROLE -->
+      <section class="section section--gray reveal">
         <div class="container">
-          <h2 class="text-center" data-i18n="home.coreSolutionsTitle">
-            Core Solution Areas
-          </h2>
+          <div class="intro-section">
+            <h2>Our Role as Energy Solutions Coordinator</h2>
+            <p>
+              Modern energy projects often involve multiple stakeholders, technologies and regions. Our role is to act as a neutral coordination layer between clients, suppliers, contractors and logistics partners.
+            </p>
+          </div>
+          <p><strong>We ensure that:</strong></p>
+          <ul class="service-benefits">
+            <li>Technical solutions match real operational needs</li>
+            <li>Suppliers are suitable and verified</li>
+            <li>Commercial and logistical aspects are aligned</li>
+            <li>Projects remain structured and transparent</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- SERVICES SECTION -->
+      <section id="services" class="section reveal">
+        <div class="container">
+          <h2 class="text-center">Services & Solutions</h2>
+          <p class="text-center text-large" style="max-width: 800px; margin: 0 auto 3rem;">
+            We provide independent coordination and sourcing services for power generation, solar and hybrid energy projects.
+          </p>
           <div class="solutions-grid">
             <div class="card solution-card">
-              <h3 class="card__title" data-i18n="home.powerGenTitle">
-                Power Generation
-              </h3>
-              <p data-i18n="home.powerGenText">
-                Reliable diesel and gas generator solutions for industrial,
-                commercial and remote applications.
+              <div style="font-size: 3rem; margin-bottom: 1rem;">⚡</div>
+              <h3 class="card__title">Power Generation</h3>
+              <p>
+                Generator-based power solutions for industrial, commercial and infrastructure applications — backup, prime and continuous power scenarios.
               </p>
             </div>
             <div class="card solution-card">
-              <h3 class="card__title" data-i18n="home.solarTitle">
-                Solar Energy
-              </h3>
-              <p data-i18n="home.solarText">
-                PV systems for on-grid, off-grid and hybrid projects, adapted to
-                local conditions.
+              <div style="font-size: 3rem; margin-bottom: 1rem;">☀️</div>
+              <h3 class="card__title">Solar Energy (PV Systems)</h3>
+              <p>
+                Photovoltaic solutions for on-grid, off-grid and hybrid applications, ensuring system design matches real operating conditions.
               </p>
             </div>
             <div class="card solution-card">
-              <h3 class="card__title" data-i18n="home.storageTitle">
-                Energy Storage
-              </h3>
-              <p data-i18n="home.storageText">
-                Battery and BESS solutions for backup, peak shaving and energy
-                independence.
+              <div style="font-size: 3rem; margin-bottom: 1rem;">🔋</div>
+              <h3 class="card__title">Energy Storage (BESS)</h3>
+              <p>
+                Battery and energy storage solutions for backup power, load balancing and hybrid energy systems.
               </p>
             </div>
             <div class="card solution-card">
-              <h3 class="card__title" data-i18n="home.hybridTitle">
-                Hybrid & Backup Systems
-              </h3>
-              <p data-i18n="home.hybridText">
-                Integrated solutions combining generators, solar and storage.
+              <div style="font-size: 3rem; margin-bottom: 1rem;">🔄</div>
+              <h3 class="card__title">Hybrid & Backup Solutions</h3>
+              <p>
+                Integrated systems combining generators, solar PV and energy storage for reliability and operational flexibility.
               </p>
             </div>
             <div class="card solution-card">
-              <h3 class="card__title" data-i18n="home.coordTitle">
-                Project Coordination & Sourcing
-              </h3>
-              <p data-i18n="home.coordText">
-                Supplier selection, technical alignment and commercial
-                coordination.
+              <div style="font-size: 3rem; margin-bottom: 1rem;">🎯</div>
+              <h3 class="card__title">Project Coordination & Sourcing</h3>
+              <p>
+                Independent coordination layer between clients, suppliers, contractors and logistics partners.
+              </p>
+            </div>
+            <div class="card solution-card">
+              <div style="font-size: 3rem; margin-bottom: 1rem;">🤝</div>
+              <h3 class="card__title">Supplier & Client Matching</h3>
+              <p>
+                Connecting verified suppliers and manufacturers with suitable B2B clients and projects.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- HOW WE WORK -->
-      <section class="section">
+      <!-- HOW WE WORK SECTION -->
+      <section id="how-we-work" class="section section--gray reveal">
         <div class="container">
-          <h2 class="text-center" data-i18n="home.howWeWorkTitle">
-            How We Work
-          </h2>
+          <h2 class="text-center">How We Work</h2>
+          <p class="text-center text-large" style="max-width: 700px; margin: 0 auto 3rem;">
+            Energy projects require clear structure, coordination and accountability. Our 5-step process ensures alignment from start to finish.
+          </p>
           <div class="process-grid">
             <div class="process-step">
               <div class="process-step__number">1</div>
-              <h3 data-i18n="home.reqAnalysisTitle">Requirements Analysis</h3>
-              <p data-i18n="home.reqAnalysisText">
-                We clarify technical, operational and regional requirements.
-              </p>
+              <h3>Requirements Analysis</h3>
+              <p>We clarify technical, operational and regional requirements, avoiding assumptions and defining clear parameters.</p>
             </div>
             <div class="process-step">
               <div class="process-step__number">2</div>
-              <h3 data-i18n="home.solutionDesignTitle">Solution Design</h3>
-              <p data-i18n="home.solutionDesignText">
-                We define suitable technical concepts and solution options.
-              </p>
+              <h3>Solution Design</h3>
+              <p>We define suitable technical concepts — generators, solar, storage or hybrid combinations — focusing on practical configurations.</p>
             </div>
             <div class="process-step">
               <div class="process-step__number">3</div>
-              <h3 data-i18n="home.supplierSourcingTitle">Supplier Sourcing</h3>
-              <p data-i18n="home.supplierSourcingText">
-                We identify and verify manufacturers and distributors.
-              </p>
+              <h3>Supplier Sourcing & Verification</h3>
+              <p>We identify and evaluate suitable manufacturers and distributors, assessing capabilities and compliance.</p>
             </div>
             <div class="process-step">
               <div class="process-step__number">4</div>
-              <h3 data-i18n="home.coordAlignTitle">Coordination & Alignment</h3>
-              <p data-i18n="home.coordAlignText">
-                We align technical, commercial and logistical aspects.
-              </p>
+              <h3>Coordination & Alignment</h3>
+              <p>We coordinate technical clarifications, commercial alignment, logistics and documentation flow.</p>
+            </div>
+            <div class="process-step">
+              <div class="process-step__number">5</div>
+              <h3>Project Support & Handover</h3>
+              <p>We support delivery, documentation and transition to operation or EPC teams.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- MARKETS & REGIONS -->
-      <section class="section section--dark">
+      <!-- MARKETS SECTION -->
+      <section id="markets" class="section section--dark reveal">
         <div class="container">
-          <h2 class="text-center" data-i18n="home.marketsWeWorkTitle">
-            Markets We Work In
-          </h2>
-          <p
-            class="text-center text-large"
-            data-i18n="home.marketsWeWorkText"
-            style="max-width: 700px; margin: 0 auto var(--space-12)"
-          >
-            We operate across multiple regions, adapting solutions to local
-            standards, logistics and project conditions.
+          <h2 class="text-center">Markets We Work In</h2>
+          <p class="text-center text-large" style="max-width: 700px; margin: 0 auto 3rem;">
+            We operate across multiple regions, adapting solutions to local standards, logistics and project conditions.
           </p>
           <div class="markets-overview">
             <div class="market-block">
               <div class="market-block__icon">🇪🇺</div>
-              <h3 data-i18n="home.europeTitle">Europe</h3>
-              <p data-i18n="home.europeText">
-                Compliance, standards, structured procurement
-              </p>
+              <h3>Europe</h3>
+              <p>Compliance-driven markets with structured procurement and high technical standards.</p>
             </div>
             <div class="market-block">
               <div class="market-block__icon">🇺🇦</div>
-              <h3 data-i18n="home.ukraineTitle">Ukraine</h3>
-              <p data-i18n="home.ukraineText">
-                Resilience, backup and rapid deployment
-              </p>
+              <h3>Ukraine</h3>
+              <p>Post-conflict reconstruction, energy independence and resilience-focused projects.</p>
             </div>
             <div class="market-block">
               <div class="market-block__icon">🌍</div>
-              <h3 data-i18n="home.africaTitle">Africa</h3>
-              <p data-i18n="home.africaText">
-                Off-grid, hybrid systems and complex logistics
-              </p>
+              <h3>Africa</h3>
+              <p>Off-grid solutions, industrial power and infrastructure development in emerging markets.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS / USE CASES -->
+      <section id="projects" class="section reveal">
+        <div class="container">
+          <h2 class="text-center">Use Cases & Project Types</h2>
+          <p class="text-center text-large" style="max-width: 800px; margin: 0 auto 3rem;">
+            Real-world scenarios where coordination, sourcing and structured solutions deliver results.
+          </p>
+          <div class="solutions-grid">
+            <div class="card">
+              <h3 class="card__title">🏭 Industrial Backup Power</h3>
+              <p>Manufacturing facility requires reliable backup for critical production lines during grid outages.</p>
+            </div>
+            <div class="card">
+              <h3 class="card__title">🏢 Hybrid Office Complex</h3>
+              <p>Office building combining solar, battery storage and grid connection for energy independence.</p>
+            </div>
+            <div class="card">
+              <h3 class="card__title">🌾 Agricultural Off-Grid</h3>
+              <p>Remote farm operation requiring solar + diesel hybrid system for irrigation and processing.</p>
+            </div>
+            <div class="card">
+              <h3 class="card__title">🏗️ Construction Site Power</h3>
+              <p>Temporary but reliable power supply for multi-year infrastructure development project.</p>
             </div>
           </div>
         </div>
       </section>
 
       <!-- WHY WORK WITH US -->
-      <section class="section">
+      <section class="section section--gray reveal">
         <div class="container">
-          <h2 class="text-center" data-i18n="home.whyWorkTitle">
-            Why Work With Us
-          </h2>
-          <ul class="trust-grid">
-            <li class="trust-item">
-              <div class="trust-item__content">
-                <h4>Independent Approach</h4>
-                <p data-i18n="home.whyBenefit1">
-                  Independent and solution-driven approach
-                </p>
-              </div>
-            </li>
-            <li class="trust-item">
-              <div class="trust-item__content">
-                <h4>No Bias</h4>
-                <p data-i18n="home.whyBenefit2">No brand or supplier bias</p>
-              </div>
-            </li>
-            <li class="trust-item">
-              <div class="trust-item__content">
-                <h4>Clear Coordination</h4>
-                <p data-i18n="home.whyBenefit3">
-                  Clear coordination and structured processes
-                </p>
-              </div>
-            </li>
-            <li class="trust-item">
-              <div class="trust-item__content">
-                <h4>International Experience</h4>
-                <p data-i18n="home.whyBenefit4">
-                  International sourcing experience
-                </p>
-              </div>
-            </li>
-            <li class="trust-item">
-              <div class="trust-item__content">
-                <h4>Transparent Communication</h4>
-                <p data-i18n="home.whyBenefit5">
-                  Transparent communication and documentation
-                </p>
-              </div>
-            </li>
-            <li class="trust-item">
-              <div class="trust-item__content">
-                <h4>Long-term Focus</h4>
-                <p data-i18n="home.whyBenefit6">
-                  Focus on long-term reliability, not short-term sales
-                </p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- USE CASES -->
-      <section class="section section--gray">
-        <div class="container">
-          <h2 class="text-center" data-i18n="home.useCasesTitle">
-            Typical Use Cases
-          </h2>
-          <ul class="service-benefits" style="max-width: 900px; margin: 0 auto">
-            <li>
-              <span data-i18n="home.useCase1">
-                Backup power solutions for commercial and industrial facilities
-              </span>
-            </li>
-            <li>
-              <span data-i18n="home.useCase2">
-                Hybrid energy systems for remote or unstable grids
-              </span>
-            </li>
-            <li>
-              <span data-i18n="home.useCase3">
-                Generator and equipment sourcing for infrastructure projects
-              </span>
-            </li>
-            <li>
-              <span data-i18n="home.useCase4">
-                Solar and storage coordination for SMEs and agricultural sites
-              </span>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- CTA SECTION -->
-      <section class="section">
-        <div class="container">
-          <div class="cta-section">
-            <h2 data-i18n="home.ctaFinalTitle">
-              Let's Discuss Your Energy Project
-            </h2>
-            <p data-i18n="home.ctaFinalText">
-              If you have a project, requirement or idea — we are ready to
-              discuss the most suitable and reliable energy solution.
-            </p>
-            <a
-              href="contact.html"
-              class="btn btn--primary btn--large"
-              data-i18n="home.ctaFinalBtn"
-              >Discuss a project</a
-            >
+          <h2 class="text-center">Why Work With Us</h2>
+          <div class="solutions-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+            <div class="card">
+              <h3 class="card__title">Independent & Neutral</h3>
+              <p>We are not tied to specific brands or manufacturers — our recommendations are based on your requirements, not our inventory.</p>
+            </div>
+            <div class="card">
+              <h3 class="card__title">Multi-Region Experience</h3>
+              <p>We understand the differences between European compliance, Ukrainian reconstruction and African infrastructure markets.</p>
+            </div>
+            <div class="card">
+              <h3 class="card__title">Coordination-First Approach</h3>
+              <p>We reduce risks by aligning all parties before commitments, not after problems arise.</p>
+            </div>
+            <div class="card">
+              <h3 class="card__title">Transparent & Structured</h3>
+              <p>Clear documentation, defined processes and open communication throughout the project lifecycle.</p>
+            </div>
           </div>
         </div>
       </section>
+
+      <!-- FAQ SECTION -->
+      <section id="faq" class="section reveal">
+        <div class="container" style="max-width: 900px;">
+          <h2 class="text-center">Frequently Asked Questions</h2>
+          <div style="margin-top: 3rem;">
+            <details style="margin-bottom: 1.5rem; padding: 1.5rem; background: var(--gray-50); border-radius: var(--radius-md);">
+              <summary style="font-weight: 600; cursor: pointer; font-size: 1.1rem;">Do you sell equipment directly?</summary>
+              <p style="margin-top: 1rem; color: var(--gray-700);">
+                No. We do not sell generators, solar panels or batteries directly. Our role is to coordinate energy solutions — which includes sourcing, supplier verification, technical alignment and project coordination.
+              </p>
+            </details>
+            <details style="margin-bottom: 1.5rem; padding: 1.5rem; background: var(--gray-50); border-radius: var(--radius-md);">
+              <summary style="font-weight: 600; cursor: pointer; font-size: 1.1rem;">How do you select suppliers?</summary>
+              <p style="margin-top: 1rem; color: var(--gray-700);">
+                We evaluate suppliers based on technical capability, compliance documentation, delivery track record and suitability for specific project requirements. We maintain independence and do not favor any single manufacturer.
+              </p>
+            </details>
+            <details style="margin-bottom: 1.5rem; padding: 1.5rem; background: var(--gray-50); border-radius: var(--radius-md);">
+              <summary style="font-weight: 600; cursor: pointer; font-size: 1.1rem;">What regions do you operate in?</summary>
+              <p style="margin-top: 1rem; color: var(--gray-700);">
+                We primarily work across Europe (EU compliance markets), Ukraine (reconstruction & resilience projects) and Africa (off-grid & industrial power). We adapt solutions to regional standards and logistics.
+              </p>
+            </details>
+            <details style="margin-bottom: 1.5rem; padding: 1.5rem; background: var(--gray-50); border-radius: var(--radius-md);">
+              <summary style="font-weight: 600; cursor: pointer; font-size: 1.1rem;">How long does the coordination process take?</summary>
+              <p style="margin-top: 1rem; color: var(--gray-700);">
+                It depends on project complexity. Simple requirements analysis and supplier sourcing may take 1-2 weeks. Full project coordination from requirements to delivery support can range from weeks to months.
+              </p>
+            </details>
+            <details style="margin-bottom: 1.5rem; padding: 1.5rem; background: var(--gray-50); border-radius: var(--radius-md);">
+              <summary style="font-weight: 600; cursor: pointer; font-size: 1.1rem;">Do you provide installation or EPC services?</summary>
+              <p style="margin-top: 1rem; color: var(--gray-700);">
+                We do not provide direct installation or EPC services. However, we can coordinate with local EPC contractors, align technical specifications and support the handover process.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT SECTION -->
+      <section id="contact" class="section section--gray reveal">
+        <div class="container" style="max-width: 800px;">
+          <h2 class="text-center">Get In Touch</h2>
+          <p class="text-center text-large" style="margin-bottom: 3rem;">
+            Ready to discuss your energy project? Send us your requirements and we'll get back to you within 24-48 hours.
+          </p>
+          <form style="background: white; padding: 2rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
+            <div style="margin-bottom: 1.5rem;">
+              <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Name *</label>
+              <input type="text" required style="width: 100%; padding: 0.75rem; border: 1px solid var(--gray-300); border-radius: var(--radius-md); font-size: 1rem;">
+            </div>
+            <div style="margin-bottom: 1.5rem;">
+              <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Email *</label>
+              <input type="email" required style="width: 100%; padding: 0.75rem; border: 1px solid var(--gray-300); border-radius: var(--radius-md); font-size: 1rem;">
+            </div>
+            <div style="margin-bottom: 1.5rem;">
+              <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Company</label>
+              <input type="text" style="width: 100%; padding: 0.75rem; border: 1px solid var(--gray-300); border-radius: var(--radius-md); font-size: 1rem;">
+            </div>
+            <div style="margin-bottom: 1.5rem;">
+              <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Project Type</label>
+              <select style="width: 100%; padding: 0.75rem; border: 1px solid var(--gray-300); border-radius: var(--radius-md); font-size: 1rem;">
+                <option>Power Generation</option>
+                <option>Solar Energy</option>
+                <option>Energy Storage</option>
+                <option>Hybrid System</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div style="margin-bottom: 1.5rem;">
+              <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Message *</label>
+              <textarea required rows="5" style="width: 100%; padding: 0.75rem; border: 1px solid var(--gray-300); border-radius: var(--radius-md); font-size: 1rem;"></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--large" style="width: 100%;">Send Message</button>
+          </form>
+          <div style="margin-top: 3rem; text-align: center;">
+            <p><strong>Direct Contact:</strong></p>
+            <p>Email: info@numo-energy.com</p>
+            <p>Phone: +49 XXX XXXX XXXX</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer style="background: var(--navy-dark); color: white; padding: 3rem 0 1rem;">
+        <div class="container">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+            <div>
+              <h3 style="margin-bottom: 1rem;">NUMO</h3>
+              <p style="opacity: 0.8;">Independent Energy Solutions Coordinator</p>
+            </div>
+            <div>
+              <h4 style="margin-bottom: 1rem;">Quick Links</h4>
+              <ul style="list-style: none; padding: 0;">
+                <li style="margin-bottom: 0.5rem;"><a href="#about" style="color: rgba(255,255,255,0.8); text-decoration: none;">About</a></li>
+                <li style="margin-bottom: 0.5rem;"><a href="#services" style="color: rgba(255,255,255,0.8); text-decoration: none;">Services</a></li>
+                <li style="margin-bottom: 0.5rem;"><a href="#how-we-work" style="color: rgba(255,255,255,0.8); text-decoration: none;">Process</a></li>
+                <li style="margin-bottom: 0.5rem;"><a href="#contact" style="color: rgba(255,255,255,0.8); text-decoration: none;">Contact</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 style="margin-bottom: 1rem;">Legal</h4>
+              <ul style="list-style: none; padding: 0;">
+                <li style="margin-bottom: 0.5rem;"><a href="legal/privacy.html" style="color: rgba(255,255,255,0.8); text-decoration: none;">Privacy Policy</a></li>
+                <li style="margin-bottom: 0.5rem;"><a href="legal/terms.html" style="color: rgba(255,255,255,0.8); text-decoration: none;">Terms of Service</a></li>
+                <li style="margin-bottom: 0.5rem;"><a href="legal/imprint.html" style="color: rgba(255,255,255,0.8); text-decoration: none;">Imprint</a></li>
+              </ul>
+            </div>
+          </div>
+          <div style="text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); opacity: 0.7;">
+            <p>&copy; 2024 NUMO. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
     </main>
 
-    <footer>
-      <div class="container">
-        <div class="footer__bottom">
-          <p>&copy; 2026 NUMO Energy Solutions. All rights reserved.</p>
-          <p style="margin-top: var(--space-4)">
-            <a href="legal/imprint.html">Imprint</a>
-            <span style="margin: 0 var(--space-2); color: var(--gray-500)"
-              >•</span
-            >
-            <a href="legal/privacy.html">Privacy Policy</a>
-            <span style="margin: 0 var(--space-2); color: var(--gray-500)"
-              >•</span
-            >
-            <a href="legal/cookies.html">Cookie Policy</a>
-            <span style="margin: 0 var(--space-2); color: var(--gray-500)"
-              >•</span
-            >
-            <a href="legal/terms.html">Terms of Use</a>
-          </p>
-        </div>
-      </div>
-    </footer>
-  </body>
+    <script>
+      // Smooth scroll for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 80,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
 
-  <!-- Scripts -->
-  <script src="js/header.js"></script>
-  <script src="js/i18n.js"></script>
-  <script src="js/cookie-consent.js"></script>
+      // Navbar scroll effect
+      const nav = document.getElementById('mainNav');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+          nav.classList.add('scrolled');
+        } else {
+          nav.classList.remove('scrolled');
+        }
+      });
+
+      // Reveal sections on scroll
+      const revealElements = document.querySelectorAll('.reveal');
+      const revealOnScroll = () => {
+        revealElements.forEach(element => {
+          const elementTop = element.getBoundingClientRect().top;
+          const windowHeight = window.innerHeight;
+          if (elementTop < windowHeight - 100) {
+            element.classList.add('active');
+          }
+        });
+      };
+
+      window.addEventListener('scroll', revealOnScroll);
+      revealOnScroll(); // Initial check
+
+      // Active nav link on scroll
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('.landing-nav__link');
+
+      window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          if (window.scrollY >= sectionTop - 200) {
+            current = section.getAttribute('id');
+          }
+        });
+
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${current}`) {
+            link.classList.add('active');
+          }
+        });
+      });
+    </script>
+  </body>
 </html>
